@@ -3,11 +3,11 @@
   <channel>
     <title>Blogario Precario</title>
     <description>A random walk on blogging</description>
-    <link>https://becarioprecario.github.io/</link>
-    <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 12 Jan 2018 16:06:44 +0100</pubDate>
-    <lastBuildDate>Fri, 12 Jan 2018 16:06:44 +0100</lastBuildDate>
-    <generator>Jekyll v3.4.3</generator>
+    <link>http://www.uclm.es/profesorado/vgomez//</link>
+    <atom:link href="http://www.uclm.es/profesorado/vgomez//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 14 Aug 2018 14:28:03 +0200</pubDate>
+    <lastBuildDate>Tue, 14 Aug 2018 14:28:03 +0200</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
     
       <item>
         <title>Predicción de escaños en las elecciones catalanas del 21D usando encuestas provinciales y regionales</title>
@@ -412,8 +412,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 15 Dec 2017 00:00:00 +0100</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</guid>
+        <link>http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</link>
+        <guid isPermaLink="true">http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</guid>
         
         <category>Cataluna</category>
         
@@ -924,8 +924,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 00:00:00 +0200</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</guid>
+        <link>http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</link>
+        <guid isPermaLink="true">http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</guid>
         
         <category>Pais Vasco</category>
         
@@ -1194,8 +1194,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 00:00:00 +0200</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</guid>
+        <link>http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</link>
+        <guid isPermaLink="true">http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</guid>
         
         <category>Galicia</category>
         
@@ -1438,8 +1438,8 @@
 
 </description>
         <pubDate>Sat, 18 Jun 2016 00:00:00 +0200</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2016/06/18/encuestas-generales/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2016/06/18/encuestas-generales/</guid>
+        <link>http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2016/06/18/encuestas-generales/</link>
+        <guid isPermaLink="true">http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2016/06/18/encuestas-generales/</guid>
         
         <category>Espana</category>
         
@@ -1807,8 +1807,8 @@
 
 </description>
         <pubDate>Sun, 20 Dec 2015 00:00:00 +0100</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/20/comparativa_predicciones/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/20/comparativa_predicciones/</guid>
+        <link>http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/12/20/comparativa_predicciones/</link>
+        <guid isPermaLink="true">http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/12/20/comparativa_predicciones/</guid>
         
         <category>Espana</category>
         
@@ -1922,8 +1922,8 @@
 
 </description>
         <pubDate>Mon, 14 Dec 2015 00:00:00 +0100</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/14/encuestas-generales/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/14/encuestas-generales/</guid>
+        <link>http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/12/14/encuestas-generales/</link>
+        <guid isPermaLink="true">http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/12/14/encuestas-generales/</guid>
         
         <category>Espana</category>
         
@@ -2236,8 +2236,8 @@
 
 </description>
         <pubDate>Tue, 01 Dec 2015 00:00:00 +0100</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/01/encuestas-electorales/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/01/encuestas-electorales/</guid>
+        <link>http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/12/01/encuestas-electorales/</link>
+        <guid isPermaLink="true">http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/12/01/encuestas-electorales/</guid>
         
         <category>Albacete</category>
         
@@ -2657,8 +2657,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 27 Sep 2015 00:00:00 +0200</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/27/encuestas-COMB/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/27/encuestas-COMB/</guid>
+        <link>http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/09/27/encuestas-COMB/</link>
+        <guid isPermaLink="true">http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/09/27/encuestas-COMB/</guid>
         
         <category>Cataluna</category>
         
@@ -3241,8 +3241,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 26 Sep 2015 00:00:00 +0200</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/26/encuestas-CATPROV/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/26/encuestas-CATPROV/</guid>
+        <link>http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/09/26/encuestas-CATPROV/</link>
+        <guid isPermaLink="true">http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/09/26/encuestas-CATPROV/</guid>
         
         <category>Cataluna</category>
         
@@ -3518,8 +3518,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 24 Sep 2015 00:00:00 +0200</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/24/encuestas-CAT/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/24/encuestas-CAT/</guid>
+        <link>http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/09/24/encuestas-CAT/</link>
+        <guid isPermaLink="true">http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/09/24/encuestas-CAT/</guid>
         
         <category>Cataluna</category>
         
