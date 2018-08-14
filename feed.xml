@@ -5,8 +5,8 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 14 Aug 2018 14:33:45 +0200</pubDate>
-    <lastBuildDate>Tue, 14 Aug 2018 14:33:45 +0200</lastBuildDate>
+    <pubDate>Wed, 15 Aug 2018 01:37:47 +0200</pubDate>
+    <lastBuildDate>Wed, 15 Aug 2018 01:37:47 +0200</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
@@ -237,13 +237,13 @@
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Min.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;22.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;21.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;3.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;23.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;20.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;12.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;24.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;22.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.0000&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;1st Qu.&lt;/td&gt;
@@ -267,13 +267,13 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Mean&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.8235&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;30.8748&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;28.4876&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.8195&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;19.8366&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;31.7734&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6.3846&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8.8627&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;30.8588&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;28.4841&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8.8161&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;19.8515&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;31.7292&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.3976&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;3rd Qu.&lt;/td&gt;
@@ -287,12 +287,12 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Max.&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;42.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;39.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;40.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;37.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;29.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;41.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;28.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;42.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;13.0000&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -390,17 +390,17 @@
 
 &lt;p&gt;El modelo Bayesiano nos combina los datos de las distintas encuestas de manera que se obtiene una estimación de las proporciones de voto mucho más fiable y, por tanto, del número de escaños obtenido por cada partido. La siguiente figura muestra las distribuciones marginales a posteriori de los escaños obtenidos por cada partido.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2017-12-15-encuestas-CATPROV/unnamed-chunk-13-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2017-12-15-encuestas-CATPROV/unnamed-chunk-13-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Por último, vamos a mostrar en una gráfica el número de escaños que obtendrían los partidos independentistas, junto con el límite de 68 escaños que marca la mayoría absoluta:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2017-12-15-encuestas-CATPROV/unnamed-chunk-14-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-14&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2017-12-15-encuestas-CATPROV/unnamed-chunk-14-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-14&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La gráfica indica que los partidos nacionalistas obtendrían una mayoría absoluta con una gran probabilidad.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
 
-&lt;p&gt;Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones catalanas de 21 de diciembre de 2017. Los resultados muestran que los partidos nacionalistas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 59.2%.&lt;/p&gt;
+&lt;p&gt;Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones catalanas de 21 de diciembre de 2017. Los resultados muestran que los partidos nacionalistas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 59.79%.&lt;/p&gt;
 
 &lt;p&gt;Por algún motivo, este modelo proporciona resultados muy similares a los obtenidos usando solamente las encuestas a nivel provincial. Esto puede deberse a que el modelo produce un sobreajuste de los porcentajes de voto a nivel provincial.&lt;/p&gt;
 
@@ -428,7 +428,7 @@
         <title>Predicción de escaños en las elecciones vascas del 25S de 2016</title>
         <description>&lt;h2 id=&quot;análisis-bayesiano-de-las-encuestas-de-las-elecciones-vascas-del-25s-2016&quot;&gt;Análisis Bayesiano de las encuestas de las elecciones vascas del 25S 2016&lt;/h2&gt;
 
-&lt;h3 id=&quot;predicción-de-escaños-a-patir-de-varias-encuestas&quot;&gt;Predicción de escaños a patir de varias encuestas&lt;/h3&gt;
+&lt;h3 id=&quot;predicción-de-escaños-a-partir-de-varias-encuestas&quot;&gt;Predicción de escaños a partir de varias encuestas&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Virgilio Gómez Rubio&lt;/strong&gt;&lt;/p&gt;
 
@@ -765,7 +765,7 @@
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;escanyos&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Escaños&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -846,12 +846,12 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Mean&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7.2721&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.957&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.5647&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.1381&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;27.0878&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.9803&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7.2776&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8.959&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;15.5663&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.1356&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;27.0856&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;15.9759&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;3rd Qu.&lt;/td&gt;
@@ -912,7 +912,7 @@
 
 &lt;p&gt;El modelo Bayesiano nos combina los datos de las distintas encuestas de manera que se obtiene una estimación de las proporciones de voto mucho más fiable. La siguiente figura muestra las distribuciones marginales a posteriori de los escaños obtenidos por cada partido:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2016-09-25-encuestas-PVPROV/unnamed-chunk-11-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-11&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2016-09-25-encuestas-PVPROV/unnamed-chunk-11-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-11&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La gráfica indica que los partidos nacionalistas obtendrían una mayoría absoluta con una gran probabilidad. La línea vertical muestra el resultado real de las elecciones.&lt;/p&gt;
 
@@ -937,10 +937,10 @@
       </item>
     
       <item>
-        <title>Prediccion de escanyos en las elecciones gallegas del 25S 2016</title>
+        <title>Predicción de escaños en las elecciones gallegas del 25S 2016</title>
         <description>&lt;h2 id=&quot;análisis-bayesiano-de-las-encuestas-de-las-elecciones-gallegas-del-25s-2016&quot;&gt;Análisis Bayesiano de las encuestas de las elecciones gallegas del 25S 2016&lt;/h2&gt;
 
-&lt;h3 id=&quot;predicción-de-escaños-a-patir-de-varias-encuestas&quot;&gt;Predicción de escaños a patir de varias encuestas&lt;/h3&gt;
+&lt;h3 id=&quot;predicción-de-escaños-a-partir-de-varias-encuestas&quot;&gt;Predicción de escaños a partir de varias encuestas&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Virgilio Gómez Rubio&lt;/strong&gt;&lt;/p&gt;
 
@@ -960,7 +960,181 @@
 
 &lt;p&gt;En concreto, las encuestas que hemos considerado en este análisis se han obtenido de diversas webs y se han resumido en una tabla. Los datos son:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## Error in nchar(x, &amp;quot;chars&amp;quot;): invalid multibyte string, element 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Empresa&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Provincia&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Dato&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;N&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Error&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;PP&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;PSOE&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Marea&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Cs&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;BNG&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;OTROSBL&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Einvenio&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;A Coruña&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;400&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.9&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;43.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;17.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;20.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Lugo&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;300&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.7&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;48.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;18.8&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;17.7&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Ourense&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;300&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.7&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;48.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;18.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;17.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Pontevedra&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;400&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.9&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;40.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;20.3&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;21.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Metroscopia&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;A Coruña&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;800&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;46.9&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;18.7&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;23.7&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.7&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.3&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Lugo&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;600&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;53.2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;18.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;18.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;2.6&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;2.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Ourense&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;600&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;55.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;12.7&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;16.6&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;2.9&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3.9&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8.9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Pontevedra&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;800&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;40.9&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;17.9&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;22.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.7&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;CIS, TNS&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;A Coruña&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;986&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;45.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;19.2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;20.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.4&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Lugo&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;741&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;51.2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;20.2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;15.9&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.3&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Ourense&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;741&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;50.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;19.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;16.7&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Pontevedra&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Porcentaje&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;986&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;39.8&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;20.9&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;22.4&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.7&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;Algunas de las encuestas muestran ya directamente los escaños estimados para cada partido, con lo que no las hemos incorporado en nuestro modelo.&lt;/p&gt;
 
@@ -1049,7 +1223,7 @@
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;escanyos&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Escaños&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -1099,49 +1273,49 @@
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Min.&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;37.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;12.000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;12.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;13.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;1.0000&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;1st Qu.&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;40.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;2.0000&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Median&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;40.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;1.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;2.0000&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Mean&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;40.4642&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.301&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.2264&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.969&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.0394&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;40.4833&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;15.3099&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;16.2197&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.9553&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;2.0318&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;3rd Qu.&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;41.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;17.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;1.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;2.0000&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Max.&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;44.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;18.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;18.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;19.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;2.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;4.0000&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -1182,7 +1356,7 @@
 
 &lt;p&gt;El modelo Bayesiano nos combina los datos de las distintas encuestas de manera que se obtiene una estimación de las proporciones de voto mucho más fiable. La siguiente figura muestra las distribuciones marginales a posteriori de los escaños obtenidos por cada partido:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2016-09-25-encuestas-GALPROV/unnamed-chunk-11-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-11&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2016-09-25-encuestas-GALPROV/unnamed-chunk-11-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-11&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La gráfica indica que los partidos nacionalistas obtendrían una mayoría absoluta con una gran probabilidad. La línea vertical muestra el resultado real de las elecciones.&lt;/p&gt;
 
@@ -1207,8 +1381,8 @@
       </item>
     
       <item>
-        <title>Predicciones Elecciones Generales 26J</title>
-        <description>&lt;h2 id=&quot;meta-análisis-de-encuestas-para-las-elecciones-generales-del-26j&quot;&gt;Meta-análisis de Encuestas para las Elecciones Generales del 26J&lt;/h2&gt;
+        <title>Predicción de los resultados de las elecciones generales del 26J</title>
+        <description>&lt;h2 id=&quot;meta-análisis-de-encuestas-para-las-elecciones-generales-del-26j&quot;&gt;Meta-análisis de encuestas para las elecciones generales del 26J&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Virgilio Gómez Rubio&lt;/strong&gt;&lt;/p&gt;
 
@@ -1218,11 +1392,11 @@
 
 &lt;p&gt;&lt;em&gt;Campus de Albacete&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;IMPORTANTE:&lt;/strong&gt; Última actualización &lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;2017-12-18&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;07&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;36&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANTE:&lt;/strong&gt; Última actualización &lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;2018-08-15&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;37&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;41&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;CAMBIOS:&lt;/strong&gt; Se han incluido intervalos de credibilidad en las estimaciones del número de escaños por partido para incluir una medida de incertidumbre en las estimaciones. Se ha actualizado el número de escaños en Valencia (de 15 a 16) y en León (de 5 a 4), aunque no hay cambios sustanciales en el total (Ciudadanos cede un diputado a Podemos).&lt;/p&gt;
 
-&lt;p&gt;En &lt;a href=&quot;http://www.uclm.es/profesorado/vgomez//posts/elecciones/rstats/2015/12/20/comparativa_predicciones/&quot;&gt;este otro artículo&lt;/a&gt; hay una comparativa de predicciones y encuestas de las elecciones del 20D.&lt;/p&gt;
+&lt;p&gt;En &lt;a href=&quot;https://becarioprecario.github.com/posts/elecciones/rstats/2015/12/20/comparativa_predicciones/&quot;&gt;este otro artículo&lt;/a&gt; hay una comparativa de predicciones y encuestas de las elecciones del 20D.&lt;/p&gt;
 
 &lt;p&gt;Se ha matizado qué representaba el intervalo para los escaños, y se ha incluido un intervalo de credibilidad al 95% (que nos da el rango de escaños que tienen una probabilidad del 95% de ocurrir).&lt;/p&gt;
 
@@ -1234,13 +1408,11 @@
 
 &lt;p&gt;Como primera aproximación, la configuración de escaños obtenida al considerar el número de escaños más probable en cada provincia según nuestro modelo es la siguiente:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## Error in names(rsultados)[2] &amp;lt;- &amp;quot;escaños&amp;quot;: objeto &amp;#39;rsultados&amp;#39; no encontrado&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: left&quot;&gt;partido&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;escanos&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;escaños&lt;/th&gt;
       &lt;th style=&quot;text-align: right&quot;&gt;min95&lt;/th&gt;
       &lt;th style=&quot;text-align: right&quot;&gt;max95&lt;/th&gt;
       &lt;th style=&quot;text-align: right&quot;&gt;ICmin95&lt;/th&gt;
@@ -1333,11 +1505,11 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Los valores ‘min95’ y ‘max95’ indican la variabilidad del número de escaños obtenidos. Se han calculado tomando los cuantiles del 0.025 y del 0.975 del número de escaños asignados a cada partido en cada provincia, por lo que estos intervalos son un tanto extremos. Los valores ‘ICmin95’  y ‘ICmax95’ corresponden a un intervalo de credibilidad del 95% calculado con la distribución de escaños proporcionada por el modelo. Este intervalo de credibilidad  indica el número de escaños que obtendría un partido con una probabilidad del 95%. Asimismo, ‘ICmediana’ nos da el valor de la mediana de la distribución de escaños, que usamos como estimación puntual.&lt;/p&gt;
+&lt;p&gt;Los valores &lt;code class=&quot;highlight language-R&quot;&gt;min95&lt;/code&gt; y &lt;code class=&quot;highlight language-R&quot;&gt;max95&lt;/code&gt; indican la variabilidad del número de escaños obtenidos. Se han calculado tomando los cuantiles del 0.025 y del 0.975 del número de escaños asignados a cada partido en cada provincia, por lo que estos intervalos son un tanto extremos. Los valores &lt;code class=&quot;highlight language-R&quot;&gt;ICmin95&lt;/code&gt;  y &lt;code class=&quot;highlight language-R&quot;&gt;ICmax95&lt;/code&gt; corresponden a un intervalo de credibilidad del 95% calculado con la distribución de escaños proporcionada por el modelo. Este intervalo de credibilidad  indica el número de escaños que obtendría un partido con una probabilidad del 95%. Asimismo, &lt;code class=&quot;highlight language-R&quot;&gt;ICmediana&lt;/code&gt; nos da el valor de la mediana de la distribución de escaños, que usamos como estimación puntual.&lt;/p&gt;
 
 &lt;p&gt;Los resultados por provincias pueden verse en el siguiente mapa y en la gráfica que aparece más abajo. Aquí hemos representado el reparto de escaños más probable en cada provincia.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2016-06-18-encuestas-generales/unnamed-chunk-4-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2016-06-18-encuestas-generales/unnamed-chunk-4-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Conviene comentar que hay provincias en las que la distribución de escaños más probable tiene una probabilidad muy pequeña. Por ejemplo, la provincia en la que hay probabilidades más cercanas entre las dos configuraciones de escaños más probables es Málaga, con las siguients configuraciones:&lt;/p&gt;
 
@@ -1416,7 +1588,7 @@
 
 &lt;p&gt;Partiendo de las probabilidades del número de escaños para cada partido podemos calcular las probabilidades de que distintas coaliciones igualen o superen el límte de 176 diputados para formar gobierno. A continuacón mostramos esta probabilidades para UP y PSOE, y PP y Ciudadanos.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2016-06-18-encuestas-generales/unnamed-chunk-6-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2016-06-18-encuestas-generales/unnamed-chunk-6-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La probabilidad de que UP y Podemos alcance los 176 escaños es de 0.22, mientras que la probabilidad de que PP y Ciudadanos lo consigan es de 0.&lt;/p&gt;
 
@@ -1424,7 +1596,7 @@
 
 &lt;p&gt;Para combinar las distintas encuestas hemos usado un modelo jerárquico Bayesiano que tiene en cuenta las encuestas nacionales, las autonómicas y, en caso de haberlas, las provinciales. El modelo es el mismo usado en las elecciones del  20 de diciembre, con la salvedad de que para arlgunas comunidades autónomas se ha utilizado un modelo que sólo se basa en encuestas regionales y provinciales.&lt;/p&gt;
 
-&lt;p&gt;##Referencias&lt;/p&gt;
+&lt;h2 id=&quot;referencias&quot;&gt;Referencias&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.electograph.com&quot;&gt;Electograph&lt;/a&gt;, como fuente de las encuestas que he usado&lt;/li&gt;
@@ -1432,9 +1604,9 @@
   &lt;li&gt;&lt;a href=&quot;http://datos.elespanol.com/elecciones-generales/la-cocina-26j/&quot;&gt;Artículo de Kiko Llaneras&lt;/a&gt;, como artículo relacionado (aunque nuestra metodología es bastante distinta) y que tiene unos gráficos bastante interesantes para mostrar los resultados del análisis&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;apéndice-1-resultados-por-provincias&quot;&gt;Apéndice 1: Resultados por provincias&lt;/h2&gt;
+&lt;h2 id=&quot;apéndice-resultados-por-provincias&quot;&gt;Apéndice: Resultados por provincias&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2016-06-18-encuestas-generales/unnamed-chunk-7-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2016-06-18-encuestas-generales/unnamed-chunk-7-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 18 Jun 2016 00:00:00 +0200</pubDate>
@@ -1453,8 +1625,8 @@
       </item>
     
       <item>
-        <title>Comparativa de Predicciones Elecciones Generales 20D</title>
-        <description>&lt;p&gt;&lt;strong&gt;IMPORTANTE:&lt;/strong&gt; Última actualización &lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;2017-12-18&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;07&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;32&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+        <title>Comparativa de predicciones de los resultados de las elecciones generales 20D</title>
+        <description>&lt;p&gt;&lt;strong&gt;IMPORTANTE:&lt;/strong&gt; Última actualización &lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;2018-08-15&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;36&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;55&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;ÚLTIMOS CAMBIOS&lt;/strong&gt;: Se han añadido las siguientes encuestas a la comparativa:&lt;/p&gt;
 
@@ -1472,7 +1644,7 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://datos.elespanol.com/elecciones-generales/la-cocina-20d/&quot;&gt;Kiko Llaneras&lt;/a&gt;, realizada para el periódico ‘El Español’&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://gianlubaio.blogspot.com.es/2015/12/political-forecasting-machine-spanish.html?spref=fb&quot;&gt;Roberto Cerina y Gianluca Baio&lt;/a&gt;, del University College London&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.uclm.es/profesorado/vgomez//elecciones/rstats/2015/12/14/encuestas-generales/&quot;&gt;Virgilio Gómez Rubio&lt;/a&gt;, yo mismo&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://becarioprecario.github.com/elecciones/rstats/2015/12/14/encuestas-generales/&quot;&gt;Virgilio Gómez Rubio&lt;/a&gt;, yo mismo&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Además, Kiko Llaneras y yo nos hemos apostado unas cervezas a ver quién afina más:&lt;/p&gt;
@@ -1803,7 +1975,7 @@
 
 &lt;p&gt;Por tanto, el siguiente mapa marca escaños asignados incorrectamente a un partido y partidos a los que no se asigno el escaño correspondiente.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-12-20-comparativa_predicciones/unnamed-chunk-5-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-12-20-comparativa_predicciones/unnamed-chunk-5-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 20 Dec 2015 00:00:00 +0100</pubDate>
@@ -1822,8 +1994,8 @@
       </item>
     
       <item>
-        <title>Predicciones Elecciones Generales 20D</title>
-        <description>&lt;h2 id=&quot;meta-análisis-de-encuestas-para-las-elecciones-generales-del-20d&quot;&gt;Meta-análisis de Encuestas para las Elecciones Generales del 20D&lt;/h2&gt;
+        <title>Predicción de los resultados de las elecciones generales del 20D</title>
+        <description>&lt;h2 id=&quot;meta-análisis-de-encuestas-para-las-elecciones-generales-del-20d&quot;&gt;Meta-análisis de encuestas para las elecciones generales del 20D&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Virgilio Gómez Rubio&lt;/strong&gt;&lt;/p&gt;
 
@@ -1902,13 +2074,13 @@
 
 &lt;p&gt;Los resultados por provincias pueden verse en el siguiente mapa y en la gráfica que aparece más abajo.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-12-14-encuestas-generales/unnamed-chunk-3-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-12-14-encuestas-generales/unnamed-chunk-3-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-3&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;metodología&quot;&gt;Metodología&lt;/h2&gt;
 
 &lt;p&gt;Para combinar las distintas encuestas hemos usado un modelo jerárquico Bayesiano que tiene en cuenta las encuestas nacionales, las autonómicas y, en caso de haberlas, las provinciales.&lt;/p&gt;
 
-&lt;p&gt;##Referencias&lt;/p&gt;
+&lt;h2 id=&quot;referencias&quot;&gt;Referencias&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.electograph.com&quot;&gt;Electograph&lt;/a&gt;, como fuente de las encuestas que he usado&lt;/li&gt;
@@ -1918,7 +2090,7 @@
 
 &lt;h2 id=&quot;apéndice-1-resultados-por-provincias&quot;&gt;Apéndice 1: Resultados por provincias&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-12-14-encuestas-generales/unnamed-chunk-4-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-12-14-encuestas-generales/unnamed-chunk-4-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 14 Dec 2015 00:00:00 +0100</pubDate>
@@ -1956,7 +2128,7 @@
 
 &lt;p&gt;Formalizando el problema, nuestro interés es estimar la proporción de votos que obtendrán los principales partidos y, posiblemente, el porcentaje de votos a otros partidos y en blanco. Para las elecciones municipales en Albacete seleccionamos a PP, PSOE, Ciudadanos, Ganemos y UpyD por ser los partidos con más posibilidades en el momento de hacer las encuestas. La distribución de escaños se realiza solamente sobre los votos válidos, así que el porcentaje de votos nulos se suele ignorar, así como la abstención.&lt;/p&gt;
 
-&lt;p&gt;###Selección de la muestra&lt;/p&gt;
+&lt;h3 id=&quot;selección-de-la-muestra&quot;&gt;Selección de la muestra&lt;/h3&gt;
 
 &lt;p&gt;Estadísticamente hablando, al conjunto de personas a las que hacemos las encuestas se conoce como &lt;em&gt;muestra&lt;/em&gt; y al total de electores como &lt;em&gt;población de estudio&lt;/em&gt; Lo que pretendemos es usar esa muestra para poder sacar conclusiones fiables de la población de estudio. Aunque generalmente cuanto mayor sea el tamaño de la muestra (es decir, el número de personas entrevistadas) mejores estimaciones obtendremos, hay una serie de consideraciones a tener en cuenta para que los resultados sean fiables:&lt;/p&gt;
 
@@ -1969,7 +2141,7 @@
 
 &lt;p&gt;El tamaño de la muestra se suele tomar de manera que el error (estadístico) cometido en las estimaciones de voto sea pequeño. El problema más común es que no hay presupuesto para alcanzar el error deseado y lo que se hace es estimar el error cometido en función del tamaño muestral que tengamos.&lt;/p&gt;
 
-&lt;p&gt;###Estimación de porcentajes&lt;/p&gt;
+&lt;h3 id=&quot;estimación-de-porcentajes&quot;&gt;Estimación de porcentajes&lt;/h3&gt;
 
 &lt;p&gt;Supongamos por un momento que estamos considerando el caso en el que únicamente tenemos dos partidos, &lt;em&gt;A&lt;/em&gt; y &lt;em&gt;B&lt;/em&gt;, y que estamos intentando estimar la intención de voto. Podemos considerar que los porcentajes de voto reales son &lt;script type=&quot;math/tex&quot;&gt;\pi_A&lt;/script&gt; y &lt;script type=&quot;math/tex&quot;&gt;\pi_B&lt;/script&gt;. Supongamos también que sólo se puede votar a estas dos opciones, de manera que &lt;script type=&quot;math/tex&quot;&gt;\pi_A = 1 - \pi_B&lt;/script&gt;.&lt;/p&gt;
 
@@ -1981,13 +2153,13 @@
 
 &lt;p&gt;Estas estimaciones serán más fiables cuanto mayor sea el número de personas que entrevistemos siempre y cuando la muestra sea representativa de toda la población. Además, si repitiésemos las encuestas tomando a otro grupo de 100 votantes, las proporciones estimadas seguramente varíen un poco, dependiendo del error que estemos cometiendo en la estimación.&lt;/p&gt;
 
-&lt;p&gt;###Estimación del error&lt;/p&gt;
+&lt;h3 id=&quot;estimación-del-error&quot;&gt;Estimación del error&lt;/h3&gt;
 
 &lt;p&gt;La estimación del error o la variabilidad de los resultados entre muestra y muestra la haremos por simulación. En concreto, supongamos que los porcentajes reales fueran conocidos y tales que &lt;script type=&quot;math/tex&quot;&gt;\pi_A=0.60&lt;/script&gt; y &lt;script type=&quot;math/tex&quot;&gt;\pi_B=0.40&lt;/script&gt;. Podríamos simular una encuesta seleccionando 100 respuestas al azar de manera que cada respuesta sea &lt;em&gt;A&lt;/em&gt; o &lt;em&gt;B&lt;/em&gt; de acuerdo a las proporciones anteriores. Si repetimos esto 1000 y hacemos un histograma de los resultados obtendríamos:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-1-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-1-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Lo que puede verse en esa gráfica es que la mayoría de las estimaciones quedan cerca del valor real, pero que también existe cierta variabilidad en las estimaciones. Podríamos dar un rango de valores (o &lt;em&gt;intervalo&lt;/em&gt;) que contenga el 95% de los valores estimados en cada muestra. Para el partido &lt;em&gt;A&lt;/em&gt; sería (0.51, 0.69) y para el partido &lt;em&gt;B&lt;/em&gt; sería (0.31, 0.49).&lt;/p&gt;
+&lt;p&gt;Lo que puede verse en esa gráfica es que la mayoría de las estimaciones quedan cerca del valor real, pero que también existe cierta variabilidad en las estimaciones. Podríamos dar un rango de valores (o &lt;em&gt;intervalo&lt;/em&gt;) que contenga el 95% de los valores estimados en cada muestra. Para el partido &lt;em&gt;A&lt;/em&gt; sería (0.5, 0.7) y para el partido &lt;em&gt;B&lt;/em&gt; sería (0.3, 0.5).&lt;/p&gt;
 
 &lt;p&gt;Como puede verse, ambos intervalos aparecen centrados en los valores reales y la amplitud es de dos veces &lt;script type=&quot;math/tex&quot;&gt;0.10&lt;/script&gt;. Este valor es lo que reportaríamos como error. Este valor viene a decir que en el 95% de las encuestas que hagamos, el valor real de la proporción va a estar, como mucho, a &lt;script type=&quot;math/tex&quot;&gt;0.10&lt;/script&gt; del valor real de la proporción de votantes.&lt;/p&gt;
 
@@ -2001,7 +2173,7 @@
 
 &lt;p&gt;Para las 100 encuestas (es decir, &lt;script type=&quot;math/tex&quot;&gt;n = 100&lt;/script&gt;) que hemos hecho en las simulaciones el error estimado sería de 0.098, que se parece mucho al error que aparece en las simulaciones.&lt;/p&gt;
 
-&lt;p&gt;###Encuestas a las elecciones municipales en Albacete el 24M&lt;/p&gt;
+&lt;h3 id=&quot;encuestas-a-las-elecciones-municipales-en-albacete-el-24m&quot;&gt;Encuestas a las elecciones municipales en Albacete el 24M&lt;/h3&gt;
 
 &lt;p&gt;En la práctica tendremos una situación en la que hay varios partidos con porcentajes de voto muy distintos. Los &lt;a href=&quot;http://resultados.elpais.com/elecciones/2015/municipales/07/02/03.html&quot;&gt;resultados de las elecciones municipales en Albacete&lt;/a&gt; del 24 de mayo de 2014 aparecen en la tabla de abajo. También hemos incluído los resultados de las encuestas realizadas por los alumnos de 1ºD y 1ºE de la Escuela de Ingenieros Industriales de Albacete, así como la encuesta publicada por el periódico &lt;a href=&quot;http://www.latribunadealbacete.es/noticia/Z78EC9BE7-C650-FF38-3B04D75BFA22A2B5/20150511/pp/sera/partido/mas/votado/cerca/mayoria/absoluta&quot;&gt;La Tribuna de Albacete&lt;/a&gt;.&lt;/p&gt;
 
@@ -2105,11 +2277,11 @@
 
 &lt;p&gt;Para estimar el error de las encuestas realizadas, podemos repetir el experimento anterior y simular respuestas a las encuestas usando los porcentajes reales de voto para ver cuál sería la variabilidad esperada y compararla con los resultados obtenidos. La siguiente gráfica muestra la variabilidad de acuerdo al número de encuestas realizado,  el porcentaje de voto estimado en nuestra  encuesta (en negro) y el de La Tribuna (en rojo):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-4-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-4-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Lo más remarcable es el &lt;em&gt;voto oculto&lt;/em&gt; que experimentan PP y PSOE en nuestras encuestas. Las encuestas subestiman el porcentaje de voto real a estos dos partidos, que quedaría englobado en el apartado de OTROS.&lt;/p&gt;
 
-&lt;p&gt;###Estimación del número de concejales&lt;/p&gt;
+&lt;h3 id=&quot;estimación-del-número-de-concejales&quot;&gt;Estimación del número de concejales&lt;/h3&gt;
 
 &lt;p&gt;Una vez que se ha realizado el cómputo de los votos válidos se realiza la distribución de concejales, que para la ciudad de Albacete son 27. Al reparto sólo pueden acceder los partidos que hayan obtenido al menos un 5% de los votos válidos, y éste se realiza de acuerdo a la &lt;a href=&quot;https://es.wikipedia.org/wiki/Sistema_d%27Hondt&quot;&gt;Ley d’Hont&lt;/a&gt;.&lt;/p&gt;
 
@@ -2226,11 +2398,11 @@
 
 &lt;p&gt;Igual que hemos hecho con los porcentajes de voto, también es posible estimar cuántos escaños obtendría cada partido por simulación. La gráfica que aparece a continuación muestran el número de escaños que obtendríamos con las simulaciones de las encuestas (usando los porcentajes de voto reales), el que obtuvimos con nuestas encuestas (en negro) y el publicado por el periódico La Tribuna de Albacete (en rojo). Como puede verse, en general nuestros resultados no estaban muy alejados de los resultados reales pero sí que quedaban fuera de lo deseable.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-7-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-7-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Como nuestras encuestas sobrestimaron el número de votos a Ciudadanos este partido parece obtener un número de escaños mucho mayor de los que en realidad tuvo. Para el resto de partidos los resultados sí que fueron bastante cercanos, aunquefuera de lo que cabría esperar por la variabilidad del muestreo. Los resultados de la encuesta del periódico La Tribuna cayeron dentro de lo que cabría esperar de acuerdo al error esperado e incluso parece que afinaron más que en nuestra encuesta.&lt;/p&gt;
 
-&lt;p&gt;###Agradecimientos&lt;/p&gt;
+&lt;h3 id=&quot;agradecimientos&quot;&gt;Agradecimientos&lt;/h3&gt;
 
 &lt;p&gt;Este trabajo no se habría llevado a cabo sin el entusiasmo y la colaboración de Mario Plaza Delgado, que es el verdadero impulsor del desarrollo de las encuestas. También hay que agradecer a los alumnos de 1ºD y ºE del Grado en Ingeniería Industrial del curso 2014-2015 por participar en la recogida de encuestas.  La Escuela de Industriales de Albacete y el Departamento de Matemáticas de la UCLM también aportaron medios económicos para poder llevar a cabo las encuestas.&lt;/p&gt;
 
@@ -2251,10 +2423,10 @@
       </item>
     
       <item>
-        <title>Prediccion de escanyos en las elecciones catalanas del 27S usando encuestas pronvinciales y regionales</title>
-        <description>&lt;p&gt;##Análisis Bayesiano de las encuestas de las elecciones catalanas del 27S&lt;/p&gt;
+        <title>Predicción de escaños en las elecciones catalanas del 27S usando encuestas pronvinciales y regionales</title>
+        <description>&lt;h2 id=&quot;análisis-bayesiano-de-las-encuestas-de-las-elecciones-catalanas-del-27s&quot;&gt;Análisis Bayesiano de las encuestas de las elecciones catalanas del 27S&lt;/h2&gt;
 
-&lt;p&gt;###Predicción de escaños a patir de varias encuestas regionales y provinciales&lt;/p&gt;
+&lt;h3 id=&quot;predicción-de-escaños-a-partir-de-varias-encuestas-regionales-y-provinciales&quot;&gt;Predicción de escaños a partir de varias encuestas regionales y provinciales&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Virgilio Gómez Rubio&lt;/strong&gt;&lt;/p&gt;
 
@@ -2264,13 +2436,13 @@
 
 &lt;p&gt;&lt;em&gt;Campus de Albacete&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;##Introducción&lt;/p&gt;
+&lt;h2 id=&quot;introducción&quot;&gt;Introducción&lt;/h2&gt;
 
 &lt;p&gt;En este tercer análisis de las encuestas de las elecciones catalanas del 27S usamos un modelo jerárquico Bayesiano para combinar la información de las encuestas regionales y provinciales. El objetivo es usar toda la información disponible para mejorar la predicción de escaños sin importar la escala geográfica a la que se hayan hecho la encuestas.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Actualización:&lt;/strong&gt; Se han añadido los escaños reales a las gráficas y una mención a las estimaciones de &lt;a href=&quot;http://www.elespanol.com/elecciones-catalanas/como-votaran-los-catalanes-una-prediccion-del-27s-a-partir-de-las-encuestas/&quot;&gt;Kiko Llaneras&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;##Métodos&lt;/p&gt;
+&lt;h2 id=&quot;métodos&quot;&gt;Métodos&lt;/h2&gt;
 
 &lt;p&gt;De manera similar a los artículos anteriores, hemos considerado encuestas de intención de voto para intentar predecir el número de escaños. Los datos que hemos utilizado son los mismos que en los dos análisis anteriores y no se reproducen aquí..&lt;/p&gt;
 
@@ -2308,7 +2480,7 @@
 
 &lt;p&gt;A la hora de ajustar el modelo usando simulación MCMC hemos usado 5000 iteraciones de calentamiento y otras 10000 para obtener las estimaciones de los parámetros. A la hora de generar estas simulaciones, nos hemos quedado con 1 de cada 10 simulaciones para disminuir la autocorrelación. Además, con cada una de estas 10000 simulaciones hemos estimado el número de escaños que correspondería a cada partido para obtener una simulación de los escaños por provincias y totales.&lt;/p&gt;
 
-&lt;p&gt;##Resultados&lt;/p&gt;
+&lt;h2 id=&quot;resultados&quot;&gt;Resultados&lt;/h2&gt;
 
 &lt;p&gt;Una vez que hemos ajustado el modelo, podemos estimar el número de escaños por provincia usando las medias a posteriori de los porcentajes de voto por provincias y partidos:&lt;/p&gt;
 
@@ -2478,17 +2650,17 @@
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Min.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;57.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;13.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;0e+00&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;17.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;9.0000&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;1st Qu.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8.000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;62.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;0e+00&lt;/td&gt;
@@ -2498,7 +2670,7 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Median&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8.000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;63.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;17.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;0e+00&lt;/td&gt;
@@ -2508,18 +2680,18 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Mean&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.3546&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;63.4556&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.6234&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1e-04&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14.7958&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.4006&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.3699&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8.381&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;63.4377&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;16.6398&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3e-04&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;14.8129&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;20.3751&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;11.3532&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;3rd Qu.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;65.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;9.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;64.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;17.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;0e+00&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
@@ -2528,10 +2700,10 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Max.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;68.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1e+00&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;11.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;70.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;21.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;2e+00&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;19.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;25.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
@@ -2558,7 +2730,7 @@
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;2.5%&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;60&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;61&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;15&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;13&lt;/td&gt;
@@ -2631,21 +2803,21 @@
 
 &lt;p&gt;El modelo Bayesiano nos combina los datos de las distintas encuestas de manera que se obtiene una estimación de las proporciones de voto mucho más fiable y, por tanto, del número de escaños obtenido por cada partido. La siguiente figura muestra las distribuciones marginales a posteriori de los escaños obtenidos por cada partido. Se han incluido los escaños reales de las elecciones.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-09-27-encuestas-COMB/unnamed-chunk-13-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-09-27-encuestas-COMB/unnamed-chunk-13-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Por último, vamos a mostrar en una gráfica el número de escaños que obtendrían los partidos independentistas, junto con el límite de 68 escaños que marca la mayoría absoluta:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-09-27-encuestas-COMB/unnamed-chunk-14-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-14&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-09-27-encuestas-COMB/unnamed-chunk-14-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-14&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La gráfica indica que los partidos nacionalistas obtendrían una mayoría absoluta con una gran probabilidad.&lt;/p&gt;
 
-&lt;p&gt;##Conclusiones&lt;/p&gt;
+&lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
 
-&lt;p&gt;Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones catalanas de 27 de septiembre de 2015. Los resultados muestran que los partidos nacionalistas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 99.71%.&lt;/p&gt;
+&lt;p&gt;Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones catalanas de 27 de septiembre de 2015. Los resultados muestran que los partidos nacionalistas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 99.67%.&lt;/p&gt;
 
 &lt;p&gt;Por algún motivo, este modelo proporciona resultados muy similares a los obtenidos usando solamente las encuestas a nivel provincial. Esto puede deberse a que el modelo produce un sobreajuste de los porcentajes de voto a nivel provincial.&lt;/p&gt;
 
-&lt;p&gt;##Apéndice: Software y datos utilizados&lt;/p&gt;
+&lt;h2 id=&quot;apéndice-software-y-datos-utilizados&quot;&gt;Apéndice: Software y datos utilizados&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.r-project.org&quot;&gt;R&lt;/a&gt;, para el análisis de datos&lt;/li&gt;
@@ -3115,22 +3287,22 @@
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Min.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;58.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;13.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0e+00&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;12.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17.000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;9.0000&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;1st Qu.&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;8.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;63.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0e+00&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;14.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;20.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -3138,39 +3310,39 @@
       &lt;td style=&quot;text-align: right&quot;&gt;8.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;64.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0e+00&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;20.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Mean&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.2516&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;63.6729&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.4658&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2e-04&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14.7688&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.459&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.3817&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8.2545&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;63.6836&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;16.4667&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;14.7819&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;20.4298&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;11.3835&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;3rd Qu.&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;9.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;65.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;17.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0e+00&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;21.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;21.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;12.0000&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Max.&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;69.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2e+00&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;21.0000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;19.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;25.000&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;25.0000&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -3194,7 +3366,7 @@
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;2.5%&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;61&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;14&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
@@ -3206,7 +3378,7 @@
       &lt;td style=&quot;text-align: left&quot;&gt;97.5%&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;67&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;18&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;19&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;17&lt;/td&gt;
       &lt;td style=&quot;text-align: right&quot;&gt;23&lt;/td&gt;
@@ -3217,17 +3389,17 @@
 
 &lt;p&gt;El modelo Bayesiano nos combina los datos de las distintas encuestas de manera que se obtiene una estimación de las proporciones de voto mucho más fiable. La siguiente figura muestra las distribuciones marginales a posteriori de los escaños obtenidos por cada partido:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-09-26-encuestas-CATPROV/unnamed-chunk-12-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-12&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-09-26-encuestas-CATPROV/unnamed-chunk-12-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-12&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Por último, vamos a mostrar en una gráfica el número de escaños que obtendrían los partidos independentistas, junto con el límite de 68 escaños que marca la mayoría absoluta:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-09-26-encuestas-CATPROV/unnamed-chunk-13-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-09-26-encuestas-CATPROV/unnamed-chunk-13-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La gráfica indica que los partidos nacionalistas obtendrían una mayoría absoluta con una gran probabilidad.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
 
-&lt;p&gt;Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones catalanas de 27 de septiembre de 2015. Los resultados muestran que los partidos nacionalistas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 99.76%.&lt;/p&gt;
+&lt;p&gt;Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones catalanas de 27 de septiembre de 2015. Los resultados muestran que los partidos nacionalistas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 99.78%.&lt;/p&gt;
 
 &lt;h2 id=&quot;apéndice-software-y-datos-utilizados&quot;&gt;Apéndice: Software y datos utilizados&lt;/h2&gt;
 
@@ -3492,15 +3664,15 @@
 
 &lt;p&gt;El modelo Bayesiano nos combina los datos de las distintas encuestas de manera que se obtiene una estimación de las proporciones de voto mucho más fiable. La siguiente figura muestra las distribuciones marginales a posteriori de las proporciones de voto según partido:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-09-24-encuestas-CAT/unnamed-chunk-5-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-09-24-encuestas-CAT/unnamed-chunk-5-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;También se podrían agrupar los porcentajes de votos en partidos independentistas (CUP y Junts pel Sí),  no independentintas (el resto de partidos considerados) y otros/votos en blanco. Con esta agrupación, tendríamos:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-09-24-encuestas-CAT/unnamed-chunk-6-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-09-24-encuestas-CAT/unnamed-chunk-6-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Por último, si consideramos la diferencia en el voto entre partidos independentinstas y no independentistas:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/profesorado/vgomez/figure/source/2015-09-24-encuestas-CAT/unnamed-chunk-7-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2015-09-24-encuestas-CAT/unnamed-chunk-7-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;De esta manera, parece que los votos recibidos por los partidos no independentistas superarían de manera clara a los de los independentistas, aunque esta diferencia es pequeña. De alrededor de un 3%.&lt;/p&gt;
 
