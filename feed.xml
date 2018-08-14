@@ -3,10 +3,10 @@
   <channel>
     <title>Blogario Precario</title>
     <description>A random walk on blogging</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 15 Aug 2018 01:44:15 +0200</pubDate>
-    <lastBuildDate>Wed, 15 Aug 2018 01:44:15 +0200</lastBuildDate>
+    <link>https://becarioprecario.github.io/</link>
+    <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 15 Aug 2018 01:55:38 +0200</pubDate>
+    <lastBuildDate>Wed, 15 Aug 2018 01:55:38 +0200</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
@@ -412,8 +412,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 15 Dec 2017 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</guid>
         
         <category>Cataluna</category>
         
@@ -924,8 +924,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</guid>
         
         <category>Pais Vasco</category>
         
@@ -1368,8 +1368,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</guid>
         
         <category>Galicia</category>
         
@@ -1610,8 +1610,8 @@
 
 </description>
         <pubDate>Sat, 18 Jun 2016 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2016/06/18/encuestas-generales/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2016/06/18/encuestas-generales/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2016/06/18/encuestas-generales/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2016/06/18/encuestas-generales/</guid>
         
         <category>Espana</category>
         
@@ -1979,8 +1979,8 @@
 
 </description>
         <pubDate>Sun, 20 Dec 2015 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2015/12/20/comparativa_predicciones/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2015/12/20/comparativa_predicciones/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/20/comparativa_predicciones/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/20/comparativa_predicciones/</guid>
         
         <category>Espana</category>
         
@@ -2094,8 +2094,8 @@
 
 </description>
         <pubDate>Mon, 14 Dec 2015 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2015/12/14/encuestas-generales/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2015/12/14/encuestas-generales/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/14/encuestas-generales/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/14/encuestas-generales/</guid>
         
         <category>Espana</category>
         
@@ -2408,8 +2408,8 @@
 
 </description>
         <pubDate>Tue, 01 Dec 2015 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2015/12/01/encuestas-electorales/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2015/12/01/encuestas-electorales/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/01/encuestas-electorales/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/01/encuestas-electorales/</guid>
         
         <category>Albacete</category>
         
@@ -2829,8 +2829,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 27 Sep 2015 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2015/09/27/encuestas-COMB/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2015/09/27/encuestas-COMB/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/27/encuestas-COMB/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/27/encuestas-COMB/</guid>
         
         <category>Cataluna</category>
         
@@ -3413,8 +3413,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 26 Sep 2015 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2015/09/26/encuestas-CATPROV/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2015/09/26/encuestas-CATPROV/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/26/encuestas-CATPROV/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/26/encuestas-CATPROV/</guid>
         
         <category>Cataluna</category>
         
@@ -3690,8 +3690,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 24 Sep 2015 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2015/09/24/encuestas-CAT/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2015/09/24/encuestas-CAT/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/24/encuestas-CAT/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/24/encuestas-CAT/</guid>
         
         <category>Cataluna</category>
         
