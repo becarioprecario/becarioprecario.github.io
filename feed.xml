@@ -5,15 +5,15 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 05 Dec 2018 12:55:41 +0100</pubDate>
-    <lastBuildDate>Wed, 05 Dec 2018 12:55:41 +0100</lastBuildDate>
+    <pubDate>Wed, 05 Dec 2018 12:59:10 +0100</pubDate>
+    <lastBuildDate>Wed, 05 Dec 2018 12:59:10 +0100</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
         <title>JSS Special Issue on Bayesian Statistics</title>
         <description>&lt;p&gt;The Journal of Statistical Software (JSS) now reached an impact factor of over 22, and recently ended highest in the category “statistics and probability” on the ISI web of knowledge ranking.&lt;/p&gt;
 
-&lt;p&gt;Special issues of JSS are very popular and get a lot of citations.  We now invite papers for a special issue of the Journal of Statistical Software on “Bayesian Statistics”. The conditions are the regular ones of (JSS submissions)[http://www.jstatsoft.org/], but the special issue aims at bringing together articles presenting open-source software developed by the authors focusing on (but not limited to) the following topics:&lt;/p&gt;
+&lt;p&gt;Special issues of JSS are very popular and get a lot of citations.  We now invite papers for a special issue of the Journal of Statistical Software on “Bayesian Statistics”. The conditions are the regular ones of &lt;a href=&quot;http://www.jstatsoft.org/&quot;&gt;JSS submissions&lt;/a&gt;, but the special issue aims at bringing together articles presenting open-source software developed by the authors focusing on (but not limited to) the following topics:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Bayesian modelling and inference.&lt;/li&gt;
