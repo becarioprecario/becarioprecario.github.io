@@ -5,9 +5,53 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 02 Dec 2018 20:22:12 +0100</pubDate>
-    <lastBuildDate>Sun, 02 Dec 2018 20:22:12 +0100</lastBuildDate>
+    <pubDate>Wed, 05 Dec 2018 12:55:41 +0100</pubDate>
+    <lastBuildDate>Wed, 05 Dec 2018 12:55:41 +0100</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>JSS Special Issue on Bayesian Statistics</title>
+        <description>&lt;p&gt;The Journal of Statistical Software (JSS) now reached an impact factor of over 22, and recently ended highest in the category “statistics and probability” on the ISI web of knowledge ranking.&lt;/p&gt;
+
+&lt;p&gt;Special issues of JSS are very popular and get a lot of citations.  We now invite papers for a special issue of the Journal of Statistical Software on “Bayesian Statistics”. The conditions are the regular ones of (JSS submissions)[http://www.jstatsoft.org/], but the special issue aims at bringing together articles presenting open-source software developed by the authors focusing on (but not limited to) the following topics:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bayesian modelling and inference.&lt;/li&gt;
+  &lt;li&gt;Software for Bayesian Data Analysis.&lt;/li&gt;
+  &lt;li&gt;Software for Bayesian Statistics.&lt;/li&gt;
+  &lt;li&gt;Model selection and assessment.&lt;/li&gt;
+  &lt;li&gt;Priors in Bayesian analysis.&lt;/li&gt;
+  &lt;li&gt;Visualization of results.&lt;/li&gt;
+  &lt;li&gt;Bayesian data analysis of highly structured data.&lt;/li&gt;
+  &lt;li&gt;High-performance computing for Bayesian data analysis.&lt;/li&gt;
+  &lt;li&gt;Bayesian methods for the analysis of ‘Big Data’.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Authors who intend to submit an article for this special issue are strongly encouraged to submit paper title, authors, and a preliminary abstract to Virgilio.Gomez@uclm.es or michela.cameletti@unibg.it before December 31st, 2018.&lt;/p&gt;
+
+&lt;p&gt;Guest editors for this special issue are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dr. Michela Cameletti (University of Bergamo, Italy)&lt;/li&gt;
+  &lt;li&gt;Dr. Virgilio Gomez-Rubio (University of Castilla-La Mancha, Spain)&lt;/li&gt;
+  &lt;li&gt;Prof. Martyn Plummer (Warwick University, UK)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Deadline for papers is Jun 30th, 2019. Submissions must clearly state that they are to be considered for this Special Issue, by mentioning it in the cover letter or by leaving a comment in the upload form.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate>
+        <link>https://becarioprecario.github.io/posts/rstats/2018/12/01/JSS-Special-Issue/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/rstats/2018/12/01/JSS-Special-Issue/</guid>
+        
+        <category>JSS</category>
+        
+        <category>Bayesian statistics</category>
+        
+        
+        <category>rstats</category>
+        
+      </item>
     
       <item>
         <title>Predicción de escaños en las elecciones andaluzas del 2D usando encuestas provinciales y regionales</title>
@@ -2434,7 +2478,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-1-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Lo que puede verse en esa gráfica es que la mayoría de las estimaciones quedan cerca del valor real, pero que también existe cierta variabilidad en las estimaciones. Podríamos dar un rango de valores (o &lt;em&gt;intervalo&lt;/em&gt;) que contenga el 95% de los valores estimados en cada muestra. Para el partido &lt;em&gt;A&lt;/em&gt; sería (0.5, 0.7) y para el partido &lt;em&gt;B&lt;/em&gt; sería (0.3, 0.5).&lt;/p&gt;
+&lt;p&gt;Lo que puede verse en esa gráfica es que la mayoría de las estimaciones quedan cerca del valor real, pero que también existe cierta variabilidad en las estimaciones. Podríamos dar un rango de valores (o &lt;em&gt;intervalo&lt;/em&gt;) que contenga el 95% de los valores estimados en cada muestra. Para el partido &lt;em&gt;A&lt;/em&gt; sería (0.50975, 0.69) y para el partido &lt;em&gt;B&lt;/em&gt; sería (0.31, 0.49025).&lt;/p&gt;
 
 &lt;p&gt;Como puede verse, ambos intervalos aparecen centrados en los valores reales y la amplitud es de dos veces &lt;script type=&quot;math/tex&quot;&gt;0.10&lt;/script&gt;. Este valor es lo que reportaríamos como error. Este valor viene a decir que en el 95% de las encuestas que hagamos, el valor real de la proporción va a estar, como mucho, a &lt;script type=&quot;math/tex&quot;&gt;0.10&lt;/script&gt; del valor real de la proporción de votantes.&lt;/p&gt;
 
@@ -2564,108 +2608,9 @@
 
 &lt;p&gt;Para el caso concreto de Albacete, la siguiente tabla muestra las puntuaciones según el número real de votos obtenido:&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;PP&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;PSOE&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Ganemos&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Cs&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;UPyD&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/1&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;29351&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;23944&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;13446&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;11902&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1532&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/2&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;14676&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;11972&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;6723&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;5951&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;766&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/3&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;9784&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;7981&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;4482&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;3967&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;510.7&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/4&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;7338&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;5986&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;3362&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;2976&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;383&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/5&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;5870&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;4789&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;2689&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2380&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;306.4&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/6&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;4892&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;3991&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2241&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1984&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;255.3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/7&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;4193&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;3421&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1921&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1700&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;218.9&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/8&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;3669&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;2993&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1681&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1488&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;191.5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/9&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;3261&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2660&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1494&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1322&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;170.2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/10&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;2935&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2394&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1345&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1190&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;153.2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/11&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2668&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2177&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1222&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1082&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;139.3&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## Error in library(pander): there is no package called &amp;#39;pander&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## Error in pandoc.table(tab.dhont[, -6], emphasize.verbatim.cells = which(tab.dhont[, : no se pudo encontrar la función &amp;quot;pandoc.table&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Se han marcado las 27 puntuaciones más altas que son las que proporcionan algún concejal. UPyD no participa en el reparto de concejales porque no ha llegado al mínimo del 5% de los votos válidos. Aun así, vemos que hubiera quedado muy lejos de obtener un concejal en caso de haber entrado.&lt;/p&gt;
 
@@ -3106,590 +3051,6 @@
         <pubDate>Sun, 27 Sep 2015 00:00:00 +0200</pubDate>
         <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/27/encuestas-COMB/</link>
         <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/27/encuestas-COMB/</guid>
-        
-        <category>Cataluna</category>
-        
-        
-        <category>elecciones</category>
-        
-        <category>rstats</category>
-        
-      </item>
-    
-      <item>
-        <title>Predicción de escaños en las elecciones catalanas del 27S</title>
-        <description>&lt;h2 id=&quot;análisis-bayesiano-de-las-encuestas-de-las-elecciones-catalanas-del-27s&quot;&gt;Análisis Bayesiano de las encuestas de las elecciones catalanas del 27S&lt;/h2&gt;
-
-&lt;h3 id=&quot;predicción-de-escaños-a-partir-de-varias-encuestas&quot;&gt;Predicción de escaños a partir de varias encuestas&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Virgilio Gómez Rubio&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Departamento de Matemáticas&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Universidad de Castilla-La Mancha&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Campus de Albacete&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;introducción&quot;&gt;Introducción&lt;/h2&gt;
-
-&lt;p&gt;Después de hacer una análisis combinando varias encuestas para modelizar el procentaje de votos que obtendría cada partido en las elecciones catalanas del 27S, nos centraremos ahora en la predicción de escaños. Para ellos usaremos datos de varias encuentas para las que existen resultados a niven provincial, que es la circunscripción electoral. A la hora de combinar las encuestas usaremos un modelo jerárquico Bayesiano basado, que se describe más abajo.&lt;/p&gt;
-
-&lt;h2 id=&quot;métodos&quot;&gt;Métodos&lt;/h2&gt;
-
-&lt;p&gt;Hemos encontrado referencias a 4 encuestas publicadas en medios de comunicación que recogen la intención de voto a nivel provincial. Queremos combinar estas encuestas para obtener una estimación más precisa de los porcentajes de voto a nivel provincial y, a partir de aquí, obtener una estimación de los escaños obtenidos por cada partido en cada provincia y de ahí sacar el número de escaños totales.&lt;/p&gt;
-
-&lt;p&gt;En concreto, las encuestas que hemos considerado en este análisis se han obtenido de diversas webs y se han resumido en una tabla. Los datos son:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Empresa&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Provincia&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Dato&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;N&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Error&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CUP&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;JpSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CatSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Unio&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PSC&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Cs&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PP&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;OTROSBL&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DYM&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Barcelona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Escaños&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;533&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;35.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Gerona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Escaños&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;209&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Lérida&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Escaños&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;211&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Tarragona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Escaños&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;204&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;CIS&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Barcelona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Votos&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1201&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;35.10&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;13.10&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.20&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.20&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.90&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Gerona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Votos&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;597&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4.1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5.30&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;52.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6.90&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.90&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.50&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Lérida&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Votos&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;605&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4.1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;53.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5.30&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.90&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5.80&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Tarragona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Votos&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;596&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4.1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4.60&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;39.20&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10.20&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.70&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.30&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17.80&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5.60&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Feedback&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Barcelona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Escaños&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Gerona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Escaños&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Lérida&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Escaños&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Tarragona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Escaños&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;GESOP&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Barcelona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Votos&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;383&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.14&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;46.21&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10.70&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.57&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.88&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.40&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4.70&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.39&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Gerona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Votos&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;48&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;12.50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;60.42&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.08&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.08&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4.17&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10.42&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.08&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6.25&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Lérida&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Votos&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;28&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.57&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;75.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.57&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14.29&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.57&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Tarragona&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Votos&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;56&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7.14&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;57.14&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7.14&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.79&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7.14&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14.29&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5.36&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.00&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Algunas de las encuestas muestran ya directamente los escaños estimados para cada partido, con lo que no las hemos incorporado en nuestro modelo.&lt;/p&gt;
-
-&lt;p&gt;Usaremos un modelo jerárquico Bayesiano multinomial-Dirichlet para combinar todos los resultados y obtener estimaciones más precisas de las proporciones de voto en cada provincia.&lt;/p&gt;
-
-&lt;p&gt;Hemos usado el paquete &lt;strong&gt;rjags&lt;/strong&gt; para ajustar el modelo Bayesiano usando este código:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt; model &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.encuestas&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;j &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.provincias&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-     votos&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; j&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.partidos&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; dmulti&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;p&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.partidos&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; n&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; j&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-     
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-   &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;j &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.provincias&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-     p&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.partidos&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; ddirch&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alpha&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.partidos&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;A la hora de ajustar el modelo usando simulación MCMC hemos usado 5000 iteraciones de calentamiento y otras 10000 para obtener las estimaciones de los parámetros. A la hora de generar estas simulaciones, nos hemos quedado con 1 de cada 10 simulaciones para disminuir la autocorrelación. Además, con cada una de estas 10000 simulaciones hemos estimado el número de escaños que correspondería a cada partido para obtener una simulación de los escaños por provincias y totales.&lt;/p&gt;
-
-&lt;h2 id=&quot;resultados&quot;&gt;Resultados&lt;/h2&gt;
-
-&lt;p&gt;Una vez que hemos ajsutado el modelo, podemos estimar el número de escaños por provincia usando las medias a posteriori de los porcentajes de voto por provincias y partidos:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Barcelona&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Gerona&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Lérida&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Tarragona&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;CatSi&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;13&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Cs&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;CUP&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;JpSi&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;34&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;OTROSBL&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PP&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PSC&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Unio&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Los escaños totales por partidos serían:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;escanyos&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;CatSi&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Cs&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;CUP&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;JpSi&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;63&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;OTROSBL&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PP&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PSC&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Unio&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Para dar una medida de la variabilidad de esta estimación, hemos usado los resultados de las simulaciones para estimar el número de escaños totales que cada partido obtendría. Para ello hemos usado los porcentajes estimados en cada iteración y calculado los escaños. Posteriormente, hemos calculado una serie de estadísticos resumen con los escaños obtenidos por cada partido.&lt;/p&gt;
-
-&lt;p&gt;Aquí vemos los estadísticos resumen:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CUP&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;JpSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CatSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Unio&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PSC&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Cs&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PP&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Min.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;58.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;12.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.0000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1st Qu.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;63.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Median&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;64.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Mean&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.2545&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;63.6836&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.4667&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14.7819&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.4298&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.3835&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;3rd Qu.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;65.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;21.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;12.0000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Max.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;69.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;21.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;19.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;25.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Y aquí tenemos un intervalo de credibilidad al 95% para el número de escaños por partido:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CUP&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;JpSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CatSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Unio&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PSC&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Cs&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PP&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2.5%&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;61&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;13&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;18&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;97.5%&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;67&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;19&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;23&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;13&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;El modelo Bayesiano nos combina los datos de las distintas encuestas de manera que se obtiene una estimación de las proporciones de voto mucho más fiable. La siguiente figura muestra las distribuciones marginales a posteriori de los escaños obtenidos por cada partido:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/figure/source/2015-09-26-encuestas-CATPROV/unnamed-chunk-12-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-12&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Por último, vamos a mostrar en una gráfica el número de escaños que obtendrían los partidos independentistas, junto con el límite de 68 escaños que marca la mayoría absoluta:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/figure/source/2015-09-26-encuestas-CATPROV/unnamed-chunk-13-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;La gráfica indica que los partidos nacionalistas obtendrían una mayoría absoluta con una gran probabilidad.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
-
-&lt;p&gt;Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones catalanas de 27 de septiembre de 2015. Los resultados muestran que los partidos nacionalistas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 99.78%.&lt;/p&gt;
-
-&lt;h2 id=&quot;apéndice-software-y-datos-utilizados&quot;&gt;Apéndice: Software y datos utilizados&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.r-project.org&quot;&gt;R&lt;/a&gt;, para el análisis de datos&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.elconfidencial.com/espana/cataluna/elecciones-catalanas/2015-09-18/mas-y-la-cup-logran-la-mayoria-absoluta-por-escanos-y-rozarian-ya-el-50-de-los-votos_1023124/&quot;&gt;Encuesta de El Confidencial&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://elpais.com/elpais/2015/09/10/media/1441883592_651182.html&quot;&gt;Sondeo del CIS (El País)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cis.es/cis/export/sites/default/-Archivos/Marginales/3100_3119/3108/Es3108_mapa_pdf.htm&quot;&gt;Sondeo del CIS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.elperiodico.com/es/noticias/politica/27s-encuesta-elecciones-catalunya-gesop-abierto-4491030&quot;&gt;Encuesta de El Periódico&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.elespanol.com/elecciones-catalanas/como-votaran-los-catalanes-una-prediccion-del-27s-a-partir-de-las-encuestas/&quot;&gt;Artículo de Kiko Llaneras en El Español&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 26 Sep 2015 00:00:00 +0200</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/26/encuestas-CATPROV/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/26/encuestas-CATPROV/</guid>
         
         <category>Cataluna</category>
         

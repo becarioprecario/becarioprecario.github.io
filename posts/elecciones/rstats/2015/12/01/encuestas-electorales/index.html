@@ -140,7 +140,7 @@
 
 <p><img src="/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /></p>
 
-<p>Lo que puede verse en esa gráfica es que la mayoría de las estimaciones quedan cerca del valor real, pero que también existe cierta variabilidad en las estimaciones. Podríamos dar un rango de valores (o <em>intervalo</em>) que contenga el 95% de los valores estimados en cada muestra. Para el partido <em>A</em> sería (0.5, 0.7) y para el partido <em>B</em> sería (0.3, 0.5).</p>
+<p>Lo que puede verse en esa gráfica es que la mayoría de las estimaciones quedan cerca del valor real, pero que también existe cierta variabilidad en las estimaciones. Podríamos dar un rango de valores (o <em>intervalo</em>) que contenga el 95% de los valores estimados en cada muestra. Para el partido <em>A</em> sería (0.50975, 0.69) y para el partido <em>B</em> sería (0.31, 0.49025).</p>
 
 <p>Como puede verse, ambos intervalos aparecen centrados en los valores reales y la amplitud es de dos veces <script type="math/tex">0.10</script>. Este valor es lo que reportaríamos como error. Este valor viene a decir que en el 95% de las encuestas que hagamos, el valor real de la proporción va a estar, como mucho, a <script type="math/tex">0.10</script> del valor real de la proporción de votantes.</p>
 
@@ -270,108 +270,9 @@
 
 <p>Para el caso concreto de Albacete, la siguiente tabla muestra las puntuaciones según el número real de votos obtenido:</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"> </th>
-      <th style="text-align: center">PP</th>
-      <th style="text-align: center">PSOE</th>
-      <th style="text-align: center">Ganemos</th>
-      <th style="text-align: center">Cs</th>
-      <th style="text-align: center">UPyD</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><strong>Nº votos/1</strong></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">29351</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">23944</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">13446</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">11902</span></code></td>
-      <td style="text-align: center">1532</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Nº votos/2</strong></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">14676</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">11972</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">6723</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">5951</span></code></td>
-      <td style="text-align: center">766</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Nº votos/3</strong></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">9784</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">7981</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">4482</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">3967</span></code></td>
-      <td style="text-align: center">510.7</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Nº votos/4</strong></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">7338</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">5986</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">3362</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">2976</span></code></td>
-      <td style="text-align: center">383</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Nº votos/5</strong></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">5870</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">4789</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">2689</span></code></td>
-      <td style="text-align: center">2380</td>
-      <td style="text-align: center">306.4</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Nº votos/6</strong></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">4892</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">3991</span></code></td>
-      <td style="text-align: center">2241</td>
-      <td style="text-align: center">1984</td>
-      <td style="text-align: center">255.3</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Nº votos/7</strong></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">4193</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">3421</span></code></td>
-      <td style="text-align: center">1921</td>
-      <td style="text-align: center">1700</td>
-      <td style="text-align: center">218.9</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Nº votos/8</strong></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">3669</span></code></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">2993</span></code></td>
-      <td style="text-align: center">1681</td>
-      <td style="text-align: center">1488</td>
-      <td style="text-align: center">191.5</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Nº votos/9</strong></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">3261</span></code></td>
-      <td style="text-align: center">2660</td>
-      <td style="text-align: center">1494</td>
-      <td style="text-align: center">1322</td>
-      <td style="text-align: center">170.2</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Nº votos/10</strong></td>
-      <td style="text-align: center"><code class="highlight language-R"><span class="m">2935</span></code></td>
-      <td style="text-align: center">2394</td>
-      <td style="text-align: center">1345</td>
-      <td style="text-align: center">1190</td>
-      <td style="text-align: center">153.2</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Nº votos/11</strong></td>
-      <td style="text-align: center">2668</td>
-      <td style="text-align: center">2177</td>
-      <td style="text-align: center">1222</td>
-      <td style="text-align: center">1082</td>
-      <td style="text-align: center">139.3</td>
-    </tr>
-  </tbody>
-</table>
+<div class="highlight"><pre><code class="language-R"><span class="c1">## Error in library(pander): there is no package called &#39;pander&#39;</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-R"><span class="c1">## Error in pandoc.table(tab.dhont[, -6], emphasize.verbatim.cells = which(tab.dhont[, : no se pudo encontrar la función &quot;pandoc.table&quot;</span></code></pre></div>
 
 <p>Se han marcado las 27 puntuaciones más altas que son las que proporcionan algún concejal. UPyD no participa en el reparto de concejales porque no ha llegado al mínimo del 5% de los votos válidos. Aun así, vemos que hubiera quedado muy lejos de obtener un concejal en caso de haber entrado.</p>
 
