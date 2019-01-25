@@ -157,21 +157,14 @@ lanzamientos de forma más uniforme durante todo el partido. Conviene comentar<b
 que algunos tiempos yo mayores a 40 minutos porque corresponden a lanzamientos<br />
 que se hicieron durante la prórroga.</p>
 
-<p>```{r echo = FALSE} library(lubridate)<br />
-ab.t &lt;- ms(shots[shots$team == arcosab, ]$t)<br />
-ab.t &lt;- (minute(ab.t) * 60 + second(ab.t)) / 60</p>
+<div class="highlight"><pre><code class="language-R"><span class="c1">## </span>
+<span class="c1">## Attaching package: &#39;lubridate&#39;</span></code></pre></div>
 
-<p>afa.t &lt;- ms(shots[shots$team == afanion, ]$t)<br />
-afa.t &lt;- (minute(afa.t) * 60 + second(afa.t)) / 60</p>
-<div class="highlight"><pre><code class="language-R"></code></pre></div>
-<h2 id="error-in-densityabt-from--0-to--40-bw--2-objeto-abt-no-encontrado">Error in density(ab.t, from = 0, to = 40, bw = 2): objeto ‘ab.t’ no encontrado</h2>
-<div class="highlight"><pre><code class="language-R"></code></pre></div>
-<h2 id="error-in-densityafat-from--0-to--40-bw--2-objeto-afat-no-encontrado">Error in density(afa.t, from = 0, to = 40, bw = 2): objeto ‘afa.t’ no encontrado</h2>
-<div class="highlight"><pre><code class="language-R"></code></pre></div>
-<h2 id="error-in-dataframetime--cabt-afat-team--repcarcosab-afanion--objeto-abt-no-encontrado">Error in data.frame(time = c(ab.t, afa.t), team = rep(c(arcosab, afanion), : objeto ‘ab.t’ no encontrado</h2>
-<div class="highlight"><pre><code class="language-R"></code></pre></div>
-<h2 id="error-in-ggplottab-aesx--time-color--team-objeto-tab-no-encontrado">Error in ggplot(tab, aes(x = time, color = team)): objeto ‘tab’ no encontrado</h2>
-<p>```</p>
+<div class="highlight"><pre><code class="language-R"><span class="c1">## The following object is masked from &#39;package:base&#39;:</span>
+<span class="c1">## </span>
+<span class="c1">##     date</span></code></pre></div>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7" /></p>
 
 <p>De manera similar, podríamos analizar dónde se concentran los lanzamientos de<br />
 los dos equipos. En la siguiente gráfica, las curvas de nivel marcan las<br />
@@ -179,7 +172,7 @@ regiones desde las cuales se producen más lanzamientos.  En general, el AFANION
 CB Almansa reparte sus lanzamientos mucho más que el Arcos Albacete Basket, que<br />
 los concentra en tres regiones mucho más reducidas.</p>
 
-<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7" /></p>
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-8-1.png" alt="plot of chunk unnamed-chunk-8" /></p>
 
 <h2 id="tiros-por-jugador">Tiros por jugador</h2>
 
@@ -188,11 +181,11 @@ paquete <code class="highlight language-R">rfeb</code> sólo proporciona el núm
 A continuación se muestra la ubicación de los lanzamientos de cada jugador del<br />
 Arcos Albacete Basket.</p>
 
-<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-8-1.png" alt="plot of chunk unnamed-chunk-8" /></p>
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-9-1.png" alt="plot of chunk unnamed-chunk-9" /></p>
 
 <p>Para el AFANION CB Almansa, la gráfica correspondiente es esta:</p>
 
-<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-9-1.png" alt="plot of chunk unnamed-chunk-9" /></p>
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-10-1.png" alt="plot of chunk unnamed-chunk-10" /></p>
 
 <h1 id="conclusiones">Conclusiones</h1>
 
