@@ -5,9 +5,137 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 11 Jan 2019 10:55:34 +0100</pubDate>
-    <lastBuildDate>Fri, 11 Jan 2019 10:55:34 +0100</lastBuildDate>
-    <generator>Jekyll v3.8.3</generator>
+    <pubDate>Fri, 25 Jan 2019 03:33:03 +0100</pubDate>
+    <lastBuildDate>Fri, 25 Jan 2019 03:33:03 +0100</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Análisis de partidos de baloncesto con R</title>
+        <description>&lt;p&gt;El paquete &lt;code class=&quot;highlight language-R&quot;&gt;rfeb&lt;/code&gt; escrito por &lt;a href=&quot;https://solmos.netlify.com&quot;&gt;Sergio Olmos&lt;/a&gt;&lt;br /&gt;
+permite descargar datos de lanzamientos de los partidos de baloncesto de varias ligas&lt;br /&gt;
+de la RFEB.  El paquete se puede instalar directamente desde&lt;br /&gt;
+&lt;a href=&quot;https://github.com/solmos/rfeb&quot;&gt;github&lt;/a&gt;.  Trasteando un poco he conseguido&lt;br /&gt;
+descargar datos de varias jornadas y me he preguntado qué podríamos hacer con&lt;br /&gt;
+estos datos.  Voy a utilizar el equipo local, &lt;a href=&quot;http://abbasket2012.com&quot;&gt;&lt;em&gt;Arcos Albacete&lt;br /&gt;
+Basket&lt;/em&gt;&lt;/a&gt; para hacer un pequeño análisis del paquete y&lt;br /&gt;
+sus posibilidades.&lt;/p&gt;
+
+&lt;h2 id=&quot;descarga-de-datos&quot;&gt;Descarga de datos&lt;/h2&gt;
+
+&lt;p&gt;La descarga de datos se hace con la función &lt;code class=&quot;highlight language-R&quot;&gt;extract_shots&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;, que require&lt;br /&gt;
+un vector con los números de identificación de los partidos. Estos se obtienen&lt;br /&gt;
+de la URL del sitio &lt;a href=&quot;http://baloncestoenvivo.feb.es&quot;&gt;http://baloncestoenvivo.feb.es&lt;/a&gt;, por lo obtener partidos de jornadas pasadas puede ser un poco complicado&lt;br /&gt;
+al no haber un listado de los partidos de jornadas anteriores.&lt;/p&gt;
+
+&lt;p&gt;Usando un poco de fuerza bruta he conseguido descargar partidos de varias ligas&lt;br /&gt;
+de las últimas jornadas, y las he guardado en un fichero &lt;code class=&quot;highlight language-R&quot;&gt;RData&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rfeb&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kp&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rfeb/2011000-199.RData&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El Arcos Albacete Basket se enfrenta el próximo sábado 26 de enero de 2019&lt;br /&gt;
+al AFANION CB Almansa, por lo que haremos un análisis comparativo de ambos&lt;br /&gt;
+equipos.&lt;/p&gt;
+
+&lt;h1 id=&quot;análisis&quot;&gt;Análisis&lt;/h1&gt;
+
+&lt;p&gt;En primer lugar, creamos dos variables con los nombres de los equipos&lt;br /&gt;
+tal y como aparecen en los datos:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;arcosab &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;ARCOS ALBACETE BASKET&amp;quot;&lt;/span&gt;
+afanion &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;AFANION CB ALMANSA&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Los resultados de los partidos están en un &lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;kt&quot;&gt;data.frame&lt;/span&gt;&lt;/code&gt; llamado &lt;code class=&quot;highlight language-R&quot;&gt;shots2&lt;/code&gt;.&lt;br /&gt;
+En primer lugar, dejamos solamente los lanzamientos de estos dos equipos:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;shots &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;subset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; team &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;arcosab&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; afanion&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;team &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;as.character&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;team&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;game &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;as.character&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;game&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kp&quot;&gt;levels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;made&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Fuera&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Dentro&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Los datos corresponden a &lt;br /&gt;
+2 partidos, en los que al AFANION CB&lt;br /&gt;
+Almansa realizó 486 lanzamientos y el Arcos&lt;br /&gt;
+Albacete Basket realizó 521.&lt;/p&gt;
+
+&lt;h2 id=&quot;ubicación-de-los-lanzamientos&quot;&gt;Ubicación de los lanzamientos&lt;/h2&gt;
+
+&lt;p&gt;El paquete &lt;code class=&quot;highlight language-R&quot;&gt;rfeb&lt;/code&gt; incluye la función &lt;code class=&quot;highlight language-R&quot;&gt;plot_shotchart&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt; para visualizar los&lt;br /&gt;
+datos. Podemos utilizar esta función para mostrar la ubicación de los lanzamientos y&lt;br /&gt;
+si entraron (&lt;code class=&quot;highlight language-R&quot;&gt;Dentro&lt;/code&gt;) o no (&lt;code class=&quot;highlight language-R&quot;&gt;Fuera&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-4-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tiempos-de-los-lanzamientos&quot;&gt;Tiempos de los lanzamientos&lt;/h2&gt;
+
+&lt;p&gt;Los datos también incluyen los tiempos a los que se hacen los lanzamientos.&lt;br /&gt;
+Podemos utilizar esta información para hacer una suvización que nos permita ver&lt;br /&gt;
+cómo varía el número de lanzamientos a lo largo del partido.  La siguiente&lt;br /&gt;
+gráfica muestra como el AFANION CB Almansa suele iniciar los partidos con más&lt;br /&gt;
+lanzamientos a canasta que el  Arcos Albacete Basket, que reparte sus&lt;br /&gt;
+lanzamientos de forma más uniforme durante todo el partido. Conviene comentar&lt;br /&gt;
+que algunos tiempos yo mayores a 40 minutos porque corresponden a lanzamientos&lt;br /&gt;
+que se hicieron durante la prórroga.&lt;/p&gt;
+
+&lt;p&gt;```{r echo = FALSE} library(lubridate)&lt;br /&gt;
+ab.t &amp;lt;- ms(shots[shots$team == arcosab, ]$t)&lt;br /&gt;
+ab.t &amp;lt;- (minute(ab.t) * 60 + second(ab.t)) / 60&lt;/p&gt;
+
+&lt;p&gt;afa.t &amp;lt;- ms(shots[shots$team == afanion, ]$t)&lt;br /&gt;
+afa.t &amp;lt;- (minute(afa.t) * 60 + second(afa.t)) / 60&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;error-in-densityabt-from--0-to--40-bw--2-objeto-abt-no-encontrado&quot;&gt;Error in density(ab.t, from = 0, to = 40, bw = 2): objeto ‘ab.t’ no encontrado&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;error-in-densityafat-from--0-to--40-bw--2-objeto-afat-no-encontrado&quot;&gt;Error in density(afa.t, from = 0, to = 40, bw = 2): objeto ‘afa.t’ no encontrado&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;error-in-dataframetime--cabt-afat-team--repcarcosab-afanion--objeto-abt-no-encontrado&quot;&gt;Error in data.frame(time = c(ab.t, afa.t), team = rep(c(arcosab, afanion), : objeto ‘ab.t’ no encontrado&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;error-in-ggplottab-aesx--time-color--team-objeto-tab-no-encontrado&quot;&gt;Error in ggplot(tab, aes(x = time, color = team)): objeto ‘tab’ no encontrado&lt;/h2&gt;
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;De manera similar, podríamos analizar dónde se concentran los lanzamientos de&lt;br /&gt;
+los dos equipos. En la siguiente gráfica, las curvas de nivel marcan las&lt;br /&gt;
+regiones desde las cuales se producen más lanzamientos.  En general, el AFANION&lt;br /&gt;
+CB Almansa reparte sus lanzamientos mucho más que el Arcos Albacete Basket, que&lt;br /&gt;
+los concentra en tres regiones mucho más reducidas.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-7-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tiros-por-jugador&quot;&gt;Tiros por jugador&lt;/h2&gt;
+
+&lt;p&gt;Por último, podemos explorar los lanzamientos por jugador. Actualmente, el&lt;br /&gt;
+paquete &lt;code class=&quot;highlight language-R&quot;&gt;rfeb&lt;/code&gt; sólo proporciona el número de la camiseta de cada jugador.&lt;br /&gt;
+A continuación se muestra la ubicación de los lanzamientos de cada jugador del&lt;br /&gt;
+Arcos Albacete Basket.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-8-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para el AFANION CB Almansa, la gráfica correspondiente es esta:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-9-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-9&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h1&gt;
+
+&lt;p&gt;El paquete &lt;code class=&quot;highlight language-R&quot;&gt;rfeb&lt;/code&gt; facilita el acceso a datos de partidos de varias ligas de la&lt;br /&gt;
+RFEB.  La explotación de los datos con el sfotware estadístico &lt;code class=&quot;highlight language-R&quot;&gt;R&lt;/code&gt; permite,&lt;br /&gt;
+entre otras cosas, visualizar los datos usando distintos tipos de gráficos.  Se&lt;br /&gt;
+echa de menos la posibilidad de descargar el listado de los partidos de la&lt;br /&gt;
+jornada, para saber qué equipo es el local y cuál el visitante. También sería&lt;br /&gt;
+interesante saber los datos de los jugadores, además del número de su camiseta.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 25 Jan 2019 00:00:00 +0100</pubDate>
+        <link>https://becarioprecario.github.io/posts/baloncesto/rstats/2019/01/25/baloncesto-conR/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/baloncesto/rstats/2019/01/25/baloncesto-conR/</guid>
+        
+        <category>Baloncesto</category>
+        
+        
+        <category>baloncesto</category>
+        
+        <category>rstats</category>
+        
+      </item>
     
       <item>
         <title>JSS Special Issue on Bayesian Statistics</title>
@@ -2634,425 +2762,6 @@
         <category>Albacete</category>
         
         <category>Castilla-La Mancha</category>
-        
-        
-        <category>elecciones</category>
-        
-        <category>rstats</category>
-        
-      </item>
-    
-      <item>
-        <title>Predicción de escaños en las elecciones catalanas del 27S usando encuestas pronvinciales y regionales</title>
-        <description>&lt;h2 id=&quot;análisis-bayesiano-de-las-encuestas-de-las-elecciones-catalanas-del-27s&quot;&gt;Análisis Bayesiano de las encuestas de las elecciones catalanas del 27S&lt;/h2&gt;
-
-&lt;h3 id=&quot;predicción-de-escaños-a-partir-de-varias-encuestas-regionales-y-provinciales&quot;&gt;Predicción de escaños a partir de varias encuestas regionales y provinciales&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Virgilio Gómez Rubio&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Departamento de Matemáticas&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Universidad de Castilla-La Mancha&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Campus de Albacete&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;introducción&quot;&gt;Introducción&lt;/h2&gt;
-
-&lt;p&gt;En este tercer análisis de las encuestas de las elecciones catalanas del 27S usamos un modelo jerárquico Bayesiano para combinar la información de las encuestas regionales y provinciales. El objetivo es usar toda la información disponible para mejorar la predicción de escaños sin importar la escala geográfica a la que se hayan hecho la encuestas.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Actualización:&lt;/strong&gt; Se han añadido los escaños reales a las gráficas y una mención a las estimaciones de &lt;a href=&quot;http://www.elespanol.com/elecciones-catalanas/como-votaran-los-catalanes-una-prediccion-del-27s-a-partir-de-las-encuestas/&quot;&gt;Kiko Llaneras&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;métodos&quot;&gt;Métodos&lt;/h2&gt;
-
-&lt;p&gt;De manera similar a los artículos anteriores, hemos considerado encuestas de intención de voto para intentar predecir el número de escaños. Los datos que hemos utilizado son los mismos que en los dos análisis anteriores y no se reproducen aquí..&lt;/p&gt;
-
-&lt;p&gt;Para modelizar las encuestas a nivel regional, se utiliza un modelo jerárquico Bayesiano multinomial-Dirichlet.Esto nos modeliza el porcentaje de votos total para cada partido. Además, usaremos un modelo multinomial para modelizar los resultados de las encuestas por partido y provincia. A nivel provincial, se ha supuesto que la probabilidad de votar a un partido en una determinada provincia depende del porcentaje global de voto de cada partido modificado por un efecto aleatorio para cada provincia y partido. Esto hace que los porcentajes de votos a un determinado partido en cada provincia se parezcan a los globales pero que también haya margen para variaciones locales. Para más detalles, se puede ver el modelo de WinBUGS más abajo.&lt;/p&gt;
-
-&lt;p&gt;Hemos usado el paquete &lt;strong&gt;rjags&lt;/strong&gt; para ajustar el modelo Bayesiano usando este código:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt; model &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.encuestas.prov&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;j &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.provincias&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-     votos.prov&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; j&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.partidos&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; dmulti&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;p.prov&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.partidos&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; n.prov&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; j&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-     
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-   &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;j &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.provincias&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.partidos&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;kp&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;phi&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; i&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;p&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; u&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; i&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-       p.prov&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; i&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; phi&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; i&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;phi&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;p&quot;&gt;,])&lt;/span&gt;
- 
-       u&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; i&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; dnorm&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; tau&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-   tau &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; dgamma&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;a0&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; b0&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
- 
- 
-   &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.encuestas.cat&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-       votos.cat&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.partidos&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; dmulti&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;p&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.partidos&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; n.cat&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-   p&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.partidos&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; ddirch&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alpha&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n.partidos&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
- 
- 
- &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;A la hora de ajustar el modelo usando simulación MCMC hemos usado 5000 iteraciones de calentamiento y otras 10000 para obtener las estimaciones de los parámetros. A la hora de generar estas simulaciones, nos hemos quedado con 1 de cada 10 simulaciones para disminuir la autocorrelación. Además, con cada una de estas 10000 simulaciones hemos estimado el número de escaños que correspondería a cada partido para obtener una simulación de los escaños por provincias y totales.&lt;/p&gt;
-
-&lt;h2 id=&quot;resultados&quot;&gt;Resultados&lt;/h2&gt;
-
-&lt;p&gt;Una vez que hemos ajustado el modelo, podemos estimar el número de escaños por provincia usando las medias a posteriori de los porcentajes de voto por provincias y partidos:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Barcelona&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Gerona&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Lérida&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Tarragona&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;TOTAL&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;CatSi&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;13&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Cs&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;CUP&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;JpSi&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;34&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;62&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PP&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PSC&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Unio&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Los resultados reales fueron:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Barcelona&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Gerona&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Lérida&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Tarragona&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;TOTAL&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;CatSi&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Cs&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;25&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;CUP&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;JpSi&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;32&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;62&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PP&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PSC&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;12&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Unio&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Como puede verse, las estimaciones fueron bastante buenas. Considerando el total de escaños, sólo fallamos en 12 (si los consideramos provincia a provincia serían 20) de un total de 135.&lt;/p&gt;
-
-&lt;p&gt;Para dar una medida de la variabilidad de esta estimación, hemos usado los resultados de las simulaciones para estimar el número de escaños totales que cada partido obtendría. Para ello hemos usado los porcentajes estimados en cada iteración y calculado los escaños. Posteriormente, hemos calculado una serie de estadísticos resumen con los escaños obtenidos por cada partido.&lt;/p&gt;
-
-&lt;p&gt;Aquí vemos los estadísticos resumen:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CUP&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;JpSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CatSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Unio&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PSC&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Cs&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PP&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Min.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;58.000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;13.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.0000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1st Qu.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;62.000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Median&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;63.000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Mean&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.3727&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;63.451&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.6325&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14.8131&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.3791&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.3516&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;3rd Qu.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;64.000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;21.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;12.0000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Max.&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;69.000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;18.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;25.0000&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15.0000&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Y aquí tenemos un intervalo de credibilidad al 95% para el número de escaños por partido:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CUP&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;JpSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CatSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Unio&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PSC&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Cs&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PP&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2.5%&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;61&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;13&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;18&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;97.5%&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;66&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;19&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;23&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;13&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Los intervalos (¿de confianza?) del número total de escaños estimados por &lt;a href=&quot;http://www.elespanol.com/elecciones-catalanas/como-votaran-los-catalanes-una-prediccion-del-27s-a-partir-de-las-encuestas/&quot;&gt;Kiko Llaneras&lt;/a&gt;, con una metodología diferente, fueron los siguientes:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CUP&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;JpSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CatSi&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Unio&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PSC&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Cs&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;PP&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;25%&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;59&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;12&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Mediana&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;63&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;14&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;13&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;75%&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;67&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;18&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;23&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;15&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Nuestra metodología parece dar intervalos de credibilidad más estrechos con un nivel de confianza más alto.&lt;/p&gt;
-
-&lt;p&gt;El modelo Bayesiano nos combina los datos de las distintas encuestas de manera que se obtiene una estimación de las proporciones de voto mucho más fiable y, por tanto, del número de escaños obtenido por cada partido. La siguiente figura muestra las distribuciones marginales a posteriori de los escaños obtenidos por cada partido. Se han incluido los escaños reales de las elecciones.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/figure/source/2015-09-27-encuestas-COMB/unnamed-chunk-13-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Por último, vamos a mostrar en una gráfica el número de escaños que obtendrían los partidos independentistas, junto con el límite de 68 escaños que marca la mayoría absoluta:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/figure/source/2015-09-27-encuestas-COMB/unnamed-chunk-14-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-14&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;La gráfica indica que los partidos nacionalistas obtendrían una mayoría absoluta con una gran probabilidad.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
-
-&lt;p&gt;Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones catalanas de 27 de septiembre de 2015. Los resultados muestran que los partidos nacionalistas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 99.77%.&lt;/p&gt;
-
-&lt;p&gt;Por algún motivo, este modelo proporciona resultados muy similares a los obtenidos usando solamente las encuestas a nivel provincial. Esto puede deberse a que el modelo produce un sobreajuste de los porcentajes de voto a nivel provincial.&lt;/p&gt;
-
-&lt;h2 id=&quot;apéndice-software-y-datos-utilizados&quot;&gt;Apéndice: Software y datos utilizados&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.r-project.org&quot;&gt;R&lt;/a&gt;, para el análisis de datos&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.elconfidencial.com/espana/cataluna/elecciones-catalanas/2015-09-18/mas-y-la-cup-logran-la-mayoria-absoluta-por-escanos-y-rozarian-ya-el-50-de-los-votos_1023124/&quot;&gt;Encuesta de El Confidencial&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://elpais.com/elpais/2015/09/10/media/1441883592_651182.html&quot;&gt;Sondeo del CIS (El País)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cis.es/cis/export/sites/default/-Archivos/Marginales/3100_3119/3108/Es3108_mapa_pdf.htm&quot;&gt;Sondeo del CIS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.elperiodico.com/es/noticias/politica/27s-encuesta-elecciones-catalunya-gesop-abierto-4491030&quot;&gt;Encuesta de El Periódico&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.elespanol.com/elecciones-catalanas/como-votaran-los-catalanes-una-prediccion-del-27s-a-partir-de-las-encuestas/&quot;&gt;Artículo de Kiko Llaneras en El Español&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 27 Sep 2015 00:00:00 +0200</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/27/encuestas-COMB/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/09/27/encuestas-COMB/</guid>
-        
-        <category>Cataluna</category>
         
         
         <category>elecciones</category>
