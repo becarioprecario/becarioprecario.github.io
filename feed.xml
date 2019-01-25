@@ -5,8 +5,8 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 25 Jan 2019 03:40:27 +0100</pubDate>
-    <lastBuildDate>Fri, 25 Jan 2019 03:40:27 +0100</lastBuildDate>
+    <pubDate>Fri, 25 Jan 2019 03:47:28 +0100</pubDate>
+    <lastBuildDate>Fri, 25 Jan 2019 03:47:28 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -77,13 +77,6 @@ lanzamientos de forma más uniforme durante todo el partido. Conviene comentar&l
 que algunos tiempos yo mayores a 40 minutos porque corresponden a lanzamientos&lt;br /&gt;
 que se hicieron durante la prórroga.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## &lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;## Attaching package: &amp;#39;lubridate&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## The following object is masked from &amp;#39;package:base&amp;#39;:&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;## &lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;##     date&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-7-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;De manera similar, podríamos analizar dónde se concentran los lanzamientos de&lt;br /&gt;
@@ -107,7 +100,7 @@ Arcos Albacete Basket.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-10-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-10&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h1&gt;
+&lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
 
 &lt;p&gt;El paquete &lt;code class=&quot;highlight language-R&quot;&gt;rfeb&lt;/code&gt; facilita el acceso a datos de partidos de varias ligas de la&lt;br /&gt;
 RFEB.  La explotación de los datos con el sfotware estadístico &lt;code class=&quot;highlight language-R&quot;&gt;R&lt;/code&gt; permite,&lt;br /&gt;
