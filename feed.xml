@@ -5,8 +5,8 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 27 Jan 2019 21:39:02 +0100</pubDate>
-    <lastBuildDate>Sun, 27 Jan 2019 21:39:02 +0100</lastBuildDate>
+    <pubDate>Sun, 27 Jan 2019 21:47:40 +0100</pubDate>
+    <lastBuildDate>Sun, 27 Jan 2019 21:47:40 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -14,8 +14,8 @@
         <description>&lt;p&gt;&lt;strong&gt;Actualización: He añadido un análisis del partido AFANINON CB Almansa - Arcos Albacete Basket celebrado el  26/01/2019.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;El paquete &lt;code class=&quot;highlight language-R&quot;&gt;rfeb&lt;/code&gt; escrito por &lt;a href=&quot;https://solmos.netlify.com&quot;&gt;Sergio Olmos&lt;/a&gt;&lt;br /&gt;
-permite descargar datos de lanzamientos de los partidos de baloncesto de varias ligas&lt;br /&gt;
-de la RFEB.  El paquete se puede instalar directamente desde&lt;br /&gt;
+permite descargar datos de lanzamientos de los partidos de baloncesto de varias&lt;br /&gt;
+ligas de la RFEB.  El paquete se puede instalar directamente desde&lt;br /&gt;
 &lt;a href=&quot;https://github.com/solmos/rfeb&quot;&gt;github&lt;/a&gt;.  Trasteando un poco he conseguido&lt;br /&gt;
 descargar datos de varias jornadas y me he preguntado qué podríamos hacer con&lt;br /&gt;
 estos datos.  Voy a utilizar el equipo local, &lt;a href=&quot;http://abbasket2012.com&quot;&gt;&lt;em&gt;Arcos Albacete&lt;br /&gt;
@@ -24,10 +24,12 @@ sus posibilidades.&lt;/p&gt;
 
 &lt;h2 id=&quot;descarga-de-datos&quot;&gt;Descarga de datos&lt;/h2&gt;
 
-&lt;p&gt;La descarga de datos se hace con la función &lt;code class=&quot;highlight language-R&quot;&gt;extract_shots&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;, que require&lt;br /&gt;
-un vector con los números de identificación de los partidos. Estos se obtienen&lt;br /&gt;
-de la URL del sitio &lt;a href=&quot;http://baloncestoenvivo.feb.es&quot;&gt;http://baloncestoenvivo.feb.es&lt;/a&gt;, por lo obtener partidos de jornadas pasadas puede ser un poco complicado&lt;br /&gt;
-al no haber un listado de los partidos de jornadas anteriores.&lt;/p&gt;
+&lt;p&gt;La descarga de datos se hace con la función &lt;code class=&quot;highlight language-R&quot;&gt;extract_shots&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;, que require un&lt;br /&gt;
+vector con los números de identificación de los partidos. Estos se obtienen de&lt;br /&gt;
+la URL del sitio&lt;br /&gt;
+&lt;a href=&quot;http://baloncestoenvivo.feb.es&quot;&gt;http://baloncestoenvivo.feb.es&lt;/a&gt;, por lo&lt;br /&gt;
+obtener partidos de jornadas pasadas puede ser un poco complicado al no haber&lt;br /&gt;
+un listado de los partidos de jornadas anteriores.&lt;/p&gt;
 
 &lt;p&gt;Usando un poco de fuerza bruta he conseguido descargar partidos de varias ligas&lt;br /&gt;
 de las últimas jornadas, y las he guardado en un fichero &lt;code class=&quot;highlight language-R&quot;&gt;RData&lt;/code&gt;.&lt;/p&gt;
@@ -59,9 +61,9 @@ shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;game &lt;span class=&quot;o&q
 al AFANION CB Almansa realizó 540 lanzamientos y el&lt;br /&gt;
 Arcos Albacete Basket realizó 586.&lt;/p&gt;
 
-&lt;p&gt;Antes de proceder al análisis vamos a eliminar los partidos del&lt;br /&gt;
-último partido entre el AFANION CB Almansa y el Arcos Albacete Basket para&lt;br /&gt;
-analizarlo por separado:&lt;/p&gt;
+&lt;p&gt;Antes de proceder al análisis vamos a eliminar los partidos del último partido&lt;br /&gt;
+entre el AFANION CB Almansa y el Arcos Albacete Basket para analizarlo por&lt;br /&gt;
+separado:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;afa.aba &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; shots&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;game &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;2011201&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 shots &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; shots&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;which&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;game &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;2011201&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -108,8 +110,8 @@ los concentra en tres regiones mucho más reducidas.&lt;/p&gt;
 &lt;h2 id=&quot;tiros-por-jugador&quot;&gt;Tiros por jugador&lt;/h2&gt;
 
 &lt;p&gt;Por último, podemos explorar los lanzamientos por jugador. Actualmente, el&lt;br /&gt;
-paquete &lt;code class=&quot;highlight language-R&quot;&gt;rfeb&lt;/code&gt; sólo proporciona el número de la camiseta de cada jugador.&lt;br /&gt;
-A continuación se muestra la ubicación de los lanzamientos de cada jugador del&lt;br /&gt;
+paquete &lt;code class=&quot;highlight language-R&quot;&gt;rfeb&lt;/code&gt; sólo proporciona el número de la camiseta de cada jugador.  A&lt;br /&gt;
+continuación se muestra la ubicación de los lanzamientos de cada jugador del&lt;br /&gt;
 Arcos Albacete Basket.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-11-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-11&quot; /&gt;&lt;/p&gt;

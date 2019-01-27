@@ -94,8 +94,8 @@
   <p><strong>Actualización: He añadido un análisis del partido AFANINON CB Almansa - Arcos Albacete Basket celebrado el  26/01/2019.</strong></p>
 
 <p>El paquete <code class="highlight language-R">rfeb</code> escrito por <a href="https://solmos.netlify.com">Sergio Olmos</a><br />
-permite descargar datos de lanzamientos de los partidos de baloncesto de varias ligas<br />
-de la RFEB.  El paquete se puede instalar directamente desde<br />
+permite descargar datos de lanzamientos de los partidos de baloncesto de varias<br />
+ligas de la RFEB.  El paquete se puede instalar directamente desde<br />
 <a href="https://github.com/solmos/rfeb">github</a>.  Trasteando un poco he conseguido<br />
 descargar datos de varias jornadas y me he preguntado qué podríamos hacer con<br />
 estos datos.  Voy a utilizar el equipo local, <a href="http://abbasket2012.com"><em>Arcos Albacete<br />
@@ -104,10 +104,12 @@ sus posibilidades.</p>
 
 <h2 id="descarga-de-datos">Descarga de datos</h2>
 
-<p>La descarga de datos se hace con la función <code class="highlight language-R">extract_shots<span class="p">()</span></code>, que require<br />
-un vector con los números de identificación de los partidos. Estos se obtienen<br />
-de la URL del sitio <a href="http://baloncestoenvivo.feb.es">http://baloncestoenvivo.feb.es</a>, por lo obtener partidos de jornadas pasadas puede ser un poco complicado<br />
-al no haber un listado de los partidos de jornadas anteriores.</p>
+<p>La descarga de datos se hace con la función <code class="highlight language-R">extract_shots<span class="p">()</span></code>, que require un<br />
+vector con los números de identificación de los partidos. Estos se obtienen de<br />
+la URL del sitio<br />
+<a href="http://baloncestoenvivo.feb.es">http://baloncestoenvivo.feb.es</a>, por lo<br />
+obtener partidos de jornadas pasadas puede ser un poco complicado al no haber<br />
+un listado de los partidos de jornadas anteriores.</p>
 
 <p>Usando un poco de fuerza bruta he conseguido descargar partidos de varias ligas<br />
 de las últimas jornadas, y las he guardado en un fichero <code class="highlight language-R">RData</code>.</p>
@@ -139,9 +141,9 @@ shots<span class="o">$</span>game <span class="o">&lt;-</span> <span class="kp">
 al AFANION CB Almansa realizó 540 lanzamientos y el<br />
 Arcos Albacete Basket realizó 586.</p>
 
-<p>Antes de proceder al análisis vamos a eliminar los partidos del<br />
-último partido entre el AFANION CB Almansa y el Arcos Albacete Basket para<br />
-analizarlo por separado:</p>
+<p>Antes de proceder al análisis vamos a eliminar los partidos del último partido<br />
+entre el AFANION CB Almansa y el Arcos Albacete Basket para analizarlo por<br />
+separado:</p>
 
 <div class="highlight"><pre><code class="language-r">afa.aba <span class="o">&lt;-</span> shots<span class="p">[</span>shots<span class="o">$</span>game <span class="o">==</span> <span class="s">&quot;2011201&quot;</span><span class="p">,</span> <span class="p">]</span>
 shots <span class="o">&lt;-</span> shots<span class="p">[</span><span class="o">-</span><span class="kp">which</span><span class="p">(</span>shots<span class="o">$</span>game <span class="o">==</span> <span class="s">&quot;2011201&quot;</span><span class="p">),</span> <span class="p">]</span></code></pre></div>
@@ -188,8 +190,8 @@ los concentra en tres regiones mucho más reducidas.</p>
 <h2 id="tiros-por-jugador">Tiros por jugador</h2>
 
 <p>Por último, podemos explorar los lanzamientos por jugador. Actualmente, el<br />
-paquete <code class="highlight language-R">rfeb</code> sólo proporciona el número de la camiseta de cada jugador.<br />
-A continuación se muestra la ubicación de los lanzamientos de cada jugador del<br />
+paquete <code class="highlight language-R">rfeb</code> sólo proporciona el número de la camiseta de cada jugador.  A<br />
+continuación se muestra la ubicación de los lanzamientos de cada jugador del<br />
 Arcos Albacete Basket.</p>
 
 <p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-11-1.png" alt="plot of chunk unnamed-chunk-11" /></p>
