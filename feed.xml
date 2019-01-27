@@ -5,13 +5,15 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 25 Jan 2019 03:47:28 +0100</pubDate>
-    <lastBuildDate>Fri, 25 Jan 2019 03:47:28 +0100</lastBuildDate>
+    <pubDate>Sun, 27 Jan 2019 21:39:02 +0100</pubDate>
+    <lastBuildDate>Sun, 27 Jan 2019 21:39:02 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Análisis de partidos de baloncesto con R</title>
-        <description>&lt;p&gt;El paquete &lt;code class=&quot;highlight language-R&quot;&gt;rfeb&lt;/code&gt; escrito por &lt;a href=&quot;https://solmos.netlify.com&quot;&gt;Sergio Olmos&lt;/a&gt;&lt;br /&gt;
+        <description>&lt;p&gt;&lt;strong&gt;Actualización: He añadido un análisis del partido AFANINON CB Almansa - Arcos Albacete Basket celebrado el  26/01/2019.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;El paquete &lt;code class=&quot;highlight language-R&quot;&gt;rfeb&lt;/code&gt; escrito por &lt;a href=&quot;https://solmos.netlify.com&quot;&gt;Sergio Olmos&lt;/a&gt;&lt;br /&gt;
 permite descargar datos de lanzamientos de los partidos de baloncesto de varias ligas&lt;br /&gt;
 de la RFEB.  El paquete se puede instalar directamente desde&lt;br /&gt;
 &lt;a href=&quot;https://github.com/solmos/rfeb&quot;&gt;github&lt;/a&gt;.  Trasteando un poco he conseguido&lt;br /&gt;
@@ -31,7 +33,7 @@ al no haber un listado de los partidos de jornadas anteriores.&lt;/p&gt;
 de las últimas jornadas, y las he guardado en un fichero &lt;code class=&quot;highlight language-R&quot;&gt;RData&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rfeb&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kp&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rfeb/2011000-199.RData&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;kp&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rfeb/2011000-299.RData&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;El Arcos Albacete Basket se enfrenta el próximo sábado 26 de enero de 2019&lt;br /&gt;
 al AFANION CB Almansa, por lo que haremos un análisis comparativo de ambos&lt;br /&gt;
@@ -53,10 +55,16 @@ shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;team &lt;span class=&quot;o&q
 shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;game &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;as.character&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;game&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;kp&quot;&gt;levels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;made&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Fuera&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Dentro&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Los datos corresponden a &lt;br /&gt;
-2 partidos, en los que al AFANION CB&lt;br /&gt;
-Almansa realizó 486 lanzamientos y el Arcos&lt;br /&gt;
-Albacete Basket realizó 521.&lt;/p&gt;
+&lt;p&gt;Los datos corresponden a 2 partidos, en los que&lt;br /&gt;
+al AFANION CB Almansa realizó 540 lanzamientos y el&lt;br /&gt;
+Arcos Albacete Basket realizó 586.&lt;/p&gt;
+
+&lt;p&gt;Antes de proceder al análisis vamos a eliminar los partidos del&lt;br /&gt;
+último partido entre el AFANION CB Almansa y el Arcos Albacete Basket para&lt;br /&gt;
+analizarlo por separado:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;afa.aba &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; shots&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;game &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;2011201&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+shots &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; shots&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;which&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;game &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;2011201&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;ubicación-de-los-lanzamientos&quot;&gt;Ubicación de los lanzamientos&lt;/h2&gt;
 
@@ -64,7 +72,7 @@ Albacete Basket realizó 521.&lt;/p&gt;
 datos. Podemos utilizar esta función para mostrar la ubicación de los lanzamientos y&lt;br /&gt;
 si entraron (&lt;code class=&quot;highlight language-R&quot;&gt;Dentro&lt;/code&gt;) o no (&lt;code class=&quot;highlight language-R&quot;&gt;Fuera&lt;/code&gt;).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-4-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-5-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;tiempos-de-los-lanzamientos&quot;&gt;Tiempos de los lanzamientos&lt;/h2&gt;
 
@@ -77,7 +85,17 @@ lanzamientos de forma más uniforme durante todo el partido. Conviene comentar&l
 que algunos tiempos yo mayores a 40 minutos porque corresponden a lanzamientos&lt;br /&gt;
 que se hicieron durante la prórroga.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-7-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#t: Vector de tiempos en formato mm:ss&lt;/span&gt;
+density_time &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; team&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  times &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ms&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;team &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; team&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  times &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;minute&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;times&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; second&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;times&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60&lt;/span&gt;
+
+  res &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; density&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;times&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; from &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; to &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; bw &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; bw&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; kernel &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; kernel&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+  res&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;y &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; res&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;y &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;times&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-9-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-9&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;De manera similar, podríamos analizar dónde se concentran los lanzamientos de&lt;br /&gt;
 los dos equipos. En la siguiente gráfica, las curvas de nivel marcan las&lt;br /&gt;
@@ -85,7 +103,7 @@ regiones desde las cuales se producen más lanzamientos.  En general, el AFANION
 CB Almansa reparte sus lanzamientos mucho más que el Arcos Albacete Basket, que&lt;br /&gt;
 los concentra en tres regiones mucho más reducidas.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-8-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-8&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-10-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-10&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;tiros-por-jugador&quot;&gt;Tiros por jugador&lt;/h2&gt;
 
@@ -94,11 +112,40 @@ paquete &lt;code class=&quot;highlight language-R&quot;&gt;rfeb&lt;/code&gt; só
 A continuación se muestra la ubicación de los lanzamientos de cada jugador del&lt;br /&gt;
 Arcos Albacete Basket.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-9-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-9&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-11-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-11&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Para el AFANION CB Almansa, la gráfica correspondiente es esta:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-10-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-10&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-12-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-12&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;análisis-de-un-partido-en-concreto&quot;&gt;Análisis de un partido en concreto&lt;/h2&gt;
+
+&lt;p&gt;Por último, vamos a ver el análisis del partido AFANION CB Almansa - Arcos&lt;br /&gt;
+Albacete Basket celebrado el 26/01/2019 con victoria local por 90 a 69 puntos.&lt;br /&gt;
+En primer lugar, veamos desde dónde se realizaron los tiros a canasta durante&lt;br /&gt;
+el partido:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ggplot2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot_shotchart&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;afa.aba&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; made&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; facet_wrap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; team &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; made&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  geom_density_2d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; shots&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; y&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-13-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La gráfica muestra como el AFANION CB Almansa tiene unas zonas de tiros mucho&lt;br /&gt;
+más amplias que el Arcos Albacete Basket. Ademñas, también se puede apreciar&lt;br /&gt;
+que el equipo local ha dominado en los lanzamientos de triples.&lt;/p&gt;
+
+&lt;p&gt;Para ver la evaluación durante la posesión en el partido, podemos realizar una&lt;br /&gt;
+suavización kernel con los datos de lanzamientos que fueron dentro y luego&lt;br /&gt;
+calcular la diferencia. Esto permite ver en qué partes del partido domina uno u&lt;br /&gt;
+otro equipo. Valores positivos indican dominio (es decir, más tiros dentro)&lt;br /&gt;
+mientras que valores negativos indican dominio del equipo visitante.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-14-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-14&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La gráfica anterior muestra como el AFANION CB Almansa ha dominado el marcador&lt;br /&gt;
+durante casi todo el partido, con pequeñas remontadas del Arcos Albacete&lt;br /&gt;
+Basket. Los parciales de cada tiempo fueron 25-13, 28-16, 17-15, 20-25.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
 
