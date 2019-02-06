@@ -5,8 +5,8 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 27 Jan 2019 21:47:40 +0100</pubDate>
-    <lastBuildDate>Sun, 27 Jan 2019 21:47:40 +0100</lastBuildDate>
+    <pubDate>Wed, 06 Feb 2019 17:36:49 +0100</pubDate>
+    <lastBuildDate>Wed, 06 Feb 2019 17:36:49 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -88,8 +88,12 @@ que algunos tiempos yo mayores a 40 minutos porque corresponden a lanzamientos&l
 que se hicieron durante la prórroga.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#t: Vector de tiempos en formato mm:ss&lt;/span&gt;
-density_time &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; team&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  times &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ms&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;team &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; team&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+density_time &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; team &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; bw &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;is.null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;team&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    times &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ms&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;team &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; team&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    times &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ms&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;shots&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   times &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;minute&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;times&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; second&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;times&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60&lt;/span&gt;
 
   res &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; density&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;times&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; from &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; to &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; bw &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; bw&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; kernel &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; kernel&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
@@ -148,6 +152,31 @@ mientras que valores negativos indican dominio del equipo visitante.&lt;/p&gt;
 &lt;p&gt;La gráfica anterior muestra como el AFANION CB Almansa ha dominado el marcador&lt;br /&gt;
 durante casi todo el partido, con pequeñas remontadas del Arcos Albacete&lt;br /&gt;
 Basket. Los parciales de cada tiempo fueron 25-13, 28-16, 17-15, 20-25.&lt;/p&gt;
+
+&lt;h2 id=&quot;análisis-de-la-defensa&quot;&gt;Análisis de la defensa&lt;/h2&gt;
+
+&lt;p&gt;Una manera sencilla de estudiar cómo defiende un equipo es ver la gráfica&lt;br /&gt;
+de tiros anotados (y fallados) de todos los equipos a los que se ha enfrentado.&lt;br /&gt;
+A continuación podemos ver estas dos gráficas para el Arcos Albacete Basket,&lt;br /&gt;
+para el que se han usado datos de los últimos 9 &lt;br /&gt;
+partidos.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-16-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-16&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como puede observarse, en el lado izquierdo se observa una cantidad ligeramente&lt;br /&gt;
+mayor de tiros que en la parte izquierda. Esto puede indicar que los equipos&lt;br /&gt;
+atacantes tenga más facilidades para entrar desde esta banda a canasta y que,&lt;br /&gt;
+por tanto, haya que reforzarla.&lt;/p&gt;
+
+&lt;p&gt;De manera similar, podemos hacer una estimación de cuándo se producen los&lt;br /&gt;
+tiros a canasta de los equipos contrarios utilizando una suavización&lt;br /&gt;
+kernel.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-17-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-17&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La mayor cantidad de tiros se produce en el primer cuarto y el número de tiros&lt;br /&gt;
+va decreciendo conforme aumenta el partido. Parece que se observa un pequeño&lt;br /&gt;
+repunte en el tercer cuarto, y a mitad del último cuarto.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
 

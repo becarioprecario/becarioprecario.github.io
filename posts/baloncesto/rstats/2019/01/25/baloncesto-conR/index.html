@@ -168,8 +168,12 @@ que algunos tiempos yo mayores a 40 minutos porque corresponden a lanzamientos<b
 que se hicieron durante la prórroga.</p>
 
 <div class="highlight"><pre><code class="language-r"><span class="c1">#t: Vector de tiempos en formato mm:ss</span>
-density_time <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>shots<span class="p">,</span> team<span class="p">)</span> <span class="p">{</span>
-  times <span class="o">&lt;-</span> ms<span class="p">(</span>shots<span class="p">[</span>shots<span class="o">$</span>team <span class="o">%in%</span> team<span class="p">,</span> <span class="p">]</span><span class="o">$</span><span class="kp">t</span><span class="p">)</span>
+density_time <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>shots<span class="p">,</span> team <span class="o">=</span> <span class="kc">NULL</span><span class="p">,</span> bw <span class="o">=</span> <span class="m">2.5</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">if</span><span class="p">(</span><span class="o">!</span><span class="kp">is.null</span><span class="p">(</span>team<span class="p">))</span> <span class="p">{</span>
+    times <span class="o">&lt;-</span> ms<span class="p">(</span>shots<span class="p">[</span>shots<span class="o">$</span>team <span class="o">%in%</span> team<span class="p">,</span> <span class="p">]</span><span class="o">$</span><span class="kp">t</span><span class="p">)</span>
+  <span class="p">}</span> <span class="kr">else</span> <span class="p">{</span>
+    times <span class="o">&lt;-</span> ms<span class="p">(</span>shots<span class="o">$</span><span class="kp">t</span><span class="p">)</span>
+  <span class="p">}</span>
   times <span class="o">&lt;-</span> <span class="p">(</span>minute<span class="p">(</span>times<span class="p">)</span> <span class="o">*</span> <span class="m">60</span> <span class="o">+</span> second<span class="p">(</span>times<span class="p">))</span> <span class="o">/</span> <span class="m">60</span>
 
   res <span class="o">&lt;-</span> density<span class="p">(</span>times<span class="p">,</span> from <span class="o">=</span> <span class="m">0</span><span class="p">,</span> to <span class="o">=</span> <span class="m">40</span><span class="p">,</span> bw <span class="o">=</span> bw<span class="p">,</span> kernel <span class="o">=</span> kernel<span class="p">)</span> 
@@ -228,6 +232,31 @@ mientras que valores negativos indican dominio del equipo visitante.</p>
 <p>La gráfica anterior muestra como el AFANION CB Almansa ha dominado el marcador<br />
 durante casi todo el partido, con pequeñas remontadas del Arcos Albacete<br />
 Basket. Los parciales de cada tiempo fueron 25-13, 28-16, 17-15, 20-25.</p>
+
+<h2 id="análisis-de-la-defensa">Análisis de la defensa</h2>
+
+<p>Una manera sencilla de estudiar cómo defiende un equipo es ver la gráfica<br />
+de tiros anotados (y fallados) de todos los equipos a los que se ha enfrentado.<br />
+A continuación podemos ver estas dos gráficas para el Arcos Albacete Basket,<br />
+para el que se han usado datos de los últimos 9 <br />
+partidos.</p>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-16-1.png" alt="plot of chunk unnamed-chunk-16" /></p>
+
+<p>Como puede observarse, en el lado izquierdo se observa una cantidad ligeramente<br />
+mayor de tiros que en la parte izquierda. Esto puede indicar que los equipos<br />
+atacantes tenga más facilidades para entrar desde esta banda a canasta y que,<br />
+por tanto, haya que reforzarla.</p>
+
+<p>De manera similar, podemos hacer una estimación de cuándo se producen los<br />
+tiros a canasta de los equipos contrarios utilizando una suavización<br />
+kernel.</p>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-17-1.png" alt="plot of chunk unnamed-chunk-17" /></p>
+
+<p>La mayor cantidad de tiros se produce en el primer cuarto y el número de tiros<br />
+va decreciendo conforme aumenta el partido. Parece que se observa un pequeño<br />
+repunte en el tercer cuarto, y a mitad del último cuarto.</p>
 
 <h2 id="conclusiones">Conclusiones</h2>
 
