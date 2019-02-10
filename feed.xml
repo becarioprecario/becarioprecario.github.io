@@ -5,9 +5,453 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 06 Feb 2019 17:36:49 +0100</pubDate>
-    <lastBuildDate>Wed, 06 Feb 2019 17:36:49 +0100</lastBuildDate>
+    <pubDate>Mon, 11 Feb 2019 00:38:17 +0100</pubDate>
+    <lastBuildDate>Mon, 11 Feb 2019 00:38:17 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Proyección de resultados para las elecciones a Cortes en Castilla-La Mancha</title>
+        <description>&lt;p&gt;&lt;strong&gt;Virgilio Gómez Rubio&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Departamento de Matemáticas&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Universidad de Castilla-La Mancha&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Campus de Albacete&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;introducción&quot;&gt;Introducción&lt;/h2&gt;
+
+&lt;p&gt;El objetivo de este artículo es proyectar los resultados de las elecciones regionales en Andalucía de diciembre de 2018 para hacer una estimación del reparto de diputados en las próximas elecciones a las Cortes de Castilla-La Mancha.&lt;/p&gt;
+
+&lt;h2 id=&quot;metodología&quot;&gt;Metodología&lt;/h2&gt;
+
+&lt;p&gt;A la hora de proyectar los resultados de las elecciones regionales en Castilla-La Mancha lo que haremos será establecer una similitud entre las provincias de ambas comunidades autónomas. Esta similitud vendrá dada por la proximidad de los porcentajes de voto en las elecciones nacionales de 2016, por ser estas las más próximas en el tiempo. La justificación es sencilla: provincias que votaron de manea similar en 2016 probablemente lo hagan también en futuras elecciones.&lt;/p&gt;
+
+&lt;p&gt;A la hora de calcular esta similitud se usarán los porcentajes de votos a los partidos PP, PSOE, Unidos Podemos (o Adelante Andalucía) y Ciudadanos. Esto nos permite definir una &lt;em&gt;distancia&lt;/em&gt; entre las distintas provincias. La similitud entre dos provincias vendrá dado por el inverso de esta distancia. Por motivos prácticas escalaremos estas similitudes para cada provincia de manera que sumen uno.&lt;/p&gt;
+
+&lt;p&gt;Así, la estimación del porcentaje de voto en cada provincia de Castilla-La Mancha vendrá dado por la suma de los porcentajes de voto de las provincias andaluzas multipliadas por el correspondiente coeficiente de similitud.&lt;/p&gt;
+
+&lt;p&gt;Por último, a la hora de repartir los escaños usaremos la Regla d’Hont siempre y cuando los partidos obtengan el porcentaje mínimo para entrar en el reparto. Supondremos que todos los partidos lo hacen.&lt;/p&gt;
+
+&lt;h2 id=&quot;resultados&quot;&gt;Resultados&lt;/h2&gt;
+
+&lt;p&gt;La siguiente tabla muestra las &lt;em&gt;distancias&lt;/em&gt; entre provincias:&lt;/p&gt;
+
+&lt;table class=&quot;table table-striped table-hover table-condensed table-responsive&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt;   &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Albacete &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Ciudad Real &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Cuenca &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Guadalajara &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Toledo &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Almería &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3.17 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2.45 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5.37 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 8.14 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1.90 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Cádiz &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 10.55 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 13.94 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 16.44 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 9.87 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 13.18 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Córdoba &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 8.77 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 10.93 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 13.17 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 10.51 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 11.06 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Granada &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 7.26 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 9.61 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 12.13 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 9.49 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 9.74 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Huelva &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 11.91 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 12.52 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 14.36 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 15.15 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 13.83 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Jaén &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 12.34 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 11.68 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 12.99 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 16.55 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 13.66 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Málaga &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 7.66 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 11.77 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 14.66 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 6.62 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 10.55 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Sevilla &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 14.71 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 17.00 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 19.23 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 15.57 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 17.24 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A partir de esta tabla, los pesos obtenidos son:&lt;/p&gt;
+
+&lt;table class=&quot;table table-striped table-hover table-condensed table-responsive&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt;   &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Albacete &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Ciudad Real &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Cuenca &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Guadalajara &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Toledo &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Almería &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.31 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.41 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.28 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.16 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.48 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Cádiz &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.09 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.07 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.09 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.13 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.07 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Córdoba &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.11 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.09 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.11 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.12 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.08 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Granada &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.13 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.11 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.12 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.14 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.09 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Huelva &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.08 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.08 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.10 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.09 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.07 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Jaén &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.08 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.09 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.11 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.08 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.07 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Málaga &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.13 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.09 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.10 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.20 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.09 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Sevilla &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.07 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.06 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.08 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.08 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0.05 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;La siguiente tabla muestra la estimación de votos a partidos por provincias:&lt;/p&gt;
+
+&lt;table class=&quot;table table-striped table-hover table-condensed table-responsive&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt;   &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; PP &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; PSOE &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; UP &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Cs &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; VOX &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; OTROS &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Albacete &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 23.01 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 27.49 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 13.99 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 17.68 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 12.30 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5.53 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Ciudad Real &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 23.68 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 27.56 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 13.23 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 17.35 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 12.90 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5.27 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Cuenca &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 22.83 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 28.04 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 14.06 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 17.56 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 11.96 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5.56 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Guadalajara &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 21.93 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 27.42 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 15.08 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 18.15 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 11.46 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5.96 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Toledo &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 24.05 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 27.21 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 12.88 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 17.29 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 13.39 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5.16 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A modo de comparativa, los resultados de las elecciones en 2016 fueron:&lt;/p&gt;
+
+&lt;table class=&quot;table table-striped table-hover table-condensed table-responsive&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Provincia &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Elecciones &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Año &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; PP &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; PSOE &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; UP &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Cs &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; VOX &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; OTROS &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Albacete &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Nacional &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2016 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 40.93 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 27.17 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 15.22 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 14.47 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; NA &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2.21 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Ciudad Real &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Nacional &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2016 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 43.60 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 29.25 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 13.37 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 11.84 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; NA &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1.94 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Cuenca &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Nacional &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2016 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 45.79 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 29.74 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 13.13 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 9.49 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; NA &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1.85 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Guadalajara &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Nacional &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2016 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 39.62 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 23.04 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 18.10 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 16.40 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; NA &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2.84 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Toledo &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Nacional &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2016 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 43.47 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 26.68 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 14.51 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 13.01 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; NA &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2.33 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Por último, el reparto de escaños quedaría así:&lt;/p&gt;
+
+&lt;table class=&quot;table table-striped table-hover table-condensed table-responsive&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt;   &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Albacete &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Ciudad Real &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Cuenca &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Guadalajara &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Toledo &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; TOTAL &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Cs &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; PP &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 7 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; PSOE &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 12 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; UP &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; VOX &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; TOTAL &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 6 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 8 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 9 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 33 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;La composición actual de las Cortes de Castilla-La Mancha es de 16 diputados del PP, 15 del PSOE y 2 de Podemos.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
+
+&lt;p&gt;Este estudio se basa en la premisa de que existe cierta similitud entre la forma de votar en las provincias andaluzas y las de Castilla-La Mancha. Explotando esta similitud hemos estimado porcentajes de voto a partidos que nos permiten estimar los escaños que conseguiría cada partido.&lt;/p&gt;
+
+&lt;p&gt;Los resultados más destacables son:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;PP y PSOE bajan en número de escaños.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Podemos (y la coalición con Izquierda Unida y otros partidos) aumentaría el número de escaños.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ciudadanos entraría en las Cortes.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;VOX también entraría en las Cortes.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;El bloque de partidos de izquierdas podría gobernar al tener un diputado más que el bloque de partidos de derechas.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;referencias&quot;&gt;Referencias&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Los datos utilizados han sido obtenidos de la web del diario &lt;em&gt;El País&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 10 Feb 2019 00:00:00 +0100</pubDate>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2019/02/10/proyeccion-CLM2019/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2019/02/10/proyeccion-CLM2019/</guid>
+        
+        <category>Castilla-La Mancha</category>
+        
+        
+        <category>elecciones</category>
+        
+        <category>rstats</category>
+        
+      </item>
     
       <item>
         <title>Análisis de partidos de baloncesto con R</title>
@@ -2611,221 +3055,6 @@ interesante saber los datos de los jugadores, además del número de su camiseta
         <category>Espana</category>
         
         <category>20D</category>
-        
-        
-        <category>elecciones</category>
-        
-        <category>rstats</category>
-        
-      </item>
-    
-      <item>
-        <title>Una de Encuestas Electorales</title>
-        <description>&lt;h2 id=&quot;introducción-al-diseño-y-análisis-de-encuestas-electorales&quot;&gt;Introducción al diseño y análisis de encuestas electorales&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Virgilio Gómez Rubio&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Departamento de Matemáticas&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Universidad de Castilla-La Mancha&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Campus de Albacete&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;introducción&quot;&gt;Introducción&lt;/h2&gt;
-
-&lt;p&gt;Aprovechando que este jueves tengo clase con los alumnos de la &lt;a href=&quot;https://www.uclm.es/organos/vic_cultura/josesaramago/index.asp&quot;&gt;Escuela de Mayores José Saramago&lt;/a&gt; de la UCLM sobre encuestas electorales, he decidido escribir una pequeña introducción al tema sin muchos detalles matemáticos. En este artículo me centraré en las elecciones municipales en Albacete celebradas el pasado 24 de mayo de 2015. En cualquier caso, la metodología es extrapolable a situaciones similares.&lt;/p&gt;
-
-&lt;p&gt;El objetivo de las encuestas electorales es hacer una estimación del porcentaje final de votos antes de que tengan lugar las elecciones. En general, el procedimiento es simple: se selecciona un conjunto de futuros votantes a los que se les pregunta sobre su intención de voto y se asume que la distribución del voto en estas encuestas se parecerá a los resultados reales. El resultado será más fiable cuanto mayor sea el número de votantes a los que se pregunte y, sobre todo, si esas personas representan de manera fiable al conjunto de los votantes de la ciudad de Albacete.&lt;/p&gt;
-
-&lt;p&gt;Formalizando el problema, nuestro interés es estimar la proporción de votos que obtendrán los principales partidos y, posiblemente, el porcentaje de votos a otros partidos y en blanco. Para las elecciones municipales en Albacete seleccionamos a PP, PSOE, Ciudadanos, Ganemos y UpyD por ser los partidos con más posibilidades en el momento de hacer las encuestas. La distribución de escaños se realiza solamente sobre los votos válidos, así que el porcentaje de votos nulos se suele ignorar, así como la abstención.&lt;/p&gt;
-
-&lt;h3 id=&quot;selección-de-la-muestra&quot;&gt;Selección de la muestra&lt;/h3&gt;
-
-&lt;p&gt;Estadísticamente hablando, al conjunto de personas a las que hacemos las encuestas se conoce como &lt;em&gt;muestra&lt;/em&gt; y al total de electores como &lt;em&gt;población de estudio&lt;/em&gt; Lo que pretendemos es usar esa muestra para poder sacar conclusiones fiables de la población de estudio. Aunque generalmente cuanto mayor sea el tamaño de la muestra (es decir, el número de personas entrevistadas) mejores estimaciones obtendremos, hay una serie de consideraciones a tener en cuenta para que los resultados sean fiables:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;La muestra ha de ser representativa de la población, es decir, que debe incluir electores de varias edades, sexos, nivel de estudios, etc.&lt;/li&gt;
-  &lt;li&gt;Esto incluye realizar encuestas a personas de todos los barrios de Albacete&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Cuando se diseña una encuesta se suele dividir a la población en grupos (o estratos) de acuerdo a una serie de variables socieconómicas y se selecciona un número de encuestas para cada uno de estos grupos. Esto se conoce como &lt;em&gt;muestreo estratificado&lt;/em&gt; y suele ser mejor que seleccionar al azar una muestra de entre toda la población porque tiene en cuenta la estructura de la población. Por ejemplo, si el número de electores entre los 18 y 30 años es menor que el de mayores de 65 años, el muestreo debería recoger más encuentas de este último grupo de edad para ser representativo de la población. Si durante la recogida de datos esto no ha sido así, se puede hacer una corrección en los resultados (lo que popularmente se llama &lt;em&gt;cocina&lt;/em&gt;).&lt;/p&gt;
-
-&lt;p&gt;El tamaño de la muestra se suele tomar de manera que el error (estadístico) cometido en las estimaciones de voto sea pequeño. El problema más común es que no hay presupuesto para alcanzar el error deseado y lo que se hace es estimar el error cometido en función del tamaño muestral que tengamos.&lt;/p&gt;
-
-&lt;h3 id=&quot;estimación-de-porcentajes&quot;&gt;Estimación de porcentajes&lt;/h3&gt;
-
-&lt;p&gt;Supongamos por un momento que estamos considerando el caso en el que únicamente tenemos dos partidos, &lt;em&gt;A&lt;/em&gt; y &lt;em&gt;B&lt;/em&gt;, y que estamos intentando estimar la intención de voto. Podemos considerar que los porcentajes de voto reales son &lt;script type=&quot;math/tex&quot;&gt;\pi_A&lt;/script&gt; y &lt;script type=&quot;math/tex&quot;&gt;\pi_B&lt;/script&gt;. Supongamos también que sólo se puede votar a estas dos opciones, de manera que &lt;script type=&quot;math/tex&quot;&gt;\pi_A = 1 - \pi_B&lt;/script&gt;.&lt;/p&gt;
-
-&lt;p&gt;Conviene comentar que este tipo de problemas se da con más frecuencia de lo que parece. En Medicina, por ejemplo, estas situaciones se dan cuando se prueba un nuevo medicamento y se estudia si el paciente mejora (&lt;em&gt;A&lt;/em&gt;) o no mejora (&lt;em&gt;B&lt;/em&gt;). En este contexto, &lt;script type=&quot;math/tex&quot;&gt;\pi_A&lt;/script&gt; mide la eficacia del medicamento o la proporción de pacientes que mejoraría con ese tratamiento, mientras que &lt;script type=&quot;math/tex&quot;&gt;\pi_B&lt;/script&gt; sería la proporción de pacientes que no mejoraría. Estas proporciones se estimarían mediante el desarrollo de un ensayo clínico en el que a un grupo de pacientes se les da el tratamiento bajo estudio y se recogen cuántos mejoran y cuántos no.&lt;/p&gt;
-
-&lt;p&gt;Volviendo al contexto electoral, si preguntamos a una persona elegida al azar de entre todos los votantes, la probabilidad de que nos diga que va a votar al partido &lt;em&gt;A&lt;/em&gt; sería de &lt;script type=&quot;math/tex&quot;&gt;\pi_A&lt;/script&gt;. Si preguntamos a un número grande de personas, la proporción que nos haya dicho que votará al partido &lt;em&gt;A&lt;/em&gt;, y que llamaremos &lt;script type=&quot;math/tex&quot;&gt;\hat{\pi}_A&lt;/script&gt;, se parecerá mucho al valor real de &lt;script type=&quot;math/tex&quot;&gt;\pi_A&lt;/script&gt;. De manera similar tendríamos la proporción observada de votantes del partidos &lt;em&gt;B&lt;/em&gt;, &lt;script type=&quot;math/tex&quot;&gt;\hat{\pi}_B&lt;/script&gt;, se ha de parecer a &lt;script type=&quot;math/tex&quot;&gt;\pi_B&lt;/script&gt;.&lt;/p&gt;
-
-&lt;p&gt;Por ejemplo, si preguntamos a 100 personas y 63 nos dicen que votarán al partido &lt;em&gt;A&lt;/em&gt; tendríamos una estimación de la proporción real de votantes igual a &lt;script type=&quot;math/tex&quot;&gt;\hat{\pi}_A = 63/100 = 0.63&lt;/script&gt;. Para el partido &lt;em&gt;B&lt;/em&gt; la estimación sería &lt;script type=&quot;math/tex&quot;&gt;\hat{\pi}_B = 37/100 = 0.37&lt;/script&gt;, que se ha de parecer mucho a la proporción real de votantes del partido &lt;em&gt;B&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Estas estimaciones serán más fiables cuanto mayor sea el número de personas que entrevistemos siempre y cuando la muestra sea representativa de toda la población. Además, si repitiésemos las encuestas tomando a otro grupo de 100 votantes, las proporciones estimadas seguramente varíen un poco, dependiendo del error que estemos cometiendo en la estimación.&lt;/p&gt;
-
-&lt;h3 id=&quot;estimación-del-error&quot;&gt;Estimación del error&lt;/h3&gt;
-
-&lt;p&gt;La estimación del error o la variabilidad de los resultados entre muestra y muestra la haremos por simulación. En concreto, supongamos que los porcentajes reales fueran conocidos y tales que &lt;script type=&quot;math/tex&quot;&gt;\pi_A=0.60&lt;/script&gt; y &lt;script type=&quot;math/tex&quot;&gt;\pi_B=0.40&lt;/script&gt;. Podríamos simular una encuesta seleccionando 100 respuestas al azar de manera que cada respuesta sea &lt;em&gt;A&lt;/em&gt; o &lt;em&gt;B&lt;/em&gt; de acuerdo a las proporciones anteriores. Si repetimos esto 1000 y hacemos un histograma de los resultados obtendríamos:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-1-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Lo que puede verse en esa gráfica es que la mayoría de las estimaciones quedan cerca del valor real, pero que también existe cierta variabilidad en las estimaciones. Podríamos dar un rango de valores (o &lt;em&gt;intervalo&lt;/em&gt;) que contenga el 95% de los valores estimados en cada muestra. Para el partido &lt;em&gt;A&lt;/em&gt; sería (0.50975, 0.69) y para el partido &lt;em&gt;B&lt;/em&gt; sería (0.31, 0.49025).&lt;/p&gt;
-
-&lt;p&gt;Como puede verse, ambos intervalos aparecen centrados en los valores reales y la amplitud es de dos veces &lt;script type=&quot;math/tex&quot;&gt;0.10&lt;/script&gt;. Este valor es lo que reportaríamos como error. Este valor viene a decir que en el 95% de las encuestas que hagamos, el valor real de la proporción va a estar, como mucho, a &lt;script type=&quot;math/tex&quot;&gt;0.10&lt;/script&gt; del valor real de la proporción de votantes.&lt;/p&gt;
-
-&lt;p&gt;Conviene comentar que este error es conocido desde hace mucho tiempo por los matemáticos y va a ser igual a&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;1.96 * \sqrt{\frac{\pi (1 - \pi)}{n}}&lt;/script&gt;
-
-&lt;p&gt;donde &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; es el número de encuestas recogidas y &lt;script type=&quot;math/tex&quot;&gt;\pi&lt;/script&gt; la proporción real que estamos intentando estimar. Como &lt;script type=&quot;math/tex&quot;&gt;\pi&lt;/script&gt; es desconocida en la práctica se suele tomar una cota superior de este error dada por&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;1.96 * \sqrt{\frac{0.5 * (1 - 0.5)}{n}}&lt;/script&gt;
-
-&lt;p&gt;Para las 100 encuestas (es decir, &lt;script type=&quot;math/tex&quot;&gt;n = 100&lt;/script&gt;) que hemos hecho en las simulaciones el error estimado sería de 0.098, que se parece mucho al error que aparece en las simulaciones.&lt;/p&gt;
-
-&lt;h3 id=&quot;encuestas-a-las-elecciones-municipales-en-albacete-el-24m&quot;&gt;Encuestas a las elecciones municipales en Albacete el 24M&lt;/h3&gt;
-
-&lt;p&gt;En la práctica tendremos una situación en la que hay varios partidos con porcentajes de voto muy distintos. Los &lt;a href=&quot;http://resultados.elpais.com/elecciones/2015/municipales/07/02/03.html&quot;&gt;resultados de las elecciones municipales en Albacete&lt;/a&gt; del 24 de mayo de 2014 aparecen en la tabla de abajo. También hemos incluído los resultados de las encuestas realizadas por los alumnos de 1ºD y 1ºE de la Escuela de Ingenieros Industriales de Albacete, así como la encuesta publicada por el periódico &lt;a href=&quot;http://www.latribunadealbacete.es/noticia/Z78EC9BE7-C650-FF38-3B04D75BFA22A2B5/20150511/pp/sera/partido/mas/votado/cerca/mayoria/absoluta&quot;&gt;La Tribuna de Albacete&lt;/a&gt;.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;PARTIDO&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;VOTOS&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;CONCEJALES&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;PORCENTAJE&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;VOTOS ENCUESTA&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;PORCENTAJE ENCUESTA&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;CONCEJALES ENCUESTA&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;PORCENTAJE LA TRIBUNA&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;CONCEJALES LA TRIBUNA&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;PP&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;29351&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;33.48&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;419&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;24.96&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;9&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;38.6&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;11.5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;PSOE&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;23944&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;27.31&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;374&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;22.28&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;24.8&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Ganemos&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;13446&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15.34&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;158&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;9.41&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15.7&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Cs&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;11902&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;13.58&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;305&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;18.17&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;16.8&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4.5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;UPyD&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1532&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.75&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;51&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3.04&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Otros&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7497&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8.55&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;372&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;22.16&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4.1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0.0&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Como puede verse, se realizaron un total de 1679 encuestas. La muestra se diseño teniendo en cuenta lo siguiente:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Se realizó una encuestación en cada uno de los barrios de Albacete&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;El número de personas que debían ser entrevistadas en cada barrio se determinó de acuerdo a la población (según edad y sexo) de cada barrio&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;La recogida de datos se realizó mediante un &lt;em&gt;tablet&lt;/em&gt; en la que el entrevistado debía marcar el partido del que prefería que fuera el futuro alcalde de Albacete&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Para estimar el error de las encuestas realizadas, podemos repetir el experimento anterior y simular respuestas a las encuestas usando los porcentajes reales de voto para ver cuál sería la variabilidad esperada y compararla con los resultados obtenidos. La siguiente gráfica muestra la variabilidad de acuerdo al número de encuestas realizado,  el porcentaje de voto estimado en nuestra  encuesta (en negro) y el de La Tribuna (en rojo):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-4-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Lo más remarcable es el &lt;em&gt;voto oculto&lt;/em&gt; que experimentan PP y PSOE en nuestras encuestas. Las encuestas subestiman el porcentaje de voto real a estos dos partidos, que quedaría englobado en el apartado de OTROS.&lt;/p&gt;
-
-&lt;h3 id=&quot;estimación-del-número-de-concejales&quot;&gt;Estimación del número de concejales&lt;/h3&gt;
-
-&lt;p&gt;Una vez que se ha realizado el cómputo de los votos válidos se realiza la distribución de concejales, que para la ciudad de Albacete son 27. Al reparto sólo pueden acceder los partidos que hayan obtenido al menos un 5% de los votos válidos, y éste se realiza de acuerdo a la &lt;a href=&quot;https://es.wikipedia.org/wiki/Sistema_d%27Hondt&quot;&gt;Ley d’Hont&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;La Ley d’Hont establece que el reparto ha de hacerse de acuerdo una serie de puntuaciones que se calculan dividiendo el número de votos obtenido (o el porcentaje) desde 1 hasta el número total de concejales. Luego estos coeficientes se ordenan de mayor a menor y los concejales serían asignados a los partidos con las 27 puntuaciones mayores (por ser ese el número de concejales en Albacete).&lt;/p&gt;
-
-&lt;p&gt;Para el caso concreto de Albacete, la siguiente tabla muestra las puntuaciones según el número real de votos obtenido:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## Error in library(pander): there is no package called &amp;#39;pander&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-R&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## Error in pandoc.table(tab.dhont[, -6], emphasize.verbatim.cells = which(tab.dhont[, : no se pudo encontrar la función &amp;quot;pandoc.table&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Se han marcado las 27 puntuaciones más altas que son las que proporcionan algún concejal. UPyD no participa en el reparto de concejales porque no ha llegado al mínimo del 5% de los votos válidos. Aun así, vemos que hubiera quedado muy lejos de obtener un concejal en caso de haber entrado.&lt;/p&gt;
-
-&lt;p&gt;Como última puntualización al reparto de concejales, este sistema electoral no proporciona un reparto de concejales proporcional al porcentaje de votos obtenido, sino que tiene a favorecer a los partidos más votados.&lt;/p&gt;
-
-&lt;p&gt;Igual que hemos hecho con los porcentajes de voto, también es posible estimar cuántos escaños obtendría cada partido por simulación. La gráfica que aparece a continuación muestran el número de escaños que obtendríamos con las simulaciones de las encuestas (usando los porcentajes de voto reales), el que obtuvimos con nuestas encuestas (en negro) y el publicado por el periódico La Tribuna de Albacete (en rojo). Como puede verse, en general nuestros resultados no estaban muy alejados de los resultados reales pero sí que quedaban fuera de lo deseable.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-7-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Como nuestras encuestas sobrestimaron el número de votos a Ciudadanos este partido parece obtener un número de escaños mucho mayor de los que en realidad tuvo. Para el resto de partidos los resultados sí que fueron bastante cercanos, aunquefuera de lo que cabría esperar por la variabilidad del muestreo. Los resultados de la encuesta del periódico La Tribuna cayeron dentro de lo que cabría esperar de acuerdo al error esperado e incluso parece que afinaron más que en nuestra encuesta.&lt;/p&gt;
-
-&lt;h3 id=&quot;agradecimientos&quot;&gt;Agradecimientos&lt;/h3&gt;
-
-&lt;p&gt;Este trabajo no se habría llevado a cabo sin el entusiasmo y la colaboración de Mario Plaza Delgado, que es el verdadero impulsor del desarrollo de las encuestas. También hay que agradecer a los alumnos de 1ºD y ºE del Grado en Ingeniería Industrial del curso 2014-2015 por participar en la recogida de encuestas.  La Escuela de Industriales de Albacete y el Departamento de Matemáticas de la UCLM también aportaron medios económicos para poder llevar a cabo las encuestas.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 01 Dec 2015 00:00:00 +0100</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/01/encuestas-electorales/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/01/encuestas-electorales/</guid>
-        
-        <category>Albacete</category>
-        
-        <category>Castilla-La Mancha</category>
         
         
         <category>elecciones</category>
