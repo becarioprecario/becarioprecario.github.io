@@ -5,8 +5,8 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 11 Feb 2019 10:03:45 +0100</pubDate>
-    <lastBuildDate>Mon, 11 Feb 2019 10:03:45 +0100</lastBuildDate>
+    <pubDate>Mon, 11 Feb 2019 12:12:02 +0100</pubDate>
+    <lastBuildDate>Mon, 11 Feb 2019 12:12:02 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -23,7 +23,7 @@
 
 &lt;p&gt;El objetivo de este artículo es proyectar los resultados de las elecciones regionales en Andalucía de diciembre de 2018 para hacer una estimación del reparto de diputados en las próximas elecciones a las Cortes de Castilla-La Mancha.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Actualización&lt;/strong&gt;: Se han añadido intervalos para estimar la variabilidad de los escaños.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Actualización&lt;/strong&gt;: Se han añadido intervalos para estimar la variabilidad de los escaños. &lt;strong&gt;Se asume que los escaños en Albacete y Ciudad Real cambian a 7 en cada provincia&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;metodología&quot;&gt;Metodología&lt;/h2&gt;
 
@@ -337,7 +337,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Por último, el reparto de escaños quedaría así:&lt;/p&gt;
+&lt;p&gt;Por último,  a la hora de repartir los escaños &lt;strong&gt;hemos asumido que tanto Albacete como Ciudad Real cambian a 7 escaños&lt;/strong&gt; (en lugar de los 6 y 8 que tienen en la actualidad), y el reparto de escaños quedaría así:&lt;/p&gt;
 
 &lt;table class=&quot;table table-striped table-hover table-condensed table-responsive&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
  &lt;thead&gt;
@@ -363,21 +363,21 @@
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style=&quot;text-align:left;&quot;&gt; PP &lt;/td&gt;
-   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
-   &lt;td style=&quot;text-align:right;&quot;&gt; 7 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 8 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style=&quot;text-align:left;&quot;&gt; PSOE &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
-   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
-   &lt;td style=&quot;text-align:right;&quot;&gt; 12 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 11 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style=&quot;text-align:left;&quot;&gt; UP &lt;/td&gt;
@@ -399,8 +399,8 @@
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style=&quot;text-align:left;&quot;&gt; TOTAL &lt;/td&gt;
-   &lt;td style=&quot;text-align:right;&quot;&gt; 6 &lt;/td&gt;
-   &lt;td style=&quot;text-align:right;&quot;&gt; 8 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 7 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 7 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 9 &lt;/td&gt;
@@ -432,16 +432,16 @@
   &lt;tr&gt;
    &lt;td style=&quot;text-align:left;&quot;&gt; 2.5% &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 6 &lt;/td&gt;
-   &lt;td style=&quot;text-align:right;&quot;&gt; 7 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 8 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 11 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
-   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style=&quot;text-align:left;&quot;&gt; 97.5% &lt;/td&gt;
-   &lt;td style=&quot;text-align:right;&quot;&gt; 7 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 6 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 8 &lt;/td&gt;
-   &lt;td style=&quot;text-align:right;&quot;&gt; 12 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 11 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
    &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
   &lt;/tr&gt;
