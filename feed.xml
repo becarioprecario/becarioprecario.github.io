@@ -5,8 +5,8 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 11 Feb 2019 00:38:17 +0100</pubDate>
-    <lastBuildDate>Mon, 11 Feb 2019 00:38:17 +0100</lastBuildDate>
+    <pubDate>Mon, 11 Feb 2019 10:03:45 +0100</pubDate>
+    <lastBuildDate>Mon, 11 Feb 2019 10:03:45 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -22,6 +22,8 @@
 &lt;h2 id=&quot;introducción&quot;&gt;Introducción&lt;/h2&gt;
 
 &lt;p&gt;El objetivo de este artículo es proyectar los resultados de las elecciones regionales en Andalucía de diciembre de 2018 para hacer una estimación del reparto de diputados en las próximas elecciones a las Cortes de Castilla-La Mancha.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Actualización&lt;/strong&gt;: Se han añadido intervalos para estimar la variabilidad de los escaños.&lt;/p&gt;
 
 &lt;h2 id=&quot;metodología&quot;&gt;Metodología&lt;/h2&gt;
 
@@ -409,6 +411,45 @@
 
 &lt;p&gt;La composición actual de las Cortes de Castilla-La Mancha es de 16 diputados del PP, 15 del PSOE y 2 de Podemos.&lt;/p&gt;
 
+&lt;h2 id=&quot;incertidumbre-de-los-resultados&quot;&gt;Incertidumbre de los resultados&lt;/h2&gt;
+
+&lt;p&gt;A esta estimación puntual vamos a añadir ahora un estudio de la variabilidad del reparto de escaños mediante simulación. Lo que haremos será utilizar una  distribución multinomial con las probabilidades de voto estimadas para simular 10.000 posibles votaciones. Con estas votaciones, volveremos a calcular los escaños obtenidos para dar una medida de la variabilidad de los resultados en Castilla-La Mancha.&lt;/p&gt;
+
+&lt;p&gt;Hemos cogido los cuantiles de 2.5% y del 97.5% para estimar la variabilidad de los escaños obtenidos en cada partido. Esto quiere decir que el 95% de las simulaciones quedaron entre los dos valores presentados en la siguiente tabla:&lt;/p&gt;
+
+&lt;table class=&quot;table table-striped table-hover table-condensed table-responsive&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt;   &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Cs &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; PP &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; PSOE &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; UP &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; VOX &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; 2.5% &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 6 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 7 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 11 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; 97.5% &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 7 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 8 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 12 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;De los resultados se deduce que hay poca variabilidad en los resultados según el modelo propuesto.&lt;/p&gt;
+
 &lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
 
 &lt;p&gt;Este estudio se basa en la premisa de que existe cierta similitud entre la forma de votar en las provincias andaluzas y las de Castilla-La Mancha. Explotando esta similitud hemos estimado porcentajes de voto a partidos que nos permiten estimar los escaños que conseguiría cada partido.&lt;/p&gt;
@@ -432,6 +473,8 @@
     &lt;p&gt;El bloque de partidos de izquierdas podría gobernar al tener un diputado más que el bloque de partidos de derechas.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;El periódico “La Vanguardia” también ha realizado unas &lt;a href=&quot;https://www.lavanguardia.com/politica/20190211/46349732797/socialismo-victoria-psoe-encuestas-elecciones-26m-asturias.html&quot;&gt;proyecciones de las elecciones regionales&lt;/a&gt;. En general, nuestros resultados coinciden con los suyos.&lt;/p&gt;
 
 &lt;h2 id=&quot;referencias&quot;&gt;Referencias&lt;/h2&gt;
 
