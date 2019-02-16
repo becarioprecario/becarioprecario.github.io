@@ -5,12 +5,12 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 11 Feb 2019 21:38:57 +0100</pubDate>
-    <lastBuildDate>Mon, 11 Feb 2019 21:38:57 +0100</lastBuildDate>
+    <pubDate>Sat, 16 Feb 2019 17:08:01 +0100</pubDate>
+    <lastBuildDate>Sat, 16 Feb 2019 17:08:01 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>Proyección de resultados para las elecciones a Cortes en Castilla-La Mancha</title>
+        <title>Proyección de resultados para las elecciones a Cortes y al Congreso en Castilla-La Mancha</title>
         <description>&lt;p&gt;&lt;strong&gt;Virgilio Gómez Rubio&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Departamento de Matemáticas&lt;/em&gt;&lt;/p&gt;
@@ -22,6 +22,8 @@
 &lt;h2 id=&quot;introducción&quot;&gt;Introducción&lt;/h2&gt;
 
 &lt;p&gt;El objetivo de este artículo es proyectar los resultados de las elecciones regionales en Andalucía de diciembre de 2018 para hacer una estimación del reparto de diputados en las próximas elecciones a las Cortes de Castilla-La Mancha.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Actualización del 16/02/2019&lt;/strong&gt;: Se ha añadido la estimación del reparto de escaños en el Congreso de los Diputados para las elecciones del 28 de abril de 2019.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Actualización&lt;/strong&gt;: Se han añadido intervalos para estimar la variabilidad de los escaños. &lt;strong&gt;Se asume que los escaños en Albacete y Ciudad Real cambian a 7 en cada provincia&lt;/strong&gt;.&lt;/p&gt;
 
@@ -450,9 +452,198 @@
 
 &lt;p&gt;De los resultados se deduce que hay poca variabilidad en los resultados según el modelo propuesto.&lt;/p&gt;
 
+&lt;h2 id=&quot;congreso-de-los-diputados&quot;&gt;Congreso de los Diputados&lt;/h2&gt;
+
+&lt;p&gt;De manera similar, es posible dar una estimación de cuántos escaños obtendría cada partido en el Congreso de los Diputados en las elecciones del próximo 28 de abril de 2019.&lt;/p&gt;
+
+&lt;p&gt;En primer lugar, los resultados en 2016 fueron los siguientes:&lt;/p&gt;
+
+&lt;table class=&quot;table table-striped table-hover table-condensed table-responsive&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt;   &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Albacete &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Ciudad.Real &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Cuenca &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Guadalajara &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Toledo &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; TOTAL &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Cs &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; PP &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 12 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; PSOE &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 7 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; UP &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; VOX &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; NA &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; NA &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; NA &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; NA &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; NA &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; TOTAL &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 4 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 6 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 21 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Según la proyección de votos que hemos hecho, los resultados de las elecciones del 28 de abril de 2019 serían los siguientes:&lt;/p&gt;
+
+&lt;table class=&quot;table table-striped table-hover table-condensed table-responsive&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt;   &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Albacete &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Ciudad Real &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Cuenca &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Guadalajara &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Toledo &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; TOTAL &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Cs &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; PP &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; PSOE &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 7 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; UP &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; VOX &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 0 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; TOTAL &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 4 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 6 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 21 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;En general, al estar todos los patidos muchos más igualados que en elecciones anteriores, el voto se repartiría un poco más. Ciudadanos entraría fuerte con 5 nuevos diputados y VOX obtendría un diputado por Toledo. Unidos Podemos obtendría un diputado más, y el PP sería el partidos más perjudicado porque perdería varios diputados.&lt;/p&gt;
+
+&lt;p&gt;También podríamos tener en cuenta la incertidumbre de las estimaciones y dar una horquilla para el nñumero de escaños que obtendría cada partido:&lt;/p&gt;
+
+&lt;table class=&quot;table table-striped table-hover table-condensed table-responsive&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt;   &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; Cs &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; PP &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; PSOE &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; UP &lt;/th&gt;
+   &lt;th style=&quot;text-align:right;&quot;&gt; VOX &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; 2.5% &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 7 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; 97.5% &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 5 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 6 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 8 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 3 &lt;/td&gt;
+   &lt;td style=&quot;text-align:right;&quot;&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
 &lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
 
+&lt;h3 id=&quot;cortes-de-castilla-la-mancha&quot;&gt;Cortes de Castilla-La Mancha&lt;/h3&gt;
+
 &lt;p&gt;Este estudio se basa en la premisa de que existe cierta similitud entre la forma de votar en las provincias andaluzas y las de Castilla-La Mancha. Explotando esta similitud hemos estimado porcentajes de voto a partidos que nos permiten estimar los escaños que conseguiría cada partido.&lt;/p&gt;
+
+&lt;p&gt;Las proyecciones para las elecciones de mayo de 2019 son:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-12-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-12&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Los resultados más destacables son:&lt;/p&gt;
 
@@ -476,12 +667,24 @@
 
 &lt;p&gt;El periódico “La Vanguardia” también ha realizado unas &lt;a href=&quot;https://www.lavanguardia.com/politica/20190211/46349732797/socialismo-victoria-psoe-encuestas-elecciones-26m-asturias.html&quot;&gt;proyecciones de las elecciones regionales&lt;/a&gt;. En general, nuestros resultados coinciden con los suyos.&lt;/p&gt;
 
+&lt;h3 id=&quot;congreso-de-los-diputados-1&quot;&gt;Congreso de los Diputados&lt;/h3&gt;
+
+&lt;p&gt;Las proyecciones para las elecciones de abril de 2019 al Congreso de los Diputados dan el siguiente reparto de escaños:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-13-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Con respecto a las elecciones generales, hay que destacar los 5 diputados que obtendría Ciudadanos y la pérdida de diputados que experimentaría el Partido Popular. VOX obtendría un diputado y Unidos Podemos subiría a 3 diputados. El Partido Socialista obtendría el mismo número de escaños que en las elecciones de 2016.&lt;/p&gt;
+
 &lt;h2 id=&quot;referencias&quot;&gt;Referencias&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Los datos utilizados han sido obtenidos de la web del diario &lt;em&gt;El País&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Los datos utilizados han sido obtenidos de la web del diario &lt;em&gt;El País&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;El reparto de escaños y los resultados históricos los he obtenido de la &lt;em&gt;Wikipedia&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
         <pubDate>Sun, 10 Feb 2019 00:00:00 +0100</pubDate>
         <link>https://becarioprecario.github.io/posts/elecciones/rstats/2019/02/10/proyeccion-CLM2019/</link>
