@@ -493,7 +493,7 @@
 
 <p>La composición actual de las Cortes de Castilla-La Mancha es de 16 diputados del PP, 15 del PSOE y 2 de Podemos.</p>
 
-<h2 id="incertidumbre-de-los-resultados">Incertidumbre de los resultados</h2>
+<h3 id="incertidumbre-de-los-resultados">Incertidumbre de los resultados</h3>
 
 <p>A esta estimación puntual vamos a añadir ahora un estudio de la variabilidad del reparto de escaños mediante simulación. Lo que haremos será utilizar una  distribución multinomial con las probabilidades de voto estimadas para simular 10.000 posibles votaciones. Con estas votaciones, volveremos a calcular los escaños obtenidos para dar una medida de la variabilidad de los resultados en Castilla-La Mancha.</p>
 
@@ -531,6 +531,82 @@
 </table>
 
 <p>De los resultados se deduce que hay poca variabilidad en los resultados según el modelo propuesto.</p>
+
+<h3 id="y-con-la-distribución-de-escaños-actual">¿Y con la distribución de escaños actual?</h3>
+
+<p>Por último, vamos a comparar cómo quedaría el reparto de escaños si no variara el número de escaños por provincia:</p>
+
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> Albacete </th>
+   <th style="text-align:right;"> Ciudad Real </th>
+   <th style="text-align:right;"> Cuenca </th>
+   <th style="text-align:right;"> Guadalajara </th>
+   <th style="text-align:right;"> Toledo </th>
+   <th style="text-align:right;"> TOTAL </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Cs </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PP </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PSOE </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 12 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> UP </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VOX </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TOTAL </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 33 </td>
+  </tr>
+</tbody>
+</table>
+
+<p>Si no hubiera cambio en el número de escaños de cada provincia podría haber un gobierno de izquierdas con PSOE y Unidos Podemos.</p>
 
 <h2 id="congreso-de-los-diputados">Congreso de los Diputados</h2>
 
@@ -715,6 +791,8 @@
 </tbody>
 </table>
 
+<p>Es decir, si los escaños por provincia fueran los mismos que hace cuatro años podría haber de nuevo un gobierno de PSOE y UP en Castilla-La Mancha.</p>
+
 <h2 id="conclusiones">Conclusiones</h2>
 
 <h3 id="cortes-de-castilla-la-mancha">Cortes de Castilla-La Mancha</h3>
@@ -723,7 +801,7 @@
 
 <p>Las proyecciones para las elecciones de mayo de 2019 son:</p>
 
-<p><img src="/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-12-1.png" alt="plot of chunk unnamed-chunk-12" /></p>
+<p><img src="/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-15-1.png" alt="plot of chunk unnamed-chunk-15" /></p>
 
 <p>Los resultados más destacables son:</p>
 
@@ -743,6 +821,9 @@
   <li>
     <p>El bloque de partidos de derechas podría gobernar al tener un diputado más que el bloque de partidos de izquierdas.</p>
   </li>
+  <li>
+    <p>Si no hubiera cambio en el número de escaños por provincia podría haber un nuevo gobierno de PSOE y Unidos Podemos.</p>
+  </li>
 </ul>
 
 <p>El periódico “La Vanguardia” también ha realizado unas <a href="https://www.lavanguardia.com/politica/20190211/46349732797/socialismo-victoria-psoe-encuestas-elecciones-26m-asturias.html">proyecciones de las elecciones regionales</a>. En general, nuestros resultados coinciden con los suyos.</p>
@@ -751,7 +832,7 @@
 
 <p>Las proyecciones para las elecciones de abril de 2019 al Congreso de los Diputados dan el siguiente reparto de escaños:</p>
 
-<p><img src="/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-13-1.png" alt="plot of chunk unnamed-chunk-13" /></p>
+<p><img src="/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-16-1.png" alt="plot of chunk unnamed-chunk-16" /></p>
 
 <p>Con respecto a las elecciones generales, hay que destacar los 5 diputados que obtendría Ciudadanos y la pérdida de diputados que experimentaría el Partido Popular. VOX obtendría un diputado y Unidos Podemos subiría a 3 diputados. El Partido Socialista obtendría el mismo número de escaños que en las elecciones de 2016.</p>
 
