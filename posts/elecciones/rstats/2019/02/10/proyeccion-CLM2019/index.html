@@ -103,6 +103,8 @@
 
 <p>El objetivo de este artículo es proyectar los resultados de las elecciones regionales en Andalucía de diciembre de 2018 para hacer una estimación del reparto de diputados en las próximas elecciones a las Cortes de Castilla-La Mancha.</p>
 
+<p><strong>Actualización del 21/02/2019</strong>: Se ha añadido la sección <code class="highlight language-R">¿Dónde hay que hacer campaña<span class="o">?</span></code>.</p>
+
 <p><strong>Actualización del 16/02/2019</strong>: Se ha añadido la estimación del reparto de escaños en el Congreso de los Diputados para las elecciones del 28 de abril de 2019.</p>
 
 <p><strong>Actualización</strong>: Se han añadido intervalos para estimar la variabilidad de los escaños. <strong>Se asume que los escaños en Albacete y Ciudad Real cambian a 7 en cada provincia</strong>.</p>
@@ -608,6 +610,374 @@
 
 <p>Si no hubiera cambio en el número de escaños de cada provincia podría haber un gobierno de izquierdas con PSOE y Unidos Podemos.</p>
 
+<h2 id="dónde-hay-que-hacer-campaña">¿Dónde hay que hacer campaña?</h2>
+
+<p>A modo de ejemplo de análisis electoral, vamos a desglosar cómo es el reparto de diputados regionales en cada una una de las provincias de acuerdo a la Regla d’Hont:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">PP</th>
+      <th style="text-align: center">PSOE</th>
+      <th style="text-align: center">UP</th>
+      <th style="text-align: center">Cs</th>
+      <th style="text-align: center">VOX</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/1</strong></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">23.01</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">27.49</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">13.99</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">17.68</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">12.3</span></code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/2</strong></td>
+      <td style="text-align: center">11.51</td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">13.74</span></code></td>
+      <td style="text-align: center">6.996</td>
+      <td style="text-align: center">8.838</td>
+      <td style="text-align: center">6.152</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/3</strong></td>
+      <td style="text-align: center">7.67</td>
+      <td style="text-align: center">9.163</td>
+      <td style="text-align: center">4.664</td>
+      <td style="text-align: center">5.892</td>
+      <td style="text-align: center">4.102</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/4</strong></td>
+      <td style="text-align: center">5.753</td>
+      <td style="text-align: center">6.872</td>
+      <td style="text-align: center">3.498</td>
+      <td style="text-align: center">4.419</td>
+      <td style="text-align: center">3.076</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/5</strong></td>
+      <td style="text-align: center">4.602</td>
+      <td style="text-align: center">5.498</td>
+      <td style="text-align: center">2.798</td>
+      <td style="text-align: center">3.535</td>
+      <td style="text-align: center">2.461</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/6</strong></td>
+      <td style="text-align: center">3.835</td>
+      <td style="text-align: center">4.581</td>
+      <td style="text-align: center">2.332</td>
+      <td style="text-align: center">2.946</td>
+      <td style="text-align: center">2.051</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/7</strong></td>
+      <td style="text-align: center">3.287</td>
+      <td style="text-align: center">3.927</td>
+      <td style="text-align: center">1.999</td>
+      <td style="text-align: center">2.525</td>
+      <td style="text-align: center">1.758</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table: DIstribución de escaños en la provincia de <strong>Albacete</strong> según la Regla d’Hont.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">PP</th>
+      <th style="text-align: center">PSOE</th>
+      <th style="text-align: center">UP</th>
+      <th style="text-align: center">Cs</th>
+      <th style="text-align: center">VOX</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/1</strong></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">23.68</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">27.56</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">13.23</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">17.35</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">12.9</span></code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/2</strong></td>
+      <td style="text-align: center">11.84</td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">13.78</span></code></td>
+      <td style="text-align: center">6.617</td>
+      <td style="text-align: center">8.674</td>
+      <td style="text-align: center">6.451</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/3</strong></td>
+      <td style="text-align: center">7.895</td>
+      <td style="text-align: center">9.186</td>
+      <td style="text-align: center">4.411</td>
+      <td style="text-align: center">5.783</td>
+      <td style="text-align: center">4.301</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/4</strong></td>
+      <td style="text-align: center">5.921</td>
+      <td style="text-align: center">6.889</td>
+      <td style="text-align: center">3.308</td>
+      <td style="text-align: center">4.337</td>
+      <td style="text-align: center">3.226</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/5</strong></td>
+      <td style="text-align: center">4.737</td>
+      <td style="text-align: center">5.511</td>
+      <td style="text-align: center">2.647</td>
+      <td style="text-align: center">3.47</td>
+      <td style="text-align: center">2.58</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/6</strong></td>
+      <td style="text-align: center">3.947</td>
+      <td style="text-align: center">4.593</td>
+      <td style="text-align: center">2.206</td>
+      <td style="text-align: center">2.891</td>
+      <td style="text-align: center">2.15</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/7</strong></td>
+      <td style="text-align: center">3.383</td>
+      <td style="text-align: center">3.937</td>
+      <td style="text-align: center">1.891</td>
+      <td style="text-align: center">2.478</td>
+      <td style="text-align: center">1.843</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table: DIstribución de escaños en la provincia de <strong>Ciudad Real</strong> según la Regla d’Hont.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">PP</th>
+      <th style="text-align: center">PSOE</th>
+      <th style="text-align: center">UP</th>
+      <th style="text-align: center">Cs</th>
+      <th style="text-align: center">VOX</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/1</strong></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">22.83</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">28.04</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">14.06</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">17.56</span></code></td>
+      <td style="text-align: center">11.96</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/2</strong></td>
+      <td style="text-align: center">11.41</td>
+      <td style="text-align: center">14.02</td>
+      <td style="text-align: center">7.03</td>
+      <td style="text-align: center">8.778</td>
+      <td style="text-align: center">5.981</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/3</strong></td>
+      <td style="text-align: center">7.609</td>
+      <td style="text-align: center">9.345</td>
+      <td style="text-align: center">4.687</td>
+      <td style="text-align: center">5.852</td>
+      <td style="text-align: center">3.987</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/4</strong></td>
+      <td style="text-align: center">5.706</td>
+      <td style="text-align: center">7.009</td>
+      <td style="text-align: center">3.515</td>
+      <td style="text-align: center">4.389</td>
+      <td style="text-align: center">2.991</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/5</strong></td>
+      <td style="text-align: center">4.565</td>
+      <td style="text-align: center">5.607</td>
+      <td style="text-align: center">2.812</td>
+      <td style="text-align: center">3.511</td>
+      <td style="text-align: center">2.392</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table: DIstribución de escaños en la provincia de <strong>Cuenca</strong> según la Regla d’Hont.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">PP</th>
+      <th style="text-align: center">PSOE</th>
+      <th style="text-align: center">UP</th>
+      <th style="text-align: center">Cs</th>
+      <th style="text-align: center">VOX</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/1</strong></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">21.93</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">27.42</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">15.08</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">18.15</span></code></td>
+      <td style="text-align: center">11.46</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/2</strong></td>
+      <td style="text-align: center">10.97</td>
+      <td style="text-align: center">13.71</td>
+      <td style="text-align: center">7.54</td>
+      <td style="text-align: center">9.074</td>
+      <td style="text-align: center">5.729</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/3</strong></td>
+      <td style="text-align: center">7.31</td>
+      <td style="text-align: center">9.141</td>
+      <td style="text-align: center">5.027</td>
+      <td style="text-align: center">6.049</td>
+      <td style="text-align: center">3.819</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/4</strong></td>
+      <td style="text-align: center">5.483</td>
+      <td style="text-align: center">6.856</td>
+      <td style="text-align: center">3.77</td>
+      <td style="text-align: center">4.537</td>
+      <td style="text-align: center">2.864</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/5</strong></td>
+      <td style="text-align: center">4.386</td>
+      <td style="text-align: center">5.485</td>
+      <td style="text-align: center">3.016</td>
+      <td style="text-align: center">3.63</td>
+      <td style="text-align: center">2.292</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table: DIstribución de escaños en la provincia de <strong>Guadalajara</strong> según la Regla d’Hont.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">PP</th>
+      <th style="text-align: center">PSOE</th>
+      <th style="text-align: center">UP</th>
+      <th style="text-align: center">Cs</th>
+      <th style="text-align: center">VOX</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/1</strong></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">24.05</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">27.21</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">12.88</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">17.29</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">13.39</span></code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/2</strong></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">12.03</span></code></td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">13.61</span></code></td>
+      <td style="text-align: center">6.441</td>
+      <td style="text-align: center">8.647</td>
+      <td style="text-align: center">6.697</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/3</strong></td>
+      <td style="text-align: center">8.018</td>
+      <td style="text-align: center"><code class="highlight language-R"><span class="m">9.071</span></code></td>
+      <td style="text-align: center">4.294</td>
+      <td style="text-align: center">5.765</td>
+      <td style="text-align: center">4.465</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/4</strong></td>
+      <td style="text-align: center">6.013</td>
+      <td style="text-align: center">6.804</td>
+      <td style="text-align: center">3.22</td>
+      <td style="text-align: center">4.324</td>
+      <td style="text-align: center">3.349</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/5</strong></td>
+      <td style="text-align: center">4.811</td>
+      <td style="text-align: center">5.443</td>
+      <td style="text-align: center">2.576</td>
+      <td style="text-align: center">3.459</td>
+      <td style="text-align: center">2.679</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/6</strong></td>
+      <td style="text-align: center">4.009</td>
+      <td style="text-align: center">4.536</td>
+      <td style="text-align: center">2.147</td>
+      <td style="text-align: center">2.882</td>
+      <td style="text-align: center">2.232</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/7</strong></td>
+      <td style="text-align: center">3.436</td>
+      <td style="text-align: center">3.888</td>
+      <td style="text-align: center">1.84</td>
+      <td style="text-align: center">2.471</td>
+      <td style="text-align: center">1.914</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/8</strong></td>
+      <td style="text-align: center">3.007</td>
+      <td style="text-align: center">3.402</td>
+      <td style="text-align: center">1.61</td>
+      <td style="text-align: center">2.162</td>
+      <td style="text-align: center">1.674</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/9</strong></td>
+      <td style="text-align: center">2.673</td>
+      <td style="text-align: center">3.024</td>
+      <td style="text-align: center">1.431</td>
+      <td style="text-align: center">1.922</td>
+      <td style="text-align: center">1.488</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table: DIstribución de escaños en la provincia de <strong>Toledo</strong> según la Regla d’Hont.</p>
+
+<p>Las provincias en las que el resultado es más ajustado son aquellas en los que:</p>
+
+<ul>
+  <li>
+    <p>La puntuación del último escaño asignado a cada partido queda muy cerca de puntuaciones de otros partidos que no han conseguido escaño.</p>
+  </li>
+  <li>
+    <p>La puntuación de los últimos escaños de cada partido es muy próxima.</p>
+  </li>
+</ul>
+
+<p>En ambos casos se puede dar un <em>baile</em> de escaños si los resultados varían ligeramente. En este caso, diferencias de alrededor de 3  (el error de las encuestas) puede hacer variar los resultados.</p>
+
+<p>```</p>
+
 <h2 id="congreso-de-los-diputados">Congreso de los Diputados</h2>
 
 <p>De manera similar, es posible dar una estimación de cuántos escaños obtendría cada partido en el Congreso de los Diputados en las elecciones del próximo 28 de abril de 2019.</p>
@@ -801,7 +1171,7 @@
 
 <p>Las proyecciones para las elecciones de mayo de 2019 son:</p>
 
-<p><img src="/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-15-1.png" alt="plot of chunk unnamed-chunk-15" /></p>
+<p><img src="/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-16-1.png" alt="plot of chunk unnamed-chunk-16" /></p>
 
 <p>Los resultados más destacables son:</p>
 
@@ -832,7 +1202,7 @@
 
 <p>Las proyecciones para las elecciones de abril de 2019 al Congreso de los Diputados dan el siguiente reparto de escaños:</p>
 
-<p><img src="/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-16-1.png" alt="plot of chunk unnamed-chunk-16" /></p>
+<p><img src="/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-17-1.png" alt="plot of chunk unnamed-chunk-17" /></p>
 
 <p>Con respecto a las elecciones generales, hay que destacar los 5 diputados que obtendría Ciudadanos y la pérdida de diputados que experimentaría el Partido Popular. VOX obtendría un diputado y Unidos Podemos subiría a 3 diputados. El Partido Socialista obtendría el mismo número de escaños que en las elecciones de 2016.</p>
 

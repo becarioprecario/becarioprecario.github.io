@@ -5,8 +5,8 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 17 Feb 2019 21:58:20 +0100</pubDate>
-    <lastBuildDate>Sun, 17 Feb 2019 21:58:20 +0100</lastBuildDate>
+    <pubDate>Thu, 21 Feb 2019 15:00:52 +0100</pubDate>
+    <lastBuildDate>Thu, 21 Feb 2019 15:00:52 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -22,6 +22,8 @@
 &lt;h2 id=&quot;introducción&quot;&gt;Introducción&lt;/h2&gt;
 
 &lt;p&gt;El objetivo de este artículo es proyectar los resultados de las elecciones regionales en Andalucía de diciembre de 2018 para hacer una estimación del reparto de diputados en las próximas elecciones a las Cortes de Castilla-La Mancha.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Actualización del 21/02/2019&lt;/strong&gt;: Se ha añadido la sección &lt;code class=&quot;highlight language-R&quot;&gt;¿Dónde hay que hacer campaña&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Actualización del 16/02/2019&lt;/strong&gt;: Se ha añadido la estimación del reparto de escaños en el Congreso de los Diputados para las elecciones del 28 de abril de 2019.&lt;/p&gt;
 
@@ -528,6 +530,374 @@
 
 &lt;p&gt;Si no hubiera cambio en el número de escaños de cada provincia podría haber un gobierno de izquierdas con PSOE y Unidos Podemos.&lt;/p&gt;
 
+&lt;h2 id=&quot;dónde-hay-que-hacer-campaña&quot;&gt;¿Dónde hay que hacer campaña?&lt;/h2&gt;
+
+&lt;p&gt;A modo de ejemplo de análisis electoral, vamos a desglosar cómo es el reparto de diputados regionales en cada una una de las provincias de acuerdo a la Regla d’Hont:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PP&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PSOE&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;UP&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Cs&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;VOX&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;23.01&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;27.49&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;13.99&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;17.68&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;12.3&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/2&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;11.51&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;13.74&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.996&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8.838&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.152&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/3&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7.67&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;9.163&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.664&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.892&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.102&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/4&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.753&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.872&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.419&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.076&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/5&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.602&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.798&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.535&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.461&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/6&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.835&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.581&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.332&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.946&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.051&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/7&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.287&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.927&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.999&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.525&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.758&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Table: DIstribución de escaños en la provincia de &lt;strong&gt;Albacete&lt;/strong&gt; según la Regla d’Hont.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PP&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PSOE&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;UP&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Cs&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;VOX&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;23.68&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;27.56&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;13.23&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;17.35&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;12.9&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/2&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;11.84&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;13.78&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.617&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8.674&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.451&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/3&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7.895&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;9.186&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.411&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.783&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.301&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/4&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.921&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.889&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.308&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.337&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.226&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/5&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.737&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.511&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.647&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.47&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.58&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/6&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.947&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.593&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.891&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.15&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/7&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.383&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.937&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.891&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.478&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.843&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Table: DIstribución de escaños en la provincia de &lt;strong&gt;Ciudad Real&lt;/strong&gt; según la Regla d’Hont.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PP&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PSOE&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;UP&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Cs&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;VOX&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;22.83&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;28.04&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;14.06&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;17.56&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;11.96&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/2&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;11.41&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;14.02&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7.03&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8.778&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.981&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/3&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7.609&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;9.345&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.687&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.852&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.987&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/4&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.706&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7.009&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.515&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.389&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.991&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/5&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.565&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.607&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.812&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.511&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.392&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Table: DIstribución de escaños en la provincia de &lt;strong&gt;Cuenca&lt;/strong&gt; según la Regla d’Hont.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PP&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PSOE&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;UP&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Cs&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;VOX&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;21.93&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;27.42&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;15.08&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;18.15&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;11.46&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/2&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10.97&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;13.71&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7.54&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;9.074&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.729&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/3&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7.31&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;9.141&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.027&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.049&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.819&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/4&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.483&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.856&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.77&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.537&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.864&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/5&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.386&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.485&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.016&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.63&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.292&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Table: DIstribución de escaños en la provincia de &lt;strong&gt;Guadalajara&lt;/strong&gt; según la Regla d’Hont.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PP&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PSOE&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;UP&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Cs&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;VOX&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;24.05&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;27.21&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;12.88&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;17.29&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;13.39&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/2&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;12.03&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;13.61&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.441&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8.647&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.697&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/3&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8.018&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;9.071&lt;/span&gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.294&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.765&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.465&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/4&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.013&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.804&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.22&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.324&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.349&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/5&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.811&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.443&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.576&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.459&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.679&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/6&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.009&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.536&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.147&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.882&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.232&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/7&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.436&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.888&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.84&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.471&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.914&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/8&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.007&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.402&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.61&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.162&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.674&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Nº votos/9&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.673&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.024&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.431&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.922&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.488&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Table: DIstribución de escaños en la provincia de &lt;strong&gt;Toledo&lt;/strong&gt; según la Regla d’Hont.&lt;/p&gt;
+
+&lt;p&gt;Las provincias en las que el resultado es más ajustado son aquellas en los que:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;La puntuación del último escaño asignado a cada partido queda muy cerca de puntuaciones de otros partidos que no han conseguido escaño.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;La puntuación de los últimos escaños de cada partido es muy próxima.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En ambos casos se puede dar un &lt;em&gt;baile&lt;/em&gt; de escaños si los resultados varían ligeramente. En este caso, diferencias de alrededor de 3  (el error de las encuestas) puede hacer variar los resultados.&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
 &lt;h2 id=&quot;congreso-de-los-diputados&quot;&gt;Congreso de los Diputados&lt;/h2&gt;
 
 &lt;p&gt;De manera similar, es posible dar una estimación de cuántos escaños obtendría cada partido en el Congreso de los Diputados en las elecciones del próximo 28 de abril de 2019.&lt;/p&gt;
@@ -721,7 +1091,7 @@
 
 &lt;p&gt;Las proyecciones para las elecciones de mayo de 2019 son:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-15-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-15&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-16-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-16&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Los resultados más destacables son:&lt;/p&gt;
 
@@ -752,7 +1122,7 @@
 
 &lt;p&gt;Las proyecciones para las elecciones de abril de 2019 al Congreso de los Diputados dan el siguiente reparto de escaños:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-16-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-16&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figure/source/2019-02-10-proyeccion-CLM2019/unnamed-chunk-17-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-17&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Con respecto a las elecciones generales, hay que destacar los 5 diputados que obtendría Ciudadanos y la pérdida de diputados que experimentaría el Partido Popular. VOX obtendría un diputado y Unidos Podemos subiría a 3 diputados. El Partido Socialista obtendría el mismo número de escaños que en las elecciones de 2016.&lt;/p&gt;
 
