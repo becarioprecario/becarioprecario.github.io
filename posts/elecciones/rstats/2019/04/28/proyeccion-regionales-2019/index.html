@@ -91,7 +91,9 @@
   </header>
 
   <article class="post-content">
-  <h2 id="estimación-de-los-resultados-a-la-elecciones-de-las-cortes-de-castilla-la-mancha-y-algunos-ayuntamientos">Estimación de los resultados a la elecciones de las Cortes de Castilla-La Mancha y algunos ayuntamientos</h2>
+  <div class="highlight"><pre><code class="language-R"><span class="c1">## Error in library(kableExtra): there is no package called &#39;kableExtra&#39;</span></code></pre></div>
+
+<h2 id="estimación-de-los-resultados-a-la-elecciones-de-las-cortes-de-castilla-la-mancha-y-algunos-ayuntamientos">Estimación de los resultados a la elecciones de las Cortes de Castilla-La Mancha y algunos ayuntamientos</h2>
 
 <h3 id="una-aproximación-usando-los-resultados-de-las-elecciones-generales-del-28a">Una aproximación usando los resultados de las elecciones generales del 28A</h3>
 
@@ -109,207 +111,13 @@
 
 <p>Los datos (de porcentaje de voto) que hemos utilizado son los siguientes:</p>
 
-<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
- <thead>
-  <tr>
-   <th style="text-align:left;"> Eleccion </th>
-   <th style="text-align:left;"> Provincia </th>
-   <th style="text-align:right;"> Escanyos </th>
-   <th style="text-align:right;"> PP </th>
-   <th style="text-align:right;"> PSOE </th>
-   <th style="text-align:right;"> Cs </th>
-   <th style="text-align:right;"> UP </th>
-   <th style="text-align:right;"> VOX </th>
-   <th style="text-align:right;"> OTROS </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> Cortes </td>
-   <td style="text-align:left;"> Albacete </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 22.05 </td>
-   <td style="text-align:right;"> 31.98 </td>
-   <td style="text-align:right;"> 18.70 </td>
-   <td style="text-align:right;"> 10.55 </td>
-   <td style="text-align:right;"> 14.50 </td>
-   <td style="text-align:right;"> 2.22 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Cortes </td>
-   <td style="text-align:left;"> Ciudad Real </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 23.69 </td>
-   <td style="text-align:right;"> 34.27 </td>
-   <td style="text-align:right;"> 17.26 </td>
-   <td style="text-align:right;"> 9.15 </td>
-   <td style="text-align:right;"> 13.72 </td>
-   <td style="text-align:right;"> 1.91 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Cortes </td>
-   <td style="text-align:left;"> Cuenca </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 26.79 </td>
-   <td style="text-align:right;"> 35.68 </td>
-   <td style="text-align:right;"> 13.78 </td>
-   <td style="text-align:right;"> 7.91 </td>
-   <td style="text-align:right;"> 14.02 </td>
-   <td style="text-align:right;"> 1.82 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Cortes </td>
-   <td style="text-align:left;"> Guadalajara </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 20.04 </td>
-   <td style="text-align:right;"> 29.78 </td>
-   <td style="text-align:right;"> 18.82 </td>
-   <td style="text-align:right;"> 12.27 </td>
-   <td style="text-align:right;"> 16.48 </td>
-   <td style="text-align:right;"> 2.61 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Cortes </td>
-   <td style="text-align:left;"> Toledo </td>
-   <td style="text-align:right;"> 9 </td>
-   <td style="text-align:right;"> 21.97 </td>
-   <td style="text-align:right;"> 31.13 </td>
-   <td style="text-align:right;"> 17.55 </td>
-   <td style="text-align:right;"> 10.55 </td>
-   <td style="text-align:right;"> 16.87 </td>
-   <td style="text-align:right;"> 1.93 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Ayuntamiento </td>
-   <td style="text-align:left;"> Albacete </td>
-   <td style="text-align:right;"> 27 </td>
-   <td style="text-align:right;"> 20.45 </td>
-   <td style="text-align:right;"> 27.59 </td>
-   <td style="text-align:right;"> 22.56 </td>
-   <td style="text-align:right;"> 11.50 </td>
-   <td style="text-align:right;"> 15.46 </td>
-   <td style="text-align:right;"> 2.44 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Ayuntamiento </td>
-   <td style="text-align:left;"> Ciudad Real </td>
-   <td style="text-align:right;"> 25 </td>
-   <td style="text-align:right;"> 24.45 </td>
-   <td style="text-align:right;"> 28.16 </td>
-   <td style="text-align:right;"> 20.39 </td>
-   <td style="text-align:right;"> 10.33 </td>
-   <td style="text-align:right;"> 14.47 </td>
-   <td style="text-align:right;"> 2.20 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Ayuntamiento </td>
-   <td style="text-align:left;"> Cuenca </td>
-   <td style="text-align:right;"> 25 </td>
-   <td style="text-align:right;"> 23.79 </td>
-   <td style="text-align:right;"> 34.42 </td>
-   <td style="text-align:right;"> 17.38 </td>
-   <td style="text-align:right;"> 9.11 </td>
-   <td style="text-align:right;"> 12.91 </td>
-   <td style="text-align:right;"> 2.39 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Ayuntamiento </td>
-   <td style="text-align:left;"> Guadalajara </td>
-   <td style="text-align:right;"> 25 </td>
-   <td style="text-align:right;"> 22.59 </td>
-   <td style="text-align:right;"> 29.70 </td>
-   <td style="text-align:right;"> 19.32 </td>
-   <td style="text-align:right;"> 10.71 </td>
-   <td style="text-align:right;"> 15.34 </td>
-   <td style="text-align:right;"> 2.34 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Ayuntamiento </td>
-   <td style="text-align:left;"> Toledo </td>
-   <td style="text-align:right;"> 25 </td>
-   <td style="text-align:right;"> 22.25 </td>
-   <td style="text-align:right;"> 28.42 </td>
-   <td style="text-align:right;"> 19.69 </td>
-   <td style="text-align:right;"> 12.05 </td>
-   <td style="text-align:right;"> 15.45 </td>
-   <td style="text-align:right;"> 2.14 </td>
-  </tr>
-</tbody>
-</table>
+<div class="highlight"><pre><code class="language-R"><span class="c1">## Error in knitr::kable(d[, -ncol(d)]) %&gt;% kable_styling(bootstrap_options = c(&quot;striped&quot;, : no se pudo encontrar la función &quot;%&gt;%&quot;</span></code></pre></div>
 
 <h2 id="elecciones-a-las-corte-de-c-lm">Elecciones a las Corte de C-LM</h2>
 
 <p>En primer lugar, para las elecciones a las Cortes he supuesto que tanto Albacete como Ciudad Real tienen ambas 7 escaños, fruto de los cambios de población. Las estimaciones se pueden ver en la tabla siguiente:</p>
 
-<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
- <thead>
-  <tr>
-   <th style="text-align:left;">   </th>
-   <th style="text-align:right;"> Cs </th>
-   <th style="text-align:right;"> PP </th>
-   <th style="text-align:right;"> PSOE </th>
-   <th style="text-align:right;"> UP </th>
-   <th style="text-align:right;"> VOX </th>
-   <th style="text-align:right;"> TOTAL </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> Albacete </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 7 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Ciudad Real </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 7 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Cuenca </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 5 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Guadalajara </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 5 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Toledo </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 9 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> TOTAL </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 8 </td>
-   <td style="text-align:right;"> 13 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 33 </td>
-  </tr>
-</tbody>
-</table>
+<div class="highlight"><pre><code class="language-R"><span class="c1">## Error in kable(round(res.cortes, 1)) %&gt;% kable_styling(bootstrap_options = c(&quot;striped&quot;, : no se pudo encontrar la función &quot;%&gt;%&quot;</span></code></pre></div>
 
 <p>Por tanto, las proyecciones darían una mayoría al bloque de derechas. Se da la circunstancia de que Unidas Podemos queda en la mayoría de las provincias como quinto partido en votos, lo que hace que VOX entre en el reparto en todas las provincias.</p>
 
@@ -317,66 +125,7 @@
 
 <p>Con respecto a los ayuntamientos, estas son las proyecciones:</p>
 
-<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
- <thead>
-  <tr>
-   <th style="text-align:left;">   </th>
-   <th style="text-align:right;"> Cs </th>
-   <th style="text-align:right;"> PP </th>
-   <th style="text-align:right;"> PSOE </th>
-   <th style="text-align:right;"> UP </th>
-   <th style="text-align:right;"> VOX </th>
-   <th style="text-align:right;"> TOTAL </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> Albacete </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 8 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 27 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Ciudad Real </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 8 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 25 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Cuenca </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 9 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 25 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Guadalajara </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 8 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 25 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Toledo </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 25 </td>
-  </tr>
-</tbody>
-</table>
+<div class="highlight"><pre><code class="language-R"><span class="c1">## Error in kable(round(res.cortes, 2)) %&gt;% kable_styling(bootstrap_options = c(&quot;striped&quot;, : no se pudo encontrar la función &quot;%&gt;%&quot;</span></code></pre></div>
 
 <p>De manea similar al caso de las elecciones a las Cortes, el reparto favorecería a los partidos de derechas.</p>
 
