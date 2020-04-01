@@ -5,9 +5,53 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Nov 2019 16:00:29 +0100</pubDate>
-    <lastBuildDate>Tue, 26 Nov 2019 16:00:29 +0100</lastBuildDate>
+    <pubDate>Wed, 01 Apr 2020 13:43:40 +0200</pubDate>
+    <lastBuildDate>Wed, 01 Apr 2020 13:43:40 +0200</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Epidemiology and Public Health with R</title>
+        <description>&lt;p&gt;This is a curated list of resourses for the &lt;code class=&quot;highlight language-R&quot;&gt;R&lt;/code&gt; programming language on &lt;br /&gt;
+Epidemiology and Public Health. The aim is to provide a Task View-like list&lt;br /&gt;
+of resourses together with some installation script.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Epidemiology&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Public Health&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Disease mapping&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/sp/index.html&quot;&gt;sp&lt;/a&gt; provides a set of&lt;br /&gt;
+classes for the analysis of spatial data that also includes plotting functions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/DCluster/index.html&quot;&gt;DCluster&lt;/a&gt; implements some methods for assessing spatial autocorrealtion in the relative risks&lt;br /&gt;
+and the detection of clusters of disease.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/DCluster/index.html&quot;&gt;DClusterm&lt;/a&gt; implements model-based detection of disease clusters using GLMs, GLMMs and zero-inflated models.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Infectuous Diseases&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Other resources&lt;/em&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 01 Apr 2020 00:00:00 +0200</pubDate>
+        <link>https://becarioprecario.github.io/posts/rstats/2020/04/01/EPH-with-R/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/rstats/2020/04/01/EPH-with-R/</guid>
+        
+        <category>Epidemiology</category>
+        
+        <category>Public Health</category>
+        
+        
+        <category>rstats</category>
+        
+      </item>
     
       <item>
         <title>Proyección del voto basado en los resultados del 28A</title>
@@ -3525,375 +3569,6 @@ plot_shotchart&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;afa.aba&lt;span clas
         <category>Espana</category>
         
         <category>26J</category>
-        
-        
-        <category>elecciones</category>
-        
-        <category>rstats</category>
-        
-      </item>
-    
-      <item>
-        <title>Comparativa de predicciones de los resultados de las elecciones generales 20D</title>
-        <description>&lt;p&gt;&lt;strong&gt;IMPORTANTE:&lt;/strong&gt; Última actualización &lt;code class=&quot;highlight language-R&quot;&gt;&lt;span class=&quot;m&quot;&gt;2018-09-26&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;03&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ÚLTIMOS CAMBIOS&lt;/strong&gt;: Se han añadido las siguientes encuestas a la comparativa:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://politica.elpais.com/politica/2015/12/03/actualidad/1449136163_058705.html&quot;&gt;encuesta del CIS del 3 de diciembre de 2015&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.electograph.com/2015/12/spain-december-2015-demoscopia.html&quot;&gt;encuesta de Demoscopia Servicios publicada el 12 de diciembre de 2015&lt;/a&gt; (para EsRadio)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.electograph.com/2015/12/spain-december-2015-myword-poll.html&quot;&gt;encuesta de MyWord publicada el 14 de diciembre de 2015&lt;/a&gt; (para la Cadena Ser) en la comparación.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.electograph.com/2015/12/spain-december-2015-gad3-poll-2.html&quot;&gt;encuesta de GAD3 publicada el 13 de diciembre de 2015&lt;/a&gt; (para ABC, Cadena Cope)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;introducción&quot;&gt;Introducción&lt;/h2&gt;
-
-&lt;p&gt;En este pequeño artículo vamos a comparar varias predicciones que se han hecho de los resultados de las elecciones generales del 20 de diciembre de 2016. Las predicciones que vamos a comparar han sido realizadas por:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://datos.elespanol.com/elecciones-generales/la-cocina-20d/&quot;&gt;Kiko Llaneras&lt;/a&gt;, realizada para el periódico ‘El Español’&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://gianlubaio.blogspot.com.es/2015/12/political-forecasting-machine-spanish.html?spref=fb&quot;&gt;Roberto Cerina y Gianluca Baio&lt;/a&gt;, del University College London&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://becarioprecario.github.com/posts/elecciones/rstats/2015/12/14/encuestas-generales/&quot;&gt;Virgilio Gómez Rubio&lt;/a&gt;, yo mismo&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Además, Kiko Llaneras y yo nos hemos apostado unas cervezas a ver quién afina más:&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;es&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/kikollan&quot;&gt;@kikollan&lt;/a&gt; ¿Nos apostamos unas cervezas a ver quién afina más? :) &lt;a href=&quot;https://t.co/mnFmEMX4I7&quot;&gt;https://t.co/mnFmEMX4I7&lt;/a&gt; &lt;a href=&quot;https://t.co/6UeHD00Yax&quot;&gt;pic.twitter.com/6UeHD00Yax&lt;/a&gt;&lt;/p&gt;&amp;mdash; Virgilio Gómez-Rubio (@precariobecario) &lt;a href=&quot;https://twitter.com/precariobecario/status/678314785621024768&quot;&gt;December 19, 2015&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;h2 id=&quot;comparativa&quot;&gt;Comparativa&lt;/h2&gt;
-
-&lt;p&gt;Los resultados globales, junto con los resultados de las elecciones, son:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;PARTIDO&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;ELEC20D&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Virgilio&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Kiko&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Roberto&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CIS&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Demoscopia&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;MyWord&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;GAD3&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PP&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;123&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;118&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;120&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;111&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;124.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;123&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;116.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;120.5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PSOE&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;90&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;92&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;80&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;83&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;83.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;72&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;84.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;84.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Cs&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;40&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;61&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;63&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;57&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;64.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;70&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;63.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;61.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Podemos&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;69&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;50&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;54&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;62&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;47.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;59&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;54.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;51.5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;UP&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DiL&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ERC&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PNV&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;EH Bildu&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;GB&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;CC&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;NA&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1.0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Otros&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;34&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;29.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0.0&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;La siguiente tabla muestra las diferencias, en valor absoluto, entre el número de escaños real y el predicho. En la última fila aparece la suma total.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;PARTIDO&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;ELEC20D&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Virgilio&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Kiko&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Roberto&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;CIS&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Demoscopia&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;MyWord&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;GAD3&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PP&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;123&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;12&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2.5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PSOE&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;90&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;18&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;6&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Cs&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;40&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;21&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;23&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;17&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;24.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;30&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;23.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;21&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Podemos&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;69&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;19&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;15&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;22&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;15&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;17.5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;UP&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DiL&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ERC&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;9&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;PNV&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;EH Bildu&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;4.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;GB&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;CC&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Otros&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;32&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;TOTAL&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;350&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;52&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;58&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;52&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;64.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;69&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;85&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;54&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;resultados-por-provincias&quot;&gt;Resultados por provincias&lt;/h2&gt;
-
-&lt;p&gt;Una vez que tenemos los resultados por provincias, hemos representado en un mapa los escaños que en los que no hemos acertado. En total, el modelo ha fallado al asignar correctamente 74. Esto incluye tanto los que no se han asignado al partido en cuestión como los que se han asignado incorrectamente a otro partido. De esta manera, el número real de escaños que se ha asignado mal sería la mitad, es decir, 37.&lt;/p&gt;
-
-&lt;p&gt;Por tanto, el siguiente mapa marca escaños asignados incorrectamente a un partido y partidos a los que no se asigno el escaño correspondiente.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/figure/source/2015-12-20-comparativa_predicciones/unnamed-chunk-5-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 20 Dec 2015 00:00:00 +0100</pubDate>
-        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/20/comparativa_predicciones/</link>
-        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2015/12/20/comparativa_predicciones/</guid>
-        
-        <category>Espana</category>
-        
-        <category>20D</category>
         
         
         <category>elecciones</category>
