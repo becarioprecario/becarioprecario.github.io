@@ -78,7 +78,7 @@ library("INLA")
 k <- 2
 # Define bivariate latent effect
 model.indimcar <- inla.rgeneric.define(inla.rgeneric.indep.IMCAR.model,
-  list(k = k, W = W))
+  k = k, W = W)
 
 
 ###################################################
