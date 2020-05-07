@@ -5,39 +5,67 @@
     <description>A random walk on blogging</description>
     <link>https://becarioprecario.github.io/</link>
     <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Apr 2020 13:43:40 +0200</pubDate>
-    <lastBuildDate>Wed, 01 Apr 2020 13:43:40 +0200</lastBuildDate>
+    <pubDate>Thu, 07 May 2020 09:42:15 +0200</pubDate>
+    <lastBuildDate>Thu, 07 May 2020 09:42:15 +0200</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
         <title>Epidemiology and Public Health with R</title>
-        <description>&lt;p&gt;This is a curated list of resourses for the &lt;code class=&quot;highlight language-R&quot;&gt;R&lt;/code&gt; programming language on &lt;br /&gt;
-Epidemiology and Public Health. The aim is to provide a Task View-like list&lt;br /&gt;
-of resourses together with some installation script.&lt;/p&gt;
+        <description>&lt;p&gt;This is a curated list of resourses for the &lt;code class=&quot;highlight language-R&quot;&gt;R&lt;/code&gt; programming language on Epidemiology and Public Health. The aim is to provide a Task View-like list of resourses together with some installation script.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Epidemiology&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The list below include purpose-specific packages. However, some more general packages can be used to buld models for data analysis. Other interesting Task Views include &lt;a href=&quot;https://cran.r-project.org/web/views/ClinicalTrials.html&quot;&gt;Clinical Trials&lt;/a&gt;, &lt;a href=&quot;https://cran.r-project.org/web/views/Genetics.html&quot;&gt;Genetics&lt;/a&gt;, &lt;a href=&quot;https://cran.r-project.org/web/views/MedicalImaging.html&quot;&gt;Medical Imaging&lt;/a&gt;, &lt;a href=&quot;https://cran.r-project.org/web/views/MetaAnalysis.html&quot;&gt;Meta-Analysis&lt;/a&gt;, &lt;a href=&quot;https://cran.r-project.org/web/views/Pharmacokinetics.html&quot;&gt;Pharmacokinetics&lt;/a&gt; and &lt;a href=&quot;https://cran.r-project.org/web/views/Survival.html&quot;&gt;Survival&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Public Health&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Disease mapping&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Epidemiology and Public Health&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/sp/index.html&quot;&gt;sp&lt;/a&gt; provides a set of&lt;br /&gt;
-classes for the analysis of spatial data that also includes plotting functions.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/Epi/index.html&quot;&gt;Epi&lt;/a&gt;  includes functions for demographic and epidemiological analysis in the Lexis diagram&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/DCluster/index.html&quot;&gt;DCluster&lt;/a&gt; implements some methods for assessing spatial autocorrealtion in the relative risks&lt;br /&gt;
-and the detection of clusters of disease.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/epibasix/index.html&quot;&gt;epibasix&lt;/a&gt; contains elementary tools for analysis of common epidemiological problems (sample size estimation, analysis of 2x2 tables, measures of agreement, etc.).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/epiDisplay/index.html&quot;&gt;epiDisplay&lt;/a&gt; is a package for data exploration and results representation related to the&lt;br /&gt;
+&lt;a href=&quot;http://medipe.psu.ac.th/epicalc/&quot;&gt;epicalc&lt;/a&gt; package (off-CRAN now).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/epiR/index.html&quot;&gt;epiR&lt;/a&gt; implements a wide range of methods for the analysis of epidemiological data, including rate standardization, measures of association, analysis of contigency tables, risk estimates and many others.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/EpiReport/&quot;&gt;epiReport&lt;/a&gt; includes a number of functions  for the creation of epidemiological reports similar to the ECDC Annual Epidemiological Report (AER).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/epitools/index.html&quot;&gt;epitools&lt;/a&gt;  is another package for the analysis oftwo-way and multi-way contingency tables.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/pubh/&quot;&gt;pubh&lt;/a&gt; is a toolbox with a number of functions on general methods in epidemiology and public health methods, inclusing reporting of coefficients and confidence intervals for regression models.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Disease mapping&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/DCluster/index.html&quot;&gt;DCluster&lt;/a&gt; implements some methods for assessing spatial autocorrealtion in the relative risks and the detection of clusters of disease.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/DCluster/index.html&quot;&gt;DClusterm&lt;/a&gt; implements model-based detection of disease clusters using GLMs, GLMMs and zero-inflated models.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/sp/index.html&quot;&gt;sp&lt;/a&gt; provides a set of classes and methods for the analysis of spatial data that also includes plotting functions to create cloropeth maps.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/surveillance/&quot;&gt;surveillance&lt;/a&gt; includes methods for the modeling and monitoring time series of counts, proportions, categorical data and continuous-time point processes. This package implements many typical outbreak detection procedure.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;Infectuous Diseases&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Other resources&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cran.r-project.org/doc/contrib/Epicalc_Book.pdf&quot;&gt;Epicalc book&lt;/a&gt; shows how to conduct an analysis of epidemiological data using R and Epicalc.&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Wed, 01 Apr 2020 00:00:00 +0200</pubDate>
