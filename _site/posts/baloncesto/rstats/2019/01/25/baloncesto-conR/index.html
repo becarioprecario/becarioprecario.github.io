@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-10270621-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-10270621-2');
+  </script>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Análisis de partidos de baloncesto con R</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="A random walk on blogging">
+    <link rel="canonical" href="https://becarioprecario.github.io/posts/baloncesto/rstats/2019/01/25/baloncesto-conR/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <a class="site-title" href="/">Blogario Precario</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href = "index.html">Main</a>
+        
+          <a class="page-link" href="/research/">Research</a>
+        
+          <a class="page-link" href="/teaching/">Teaching</a>
+        
+          <a class="page-link" href="/software/">Software</a>
+        
+          <a class="page-link" href="/books/">Books</a>
+        
+          <a class="page-link" href="/posts/">Blog</a>
+        
+          <a class="page-link" href="/about/">About</a>
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+
+    <h1>Análisis de partidos de baloncesto con R</h1>
+    <p class="meta">Jan 25, 2019</p>
+  </header>
+
+  <article class="post-content">
+  <p><strong>Actualización: He añadido un análisis del partido AFANINON CB Almansa - Arcos Albacete Basket celebrado el  26/01/2019.</strong></p>
+
+<p>El paquete <code class="highlight language-R">rfeb</code> escrito por <a href="https://solmos.netlify.com">Sergio Olmos</a><br />
+permite descargar datos de lanzamientos de los partidos de baloncesto de varias<br />
+ligas de la RFEB.  El paquete se puede instalar directamente desde<br />
+<a href="https://github.com/solmos/rfeb">github</a>.  Trasteando un poco he conseguido<br />
+descargar datos de varias jornadas y me he preguntado qué podríamos hacer con<br />
+estos datos.  Voy a utilizar el equipo local, <a href="http://abbasket2012.com"><em>Arcos Albacete<br />
+Basket</em></a> para hacer un pequeño análisis del paquete y<br />
+sus posibilidades.</p>
+
+<h2 id="descarga-de-datos">Descarga de datos</h2>
+
+<p>La descarga de datos se hace con la función <code class="highlight language-R">extract_shots<span class="p">()</span></code>, que require un<br />
+vector con los números de identificación de los partidos. Estos se obtienen de<br />
+la URL del sitio<br />
+<a href="http://baloncestoenvivo.feb.es">http://baloncestoenvivo.feb.es</a>, por lo<br />
+obtener partidos de jornadas pasadas puede ser un poco complicado al no haber<br />
+un listado de los partidos de jornadas anteriores.</p>
+
+<p>Usando un poco de fuerza bruta he conseguido descargar partidos de varias ligas<br />
+de las últimas jornadas, y las he guardado en un fichero <code class="highlight language-R">RData</code>.</p>
+
+<div class="highlight"><pre><code class="language-r"><span class="kn">library</span><span class="p">(</span>rfeb<span class="p">)</span>
+<span class="kp">load</span><span class="p">(</span><span class="s">&quot;rfeb/2011000-299.RData&quot;</span><span class="p">)</span></code></pre></div>
+
+<p>El Arcos Albacete Basket se enfrenta el próximo sábado 26 de enero de 2019<br />
+al AFANION CB Almansa, por lo que haremos un análisis comparativo de ambos<br />
+equipos.</p>
+
+<h1 id="análisis">Análisis</h1>
+
+<p>En primer lugar, creamos dos variables con los nombres de los equipos<br />
+tal y como aparecen en los datos:</p>
+
+<div class="highlight"><pre><code class="language-r">arcosab <span class="o">&lt;-</span> <span class="s">&quot;ARCOS ALBACETE BASKET&quot;</span>
+afanion <span class="o">&lt;-</span> <span class="s">&quot;AFANION CB ALMANSA&quot;</span></code></pre></div>
+
+<p>Los resultados de los partidos están en un <code class="highlight language-R"><span class="kt">data.frame</span></code> llamado <code class="highlight language-R">shots2</code>.<br />
+En primer lugar, dejamos solamente los lanzamientos de estos dos equipos:</p>
+
+<div class="highlight"><pre><code class="language-r">shots <span class="o">&lt;-</span> <span class="kp">subset</span><span class="p">(</span>shots2<span class="p">,</span> team <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span>arcosab<span class="p">,</span> afanion<span class="p">))</span>
+shots<span class="o">$</span>team <span class="o">&lt;-</span> <span class="kp">as.character</span><span class="p">(</span>shots<span class="o">$</span>team<span class="p">)</span>
+shots<span class="o">$</span>game <span class="o">&lt;-</span> <span class="kp">as.character</span><span class="p">(</span>shots<span class="o">$</span>game<span class="p">)</span>
+<span class="kp">levels</span><span class="p">(</span>shots<span class="o">$</span>made<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;Fuera&quot;</span><span class="p">,</span> <span class="s">&quot;Dentro&quot;</span><span class="p">)</span></code></pre></div>
+
+<p>Los datos corresponden a 2 partidos, en los que<br />
+al AFANION CB Almansa realizó 540 lanzamientos y el<br />
+Arcos Albacete Basket realizó 586.</p>
+
+<p>Antes de proceder al análisis vamos a eliminar los partidos del último partido<br />
+entre el AFANION CB Almansa y el Arcos Albacete Basket para analizarlo por<br />
+separado:</p>
+
+<div class="highlight"><pre><code class="language-r">afa.aba <span class="o">&lt;-</span> shots<span class="p">[</span>shots<span class="o">$</span>game <span class="o">==</span> <span class="s">&quot;2011201&quot;</span><span class="p">,</span> <span class="p">]</span>
+shots <span class="o">&lt;-</span> shots<span class="p">[</span><span class="o">-</span><span class="kp">which</span><span class="p">(</span>shots<span class="o">$</span>game <span class="o">==</span> <span class="s">&quot;2011201&quot;</span><span class="p">),</span> <span class="p">]</span></code></pre></div>
+
+<h2 id="ubicación-de-los-lanzamientos">Ubicación de los lanzamientos</h2>
+
+<p>El paquete <code class="highlight language-R">rfeb</code> incluye la función <code class="highlight language-R">plot_shotchart<span class="p">()</span></code> para visualizar los<br />
+datos. Podemos utilizar esta función para mostrar la ubicación de los lanzamientos y<br />
+si entraron (<code class="highlight language-R">Dentro</code>) o no (<code class="highlight language-R">Fuera</code>).</p>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5" /></p>
+
+<h2 id="tiempos-de-los-lanzamientos">Tiempos de los lanzamientos</h2>
+
+<p>Los datos también incluyen los tiempos a los que se hacen los lanzamientos.<br />
+Podemos utilizar esta información para hacer una suvización que nos permita ver<br />
+cómo varía el número de lanzamientos a lo largo del partido.  La siguiente<br />
+gráfica muestra como el AFANION CB Almansa suele iniciar los partidos con más<br />
+lanzamientos a canasta que el  Arcos Albacete Basket, que reparte sus<br />
+lanzamientos de forma más uniforme durante todo el partido. Conviene comentar<br />
+que algunos tiempos yo mayores a 40 minutos porque corresponden a lanzamientos<br />
+que se hicieron durante la prórroga.</p>
+
+<div class="highlight"><pre><code class="language-r"><span class="c1">#t: Vector de tiempos en formato mm:ss</span>
+density_time <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>shots<span class="p">,</span> team <span class="o">=</span> <span class="kc">NULL</span><span class="p">,</span> bw <span class="o">=</span> <span class="m">2.5</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">if</span><span class="p">(</span><span class="o">!</span><span class="kp">is.null</span><span class="p">(</span>team<span class="p">))</span> <span class="p">{</span>
+    times <span class="o">&lt;-</span> ms<span class="p">(</span>shots<span class="p">[</span>shots<span class="o">$</span>team <span class="o">%in%</span> team<span class="p">,</span> <span class="p">]</span><span class="o">$</span><span class="kp">t</span><span class="p">)</span>
+  <span class="p">}</span> <span class="kr">else</span> <span class="p">{</span>
+    times <span class="o">&lt;-</span> ms<span class="p">(</span>shots<span class="o">$</span><span class="kp">t</span><span class="p">)</span>
+  <span class="p">}</span>
+  times <span class="o">&lt;-</span> <span class="p">(</span>minute<span class="p">(</span>times<span class="p">)</span> <span class="o">*</span> <span class="m">60</span> <span class="o">+</span> second<span class="p">(</span>times<span class="p">))</span> <span class="o">/</span> <span class="m">60</span>
+
+  res <span class="o">&lt;-</span> density<span class="p">(</span>times<span class="p">,</span> from <span class="o">=</span> <span class="m">0</span><span class="p">,</span> to <span class="o">=</span> <span class="m">40</span><span class="p">,</span> bw <span class="o">=</span> bw<span class="p">,</span> kernel <span class="o">=</span> kernel<span class="p">)</span> 
+  res<span class="o">$</span>y <span class="o">&lt;-</span> res<span class="o">$</span>y <span class="o">*</span> <span class="kp">length</span><span class="p">(</span>times<span class="p">)</span>
+  <span class="kr">return</span><span class="p">(</span>res<span class="p">)</span>
+<span class="p">}</span></code></pre></div>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-9-1.png" alt="plot of chunk unnamed-chunk-9" /></p>
+
+<p>De manera similar, podríamos analizar dónde se concentran los lanzamientos de<br />
+los dos equipos. En la siguiente gráfica, las curvas de nivel marcan las<br />
+regiones desde las cuales se producen más lanzamientos.  En general, el AFANION<br />
+CB Almansa reparte sus lanzamientos mucho más que el Arcos Albacete Basket, que<br />
+los concentra en tres regiones mucho más reducidas.</p>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-10-1.png" alt="plot of chunk unnamed-chunk-10" /></p>
+
+<h2 id="tiros-por-jugador">Tiros por jugador</h2>
+
+<p>Por último, podemos explorar los lanzamientos por jugador. Actualmente, el<br />
+paquete <code class="highlight language-R">rfeb</code> sólo proporciona el número de la camiseta de cada jugador.  A<br />
+continuación se muestra la ubicación de los lanzamientos de cada jugador del<br />
+Arcos Albacete Basket.</p>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-11-1.png" alt="plot of chunk unnamed-chunk-11" /></p>
+
+<p>Para el AFANION CB Almansa, la gráfica correspondiente es esta:</p>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-12-1.png" alt="plot of chunk unnamed-chunk-12" /></p>
+
+<h2 id="análisis-de-un-partido-en-concreto">Análisis de un partido en concreto</h2>
+
+<p>Por último, vamos a ver el análisis del partido AFANION CB Almansa - Arcos<br />
+Albacete Basket celebrado el 26/01/2019 con victoria local por 90 a 69 puntos.<br />
+En primer lugar, veamos desde dónde se realizaron los tiros a canasta durante<br />
+el partido:</p>
+
+<div class="highlight"><pre><code class="language-r"><span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
+plot_shotchart<span class="p">(</span>afa.aba<span class="p">,</span> color <span class="o">=</span> made<span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> team <span class="o">+</span> made<span class="p">)</span> <span class="o">+</span>
+  geom_density_2d<span class="p">(</span>data <span class="o">=</span> shots<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> x<span class="p">,</span> y <span class="o">=</span> y<span class="p">))</span></code></pre></div>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-13-1.png" alt="plot of chunk unnamed-chunk-13" /></p>
+
+<p>La gráfica muestra como el AFANION CB Almansa tiene unas zonas de tiros mucho<br />
+más amplias que el Arcos Albacete Basket. Ademñas, también se puede apreciar<br />
+que el equipo local ha dominado en los lanzamientos de triples.</p>
+
+<p>Para ver la evaluación durante la posesión en el partido, podemos realizar una<br />
+suavización kernel con los datos de lanzamientos que fueron dentro y luego<br />
+calcular la diferencia. Esto permite ver en qué partes del partido domina uno u<br />
+otro equipo. Valores positivos indican dominio (es decir, más tiros dentro)<br />
+mientras que valores negativos indican dominio del equipo visitante.</p>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-14-1.png" alt="plot of chunk unnamed-chunk-14" /></p>
+
+<p>La gráfica anterior muestra como el AFANION CB Almansa ha dominado el marcador<br />
+durante casi todo el partido, con pequeñas remontadas del Arcos Albacete<br />
+Basket. Los parciales de cada tiempo fueron 25-13, 28-16, 17-15, 20-25.</p>
+
+<h2 id="análisis-de-la-defensa">Análisis de la defensa</h2>
+
+<p>Una manera sencilla de estudiar cómo defiende un equipo es ver la gráfica<br />
+de tiros anotados (y fallados) de todos los equipos a los que se ha enfrentado.<br />
+A continuación podemos ver estas dos gráficas para el Arcos Albacete Basket,<br />
+para el que se han usado datos de los últimos 9 <br />
+partidos.</p>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-16-1.png" alt="plot of chunk unnamed-chunk-16" /></p>
+
+<p>Como puede observarse, en el lado izquierdo se observa una cantidad ligeramente<br />
+mayor de tiros que en la parte izquierda. Esto puede indicar que los equipos<br />
+atacantes tenga más facilidades para entrar desde esta banda a canasta y que,<br />
+por tanto, haya que reforzarla.</p>
+
+<p>De manera similar, podemos hacer una estimación de cuándo se producen los<br />
+tiros a canasta de los equipos contrarios utilizando una suavización<br />
+kernel.</p>
+
+<p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-17-1.png" alt="plot of chunk unnamed-chunk-17" /></p>
+
+<p>La mayor cantidad de tiros se produce en el primer cuarto y el número de tiros<br />
+va decreciendo conforme aumenta el partido. Parece que se observa un pequeño<br />
+repunte en el tercer cuarto, y a mitad del último cuarto.</p>
+
+<h2 id="conclusiones">Conclusiones</h2>
+
+<p>El paquete <code class="highlight language-R">rfeb</code> facilita el acceso a datos de partidos de varias ligas de la<br />
+RFEB.  La explotación de los datos con el sfotware estadístico <code class="highlight language-R">R</code> permite,<br />
+entre otras cosas, visualizar los datos usando distintos tipos de gráficos.  Se<br />
+echa de menos la posibilidad de descargar el listado de los partidos de la<br />
+jornada, para saber qué equipo es el local y cuál el visitante. También sería<br />
+interesante saber los datos de los jugadores, además del número de su camiseta.</p>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrap">
+
+    <h2 class="footer-heading">Blogario Precario</h2>
+
+    <div class="footer-col-1 column">
+      <ul>
+        <li>Blogario Precario</li>
+        <li><a href="mailto:Virgilio.Gomez@uclm.es">Virgilio.Gomez@uclm.es</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col-2 column">
+      <ul>
+        
+          <a href="https://github.com/becarioprecario">
+            <span class="icon github">
+              <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+                c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+                C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+                c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+                c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+          </a>
+        
+        
+          <a href="https://twitter.com/precariobecario">
+            <span class="icon twitter">
+              <svg version="1.1" class="twitter-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill="#C2C2C2" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27
+                c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767
+                c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206
+                C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271
+                c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469
+                c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+              </svg>
+            </span>
+          </a>
+        
+        
+          <a href="https://www.researchgate.net/profile/Virgilio_Gomez_Rubio">
+            <span class="icon researchgate">
+            <img alt="Embedded Image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wsOADguc/rzTAAAAbxJREFUOMulk01rE1EUhp9zcqczcUxCpbH2QxqKRayliMUuulDcqgtxJwj1F+gv0JVLXbgRupEirnXhzm0LESpoS7FQBVMrGpBo1ahjJpnrYiZCPpAB7+JyONz3gfe89wgvH1v+42jql1ELsBA1O9omldhGLJdOMb9vkO2gzsW3ZRBNCbCWKS/PsHGZ3njCycIojhpCG3VaEBFImq5qXEctAMYcj+3fda4eOsbS+AnmsoUuCzZi8UCJu2Oz7LVCNn59Y8r1eR8GXN5Z42MzoOT4XN99wayXw1HtAoiyXNvhuJenGgbcqW6BKI8mF7g9OsPiu+esB1+5PzHPh2bAar3WZ4gicUMUNAPWUv5R4+z+IkaUm9VXYAGhffWP0RVFRDmaLXCteIQHX3Zp2kQp0iHuSaFhI64MjnMuf5Bh43Gp8oy1n3vpP5Iryr1ahdNvVvHVxHaSZFIBbAJptEJuVLd4OrnA4QE/HcCIkJUMOc2AKEufXrNS/8zDiTlyarqcdwNsxBl/CEeEITPA+cIIqg4XKmU2g+/cGpmmaNy+AGlvo0libCcVTz6uXVEa1hLRu7h/U2gLelYBCP4xyD+onJDij2xPmAAAAABJRU5ErkJggg==" />
+            </span>
+          </a>
+        
+        
+          <a href="https://www.linkedin.com/in/virgilio-gómez-rubio-a98953b0">
+            <span class="icon linkedin">
+            <img alt="Embedded Image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH3wsOFwYE8O2UEgAAAYhJREFUOMulk79LW1EUxz/nvJs89aWK+KvSkKUgFH8s4q/FpauUDh1FhYJODkrGgn+EQ9eiuCoYFwcnBUW0S6FTIVgtndrUtjGlybvXIclT0rSNeMZz7/2e749zRdOZ18A0YLlbKbBugBmgxQGuZMFTVBoGmVXAOqCvK+DDq6dMPenGNc7CKpXJewsTPO4IyLwcpcnonXSAJyxvvwdg/fSCQjFsGEA0nfkBJGzJggoUQ9Q32GIIrgyOIzoj5qE3Jv00ANY6Vl8MMTeS5PuvkEcruxwuTTLY28rG20886+/h4QMfgNOLSyZWDwituyUB8I2SiBuCuAdAc8wjiHvMj6eixwDDyTbGUu2R0f9162OugCxuIemdqPd8oAdXy+BvtZ/9Cr4B58j/LpvbGfg1KfwraHezFaXKVPkjxnvUvQFMldN+9gsC5SUSYfPdZ47Pv3F0lkMQnDjWTs5pjnkcnuUiHaLpTB5osc5RzUZVsBW9CKiUb9fpXRngDTCjIva2O1rnS9b0FFi7BoPefZFMcKSmAAAAAElFTkSuQmCC" />
+
+            </span>
+          </a>
+        
+        
+          <a href="https://www.orcid.org/0000-0002-4791-3072">
+            <span class="icon linkedin">
+            <img alt="Embedded Image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==" />
+
+            </span>
+          </a>
+        
+
+
+      </ul>
+    </div>
+
+    <div class="footer-col-3 column">
+      <p class="text">
+   Department of Mathematics
+   <br>
+   School of Industrial Engineering
+   <br>
+   University of Castilla-La Mancha
+   <br>
+   Avda. España s/n - 02071 Albacete (Spain)
+   <br>
+   Tel: (+34) 967 59 92 00, ext. 8291
+   </p>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    </body>
+</html>
