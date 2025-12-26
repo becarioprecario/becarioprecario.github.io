@@ -309,20 +309,21 @@
 
 <p>Hemos usado el paquete <strong>rjags</strong> para ajustar el modelo Bayesiano usando este código:</p>
 
-<div class="highlight"><pre><code class="language-R"> model <span class="p">{</span>
-   <span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.encuestas<span class="p">)</span> <span class="p">{</span>
-     votos<span class="p">[</span>i<span class="p">,</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">]</span> <span class="o">~</span> dmulti<span class="p">(</span>p<span class="p">[</span><span class="m">1</span><span class="o">:</span>n.partidos<span class="p">],</span> n<span class="p">[</span>i<span class="p">])</span>
-   <span class="p">}</span>
-   p<span class="p">[</span><span class="m">1</span><span class="o">:</span>n.partidos<span class="p">]</span> <span class="o">~</span> ddirch<span class="p">(</span>alpha<span class="p">[</span><span class="m">1</span><span class="o">:</span>n.partidos<span class="p">])</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> model {
+   for(i in 1:n.encuestas) {
+     votos[i, 1:n.partidos] ~ dmulti(p[1:n.partidos], n[i])
+   }
+   p[1:n.partidos] ~ ddirch(alpha[1:n.partidos])
  
-   indep <span class="o">&lt;-</span> <span class="kp">sum</span><span class="p">(</span>p<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">])</span>
-   no.indep <span class="o">&lt;-</span> <span class="kp">sum</span><span class="p">(</span>p<span class="p">[</span><span class="m">3</span><span class="o">:</span><span class="m">7</span><span class="p">])</span>
+   indep &lt;- sum(p[1:2])
+   no.indep &lt;- sum(p[3:7])
  
-   diferencia <span class="o">&lt;-</span>  indep <span class="o">-</span> no.indep
+   diferencia &lt;-  indep - no.indep
  
-   otros <span class="o">&lt;-</span> p<span class="p">[</span><span class="m">8</span><span class="p">]</span>
+   otros &lt;- p[8]
  
- <span class="p">}</span></code></pre></div>
+ }
+</code></pre></div></div>
 
 <h2 id="resultados">Resultados</h2>
 
@@ -447,10 +448,7 @@
    <br>
    Avda. España s/n - 02071 Albacete (Spain)
    <br>
-   Tel: (+34) 967 59 92 00, ext. 8291
-   </p>
-    </div>
-
+   Tel: (+34) 926 05 36 65
   </div>
 
 </footer>

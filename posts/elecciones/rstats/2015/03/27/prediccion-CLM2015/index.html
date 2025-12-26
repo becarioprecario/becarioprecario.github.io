@@ -121,7 +121,7 @@
 
 <p>En primer lugar, el número de votos obtenidos por cada uno de los principales partidos sería el siguiente:</p>
 
-<p><img src="/figure/source/2015-03-27-prediccion-CLM2015/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" /></p>
+<p><img src="/figure/posts/2015-03-27-prediccion-CLM2015/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /></p>
 
 <p>De los partidos anteriores, sólo UPyD no conseguiría llegar al mínimo del 3% de los votos válidos que marca la ley electoral para poder optar a algún escaño. Esto ocurriría en todas las circunscripciones.</p>
 
@@ -158,14 +158,14 @@
 
 <h3 id="apéndice-1-cálculo-de-similitudes-entre-municipios">Apéndice 1: Cálculo de similitudes entre municipios</h3>
 
-<p>En este apéndice damos más detalles sobre cómo hemos calculado la similitud entre los municipios de Andalucía y Castilla-La Mancha. Hemos usado los datos de las elecciones europeas de 2014, de los que hemos tomado los votos de los partidos PP, PSOE, IU, Podemos, UPyD y Ciudadanos, junto con el número de votos en blanco<br />
+<p>En este apéndice damos más detalles sobre cómo hemos calculado la similitud entre los municipios de Andalucía y Castilla-La Mancha. Hemos usado los datos de las elecciones europeas de 2014, de los que hemos tomado los votos de los partidos PP, PSOE, IU, Podemos, UPyD y Ciudadanos, junto con el número de votos en blanco
 y votos nulos.</p>
 
 <p>En lugar de usar estos 8 valores en bruto, los hemos representado como proporciones. De esta manera, todos los números estarán en la misma escala, sin importar el número de posibles votantes. Así, podemos calcular la “distancia” entre los municipios de Andalucía y Castilla-La Mancha como la suma de los cuadrados de las diferencias entre la proporciones de voto para cada partido. Si para dos municipios este valor es cero, eso indica perfiles de voto idénticos, mientras que si es grande indica perfiles de voto diferentes.</p>
 
 <h3 id="apéndice-2-cálculo-de-la-estimación-de-voto">Apéndice 2: Cálculo de la estimación de voto</h3>
 
-<p>A partir de las distancias entre municipios, para cada municipio de Castilla-La Mancha calculamos una serie de pesos usando la inversa del cuadrado de la <br />
+<p>A partir de las distancias entre municipios, para cada municipio de Castilla-La Mancha calculamos una serie de pesos usando la inversa del cuadrado de la 
 distancia (a cada municipio andaluz) elevada a un valor <em>k</em>. Estos pesos se dividen luego por una constante de manera que sumen 1. Por eso, municipios con un mayor peso estarán más cerca que aquellos que tengan menor peso. Al acabar, cada municipio de Castilla-La Mancha tiene un peso asociado a cada municipio de Andalucía y todos ellos suman 1.</p>
 
 <p>La proporción de votos es entonces una suma ponderada de las proporciones de voto de los municipios andaluces. Además, el número de votos también se calcula usando una suma ponderada de la participación de cada municipio andaluz. Así modelizamos a la vez el incremento en la participación y cómo han votado los ciudadanos andaluces.</p>
@@ -332,7 +332,7 @@ distancia (a cada municipio andaluz) elevada a un valor <em>k</em>. Estos pesos 
 
 <p>Numéricamente, tendríamos que el perfil generado para Nerpio sería:</p>
 
-<p>0.15 * (0.02, 0.02, 0.42, 0.35, 0.09, 0.04, 0.05, 0.01) + <br />
+<p>0.15 * (0.02, 0.02, 0.42, 0.35, 0.09, 0.04, 0.05, 0.01) + 
   0.14 * (0.01, 0.04, 0.38, 0.40, 0.07, 0.03, 0.05, 0.02) + …</p>
 
 <p>El perfil resultante para Nerpio es:</p>
@@ -514,10 +514,7 @@ distancia (a cada municipio andaluz) elevada a un valor <em>k</em>. Estos pesos 
    <br>
    Avda. España s/n - 02071 Albacete (Spain)
    <br>
-   Tel: (+34) 967 59 92 00, ext. 8291
-   </p>
-    </div>
-
+   Tel: (+34) 926 05 36 65
   </div>
 
 </footer>

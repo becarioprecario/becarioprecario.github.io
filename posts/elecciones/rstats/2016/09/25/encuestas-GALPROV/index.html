@@ -295,18 +295,19 @@
 
 <p>Hemos usado el paquete <strong>rjags</strong> para ajustar el modelo Bayesiano usando este código:</p>
 
-<div class="highlight"><pre><code class="language-R"> model <span class="p">{</span>
-   <span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.encuestas<span class="p">)</span> <span class="p">{</span>
-     <span class="kr">for</span><span class="p">(</span>j <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.provincias<span class="p">)</span> <span class="p">{</span>
-     votos<span class="p">[</span>i<span class="p">,</span> j<span class="p">,</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">]</span> <span class="o">~</span> dmulti<span class="p">(</span>p<span class="p">[</span>j<span class="p">,</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">],</span> n<span class="p">[</span>i<span class="p">,</span> j<span class="p">])</span>
-     <span class="p">}</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> model {
+   for(i in 1:n.encuestas) {
+     for(j in 1:n.provincias) {
+     votos[i, j, 1:n.partidos] ~ dmulti(p[j, 1:n.partidos], n[i, j])
+     }
      
-   <span class="p">}</span>
+   }
  
-   <span class="kr">for</span><span class="p">(</span>j <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.provincias<span class="p">)</span> <span class="p">{</span>
-     p<span class="p">[</span>j<span class="p">,</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">]</span> <span class="o">~</span> ddirch<span class="p">(</span>alpha<span class="p">[</span><span class="m">1</span><span class="o">:</span>n.partidos<span class="p">])</span>
-   <span class="p">}</span>
- <span class="p">}</span></code></pre></div>
+   for(j in 1:n.provincias) {
+     p[j, 1:n.partidos] ~ ddirch(alpha[1:n.partidos])
+   }
+ }
+</code></pre></div></div>
 
 <p>A la hora de ajustar el modelo usando simulación MCMC hemos usado 5000 iteraciones de calentamiento y otras 10000 para obtener las estimaciones de los parámetros. A la hora de generar estas simulaciones, nos hemos quedado con 1 de cada 10 simulaciones para disminuir la autocorrelación. Además, con cada una de estas 10000 simulaciones hemos estimado el número de escaños que correspondería a cada partido para obtener una simulación de los escaños por provincias y totales.</p>
 
@@ -318,7 +319,7 @@
   <thead>
     <tr>
       <th style="text-align: left"> </th>
-      <th style="text-align: right">A Coruña</th>
+      <th style="text-align: right">A.Coruña</th>
       <th style="text-align: right">Lugo</th>
       <th style="text-align: right">Ourense</th>
       <th style="text-align: right">Pontevedra</th>
@@ -326,36 +327,8 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">BNG</td>
-      <td style="text-align: right">1</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">1</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Cs</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">0</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Marea</td>
-      <td style="text-align: right">6</td>
-      <td style="text-align: right">2</td>
-      <td style="text-align: right">3</td>
-      <td style="text-align: right">6</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OTROSBL</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">0</td>
-    </tr>
-    <tr>
       <td style="text-align: left">PP</td>
-      <td style="text-align: right">13</td>
+      <td style="text-align: right">12</td>
       <td style="text-align: right">9</td>
       <td style="text-align: right">9</td>
       <td style="text-align: right">10</td>
@@ -366,6 +339,34 @@
       <td style="text-align: right">3</td>
       <td style="text-align: right">2</td>
       <td style="text-align: right">5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Marea</td>
+      <td style="text-align: right">6</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">3</td>
+      <td style="text-align: right">5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Cs</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">BNG</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">OTROSBL</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
     </tr>
   </tbody>
 </table>
@@ -381,28 +382,28 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">BNG</td>
-      <td style="text-align: right">2</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Cs</td>
-      <td style="text-align: right">0</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Marea</td>
-      <td style="text-align: right">17</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OTROSBL</td>
-      <td style="text-align: right">0</td>
-    </tr>
-    <tr>
       <td style="text-align: left">PP</td>
-      <td style="text-align: right">41</td>
+      <td style="text-align: right">40</td>
     </tr>
     <tr>
       <td style="text-align: left">PSOE</td>
       <td style="text-align: right">15</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Marea</td>
+      <td style="text-align: right">16</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Cs</td>
+      <td style="text-align: right">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">BNG</td>
+      <td style="text-align: right">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">OTROSBL</td>
+      <td style="text-align: right">0</td>
     </tr>
   </tbody>
 </table>
@@ -425,51 +426,51 @@
   <tbody>
     <tr>
       <td style="text-align: left">Min.</td>
-      <td style="text-align: right">37.0000</td>
-      <td style="text-align: right">12.0000</td>
-      <td style="text-align: right">13.0000</td>
-      <td style="text-align: right">0.0000</td>
-      <td style="text-align: right">1.0000</td>
+      <td style="text-align: right">37.00</td>
+      <td style="text-align: right">12.0</td>
+      <td style="text-align: right">13.00</td>
+      <td style="text-align: right">1.000</td>
+      <td style="text-align: right">2.00</td>
     </tr>
     <tr>
       <td style="text-align: left">1st Qu.</td>
-      <td style="text-align: right">40.0000</td>
-      <td style="text-align: right">15.0000</td>
-      <td style="text-align: right">16.0000</td>
-      <td style="text-align: right">0.0000</td>
-      <td style="text-align: right">2.0000</td>
+      <td style="text-align: right">39.00</td>
+      <td style="text-align: right">15.0</td>
+      <td style="text-align: right">15.00</td>
+      <td style="text-align: right">2.000</td>
+      <td style="text-align: right">2.00</td>
     </tr>
     <tr>
       <td style="text-align: left">Median</td>
-      <td style="text-align: right">40.0000</td>
-      <td style="text-align: right">15.0000</td>
-      <td style="text-align: right">16.0000</td>
-      <td style="text-align: right">1.0000</td>
-      <td style="text-align: right">2.0000</td>
+      <td style="text-align: right">40.00</td>
+      <td style="text-align: right">15.0</td>
+      <td style="text-align: right">16.00</td>
+      <td style="text-align: right">2.000</td>
+      <td style="text-align: right">2.00</td>
     </tr>
     <tr>
       <td style="text-align: left">Mean</td>
-      <td style="text-align: right">40.4833</td>
-      <td style="text-align: right">15.3099</td>
-      <td style="text-align: right">16.2197</td>
-      <td style="text-align: right">0.9553</td>
-      <td style="text-align: right">2.0318</td>
+      <td style="text-align: right">39.83</td>
+      <td style="text-align: right">15.1</td>
+      <td style="text-align: right">15.85</td>
+      <td style="text-align: right">1.996</td>
+      <td style="text-align: right">2.23</td>
     </tr>
     <tr>
       <td style="text-align: left">3rd Qu.</td>
-      <td style="text-align: right">41.0000</td>
-      <td style="text-align: right">16.0000</td>
-      <td style="text-align: right">17.0000</td>
-      <td style="text-align: right">1.0000</td>
-      <td style="text-align: right">2.0000</td>
+      <td style="text-align: right">40.00</td>
+      <td style="text-align: right">16.0</td>
+      <td style="text-align: right">16.00</td>
+      <td style="text-align: right">2.000</td>
+      <td style="text-align: right">2.00</td>
     </tr>
     <tr>
       <td style="text-align: left">Max.</td>
-      <td style="text-align: right">44.0000</td>
-      <td style="text-align: right">18.0000</td>
-      <td style="text-align: right">19.0000</td>
-      <td style="text-align: right">2.0000</td>
-      <td style="text-align: right">4.0000</td>
+      <td style="text-align: right">43.00</td>
+      <td style="text-align: right">17.0</td>
+      <td style="text-align: right">19.00</td>
+      <td style="text-align: right">3.000</td>
+      <td style="text-align: right">4.00</td>
     </tr>
   </tbody>
 </table>
@@ -490,15 +491,15 @@
   <tbody>
     <tr>
       <td style="text-align: left">2.5%</td>
-      <td style="text-align: right">39</td>
+      <td style="text-align: right">38</td>
       <td style="text-align: right">14</td>
-      <td style="text-align: right">15</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">1</td>
+      <td style="text-align: right">14</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">2</td>
     </tr>
     <tr>
       <td style="text-align: left">97.5%</td>
-      <td style="text-align: right">42</td>
+      <td style="text-align: right">41</td>
       <td style="text-align: right">16</td>
       <td style="text-align: right">18</td>
       <td style="text-align: right">2</td>
@@ -509,7 +510,7 @@
 
 <p>El modelo Bayesiano nos combina los datos de las distintas encuestas de manera que se obtiene una estimación de las proporciones de voto mucho más fiable. La siguiente figura muestra las distribuciones marginales a posteriori de los escaños obtenidos por cada partido:</p>
 
-<p><img src="/figure/source/2016-09-25-encuestas-GALPROV/unnamed-chunk-11-1.png" alt="plot of chunk unnamed-chunk-11" /></p>
+<p><img src="/figure/posts/2016-09-25-encuestas-GALPROV/unnamed-chunk-11-1.png" alt="plot of chunk unnamed-chunk-11" /></p>
 
 <p>La gráfica indica que los partidos nacionalistas obtendrían una mayoría absoluta con una gran probabilidad. La línea vertical muestra el resultado real de las elecciones.</p>
 
@@ -614,10 +615,7 @@
    <br>
    Avda. España s/n - 02071 Albacete (Spain)
    <br>
-   Tel: (+34) 967 59 92 00, ext. 8291
-   </p>
-    </div>
-
+   Tel: (+34) 926 05 36 65
   </div>
 
 </footer>

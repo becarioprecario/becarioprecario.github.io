@@ -115,33 +115,34 @@
 
 <p>Hemos usado el paquete <strong>rjags</strong> para ajustar el modelo Bayesiano usando este código:</p>
 
-<div class="highlight"><pre><code class="language-R"> model <span class="p">{</span>
-   <span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.encuestas.prov<span class="p">)</span> <span class="p">{</span>
-     <span class="kr">for</span><span class="p">(</span>j <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.provincias<span class="p">)</span> <span class="p">{</span>
-     votos.prov<span class="p">[</span>i<span class="p">,</span> j<span class="p">,</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">]</span> <span class="o">~</span> dmulti<span class="p">(</span>p.prov<span class="p">[</span>j<span class="p">,</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">],</span> n.prov<span class="p">[</span>i<span class="p">,</span> j<span class="p">])</span>
-     <span class="p">}</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> model {
+   for(i in 1:n.encuestas.prov) {
+     for(j in 1:n.provincias) {
+     votos.prov[i, j, 1:n.partidos] ~ dmulti(p.prov[j, 1:n.partidos], n.prov[i, j])
+     }
      
-   <span class="p">}</span>
+   }
  
-   <span class="kr">for</span><span class="p">(</span>j <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.provincias<span class="p">)</span> <span class="p">{</span>
-     <span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">)</span> <span class="p">{</span>
-       <span class="kp">log</span><span class="p">(</span>phi<span class="p">[</span>j<span class="p">,</span> i<span class="p">])</span> <span class="o">&lt;-</span> <span class="kp">log</span><span class="p">(</span>p<span class="p">[</span>i<span class="p">])</span> <span class="o">+</span> u<span class="p">[</span>j<span class="p">,</span> i<span class="p">]</span>
-       p.prov<span class="p">[</span>j<span class="p">,</span> i<span class="p">]</span> <span class="o">&lt;-</span> phi<span class="p">[</span>j<span class="p">,</span> i<span class="p">]</span><span class="o">/</span><span class="kp">sum</span><span class="p">(</span>phi<span class="p">[</span>j<span class="p">,])</span>
+   for(j in 1:n.provincias) {
+     for(i in 1:n.partidos) {
+       log(phi[j, i]) &lt;- log(p[i]) + u[j, i]
+       p.prov[j, i] &lt;- phi[j, i]/sum(phi[j,])
  
-       u<span class="p">[</span>j<span class="p">,</span> i<span class="p">]</span> <span class="o">~</span> dnorm<span class="p">(</span><span class="m">0</span><span class="p">,</span> tau<span class="p">)</span>
-     <span class="p">}</span>
-   <span class="p">}</span>
+       u[j, i] ~ dnorm(0, tau)
+     }
+   }
  
-   tau <span class="o">~</span> dgamma<span class="p">(</span>a0<span class="p">,</span> b0<span class="p">)</span>
- 
- 
-   <span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.encuestas.ca<span class="p">)</span> <span class="p">{</span>
-       votos.ca<span class="p">[</span>i<span class="p">,</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">]</span> <span class="o">~</span> dmulti<span class="p">(</span>p<span class="p">[</span><span class="m">1</span><span class="o">:</span>n.partidos<span class="p">],</span> n.ca<span class="p">[</span>i<span class="p">])</span>
-   <span class="p">}</span>
-   p<span class="p">[</span><span class="m">1</span><span class="o">:</span>n.partidos<span class="p">]</span> <span class="o">~</span> ddirch<span class="p">(</span>alpha<span class="p">[</span><span class="m">1</span><span class="o">:</span>n.partidos<span class="p">])</span>
+   tau ~ dgamma(a0, b0)
  
  
- <span class="p">}</span></code></pre></div>
+   for(i in 1:n.encuestas.ca) {
+       votos.ca[i, 1:n.partidos] ~ dmulti(p[1:n.partidos], n.ca[i])
+   }
+   p[1:n.partidos] ~ ddirch(alpha[1:n.partidos])
+ 
+ 
+ }
+</code></pre></div></div>
 
 <p>A la hora de ajustar el modelo usando simulación MCMC hemos usado 5000 iteraciones de calentamiento y otras 10000 para obtener las estimaciones de los parámetros. A la hora de generar estas simulaciones, nos hemos quedado con 1 de cada 10 simulaciones para disminuir la autocorrelación. Además, con cada una de estas 10000 simulaciones hemos estimado el número de escaños que correspondería a cada partido para obtener una simulación de los escaños por provincias y totales.</p>
 
@@ -165,50 +166,50 @@
 <tbody>
   <tr>
    <td style="text-align:left;"> Min. </td>
-   <td style="text-align:right;"> 21.0000 </td>
-   <td style="text-align:right;"> 33.0000 </td>
-   <td style="text-align:right;"> 15.0000 </td>
-   <td style="text-align:right;"> 17.0000 </td>
+   <td style="text-align:right;"> 21.00 </td>
+   <td style="text-align:right;"> 34.00 </td>
+   <td style="text-align:right;"> 15.00 </td>
+   <td style="text-align:right;"> 18.00 </td>
    <td style="text-align:right;"> 0.0000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 1st Qu. </td>
-   <td style="text-align:right;"> 25.0000 </td>
-   <td style="text-align:right;"> 39.0000 </td>
-   <td style="text-align:right;"> 19.0000 </td>
-   <td style="text-align:right;"> 21.0000 </td>
+   <td style="text-align:right;"> 25.00 </td>
+   <td style="text-align:right;"> 39.00 </td>
+   <td style="text-align:right;"> 19.00 </td>
+   <td style="text-align:right;"> 21.00 </td>
    <td style="text-align:right;"> 0.0000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Median </td>
-   <td style="text-align:right;"> 26.0000 </td>
-   <td style="text-align:right;"> 40.0000 </td>
-   <td style="text-align:right;"> 20.0000 </td>
-   <td style="text-align:right;"> 22.0000 </td>
+   <td style="text-align:right;"> 26.00 </td>
+   <td style="text-align:right;"> 40.00 </td>
+   <td style="text-align:right;"> 20.00 </td>
+   <td style="text-align:right;"> 22.00 </td>
    <td style="text-align:right;"> 0.0000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Mean </td>
-   <td style="text-align:right;"> 26.2303 </td>
-   <td style="text-align:right;"> 39.6958 </td>
-   <td style="text-align:right;"> 20.3228 </td>
-   <td style="text-align:right;"> 22.2704 </td>
-   <td style="text-align:right;"> 0.4807 </td>
+   <td style="text-align:right;"> 26.19 </td>
+   <td style="text-align:right;"> 39.72 </td>
+   <td style="text-align:right;"> 20.32 </td>
+   <td style="text-align:right;"> 22.27 </td>
+   <td style="text-align:right;"> 0.4932 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> 3rd Qu. </td>
-   <td style="text-align:right;"> 27.0000 </td>
-   <td style="text-align:right;"> 41.0000 </td>
-   <td style="text-align:right;"> 21.0000 </td>
-   <td style="text-align:right;"> 23.0000 </td>
+   <td style="text-align:right;"> 27.00 </td>
+   <td style="text-align:right;"> 41.00 </td>
+   <td style="text-align:right;"> 21.00 </td>
+   <td style="text-align:right;"> 23.00 </td>
    <td style="text-align:right;"> 1.0000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Max. </td>
-   <td style="text-align:right;"> 31.0000 </td>
-   <td style="text-align:right;"> 46.0000 </td>
-   <td style="text-align:right;"> 25.0000 </td>
-   <td style="text-align:right;"> 27.0000 </td>
+   <td style="text-align:right;"> 31.00 </td>
+   <td style="text-align:right;"> 45.00 </td>
+   <td style="text-align:right;"> 26.00 </td>
+   <td style="text-align:right;"> 28.00 </td>
    <td style="text-align:right;"> 4.0000 </td>
   </tr>
 </tbody>
@@ -336,7 +337,7 @@
 
 <h2 id="conclusiones">Conclusiones</h2>
 
-<p>Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones andluzas del 2 de diciembre de 2018. Los resultados muestran que los partidos de izquierdas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 99.92%.</p>
+<p>Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones andluzas del 2 de diciembre de 2018. Los resultados muestran que los partidos de izquierdas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 99.98%.</p>
 
 <p>Por algún motivo, este modelo proporciona resultados muy similares a los obtenidos usando solamente las encuestas a nivel provincial. Esto puede deberse a que el modelo produce un sobreajuste de los porcentajes de voto a nivel provincial.</p>
 
@@ -445,10 +446,7 @@
    <br>
    Avda. España s/n - 02071 Albacete (Spain)
    <br>
-   Tel: (+34) 967 59 92 00, ext. 8291
-   </p>
-    </div>
-
+   Tel: (+34) 926 05 36 65
   </div>
 
 </footer>

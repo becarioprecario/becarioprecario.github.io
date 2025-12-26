@@ -117,33 +117,34 @@
 
 <p>Hemos usado el paquete <strong>rjags</strong> para ajustar el modelo Bayesiano usando este código:</p>
 
-<div class="highlight"><pre><code class="language-R"> model <span class="p">{</span>
-   <span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.encuestas.prov<span class="p">)</span> <span class="p">{</span>
-     <span class="kr">for</span><span class="p">(</span>j <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.provincias<span class="p">)</span> <span class="p">{</span>
-     votos.prov<span class="p">[</span>i<span class="p">,</span> j<span class="p">,</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">]</span> <span class="o">~</span> dmulti<span class="p">(</span>p.prov<span class="p">[</span>j<span class="p">,</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">],</span> n.prov<span class="p">[</span>i<span class="p">,</span> j<span class="p">])</span>
-     <span class="p">}</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> model {
+   for(i in 1:n.encuestas.prov) {
+     for(j in 1:n.provincias) {
+     votos.prov[i, j, 1:n.partidos] ~ dmulti(p.prov[j, 1:n.partidos], n.prov[i, j])
+     }
      
-   <span class="p">}</span>
+   }
  
-   <span class="kr">for</span><span class="p">(</span>j <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.provincias<span class="p">)</span> <span class="p">{</span>
-     <span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">)</span> <span class="p">{</span>
-       <span class="kp">log</span><span class="p">(</span>phi<span class="p">[</span>j<span class="p">,</span> i<span class="p">])</span> <span class="o">&lt;-</span> <span class="kp">log</span><span class="p">(</span>p<span class="p">[</span>i<span class="p">])</span> <span class="o">+</span> u<span class="p">[</span>j<span class="p">,</span> i<span class="p">]</span>
-       p.prov<span class="p">[</span>j<span class="p">,</span> i<span class="p">]</span> <span class="o">&lt;-</span> phi<span class="p">[</span>j<span class="p">,</span> i<span class="p">]</span><span class="o">/</span><span class="kp">sum</span><span class="p">(</span>phi<span class="p">[</span>j<span class="p">,])</span>
+   for(j in 1:n.provincias) {
+     for(i in 1:n.partidos) {
+       log(phi[j, i]) &lt;- log(p[i]) + u[j, i]
+       p.prov[j, i] &lt;- phi[j, i]/sum(phi[j,])
  
-       u<span class="p">[</span>j<span class="p">,</span> i<span class="p">]</span> <span class="o">~</span> dnorm<span class="p">(</span><span class="m">0</span><span class="p">,</span> tau<span class="p">)</span>
-     <span class="p">}</span>
-   <span class="p">}</span>
+       u[j, i] ~ dnorm(0, tau)
+     }
+   }
  
-   tau <span class="o">~</span> dgamma<span class="p">(</span>a0<span class="p">,</span> b0<span class="p">)</span>
- 
- 
-   <span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n.encuestas.cat<span class="p">)</span> <span class="p">{</span>
-       votos.cat<span class="p">[</span>i<span class="p">,</span> <span class="m">1</span><span class="o">:</span>n.partidos<span class="p">]</span> <span class="o">~</span> dmulti<span class="p">(</span>p<span class="p">[</span><span class="m">1</span><span class="o">:</span>n.partidos<span class="p">],</span> n.cat<span class="p">[</span>i<span class="p">])</span>
-   <span class="p">}</span>
-   p<span class="p">[</span><span class="m">1</span><span class="o">:</span>n.partidos<span class="p">]</span> <span class="o">~</span> ddirch<span class="p">(</span>alpha<span class="p">[</span><span class="m">1</span><span class="o">:</span>n.partidos<span class="p">])</span>
+   tau ~ dgamma(a0, b0)
  
  
- <span class="p">}</span></code></pre></div>
+   for(i in 1:n.encuestas.cat) {
+       votos.cat[i, 1:n.partidos] ~ dmulti(p[1:n.partidos], n.cat[i])
+   }
+   p[1:n.partidos] ~ ddirch(alpha[1:n.partidos])
+ 
+ 
+ }
+</code></pre></div></div>
 
 <p>A la hora de ajustar el modelo usando simulación MCMC hemos usado 5000 iteraciones de calentamiento y otras 10000 para obtener las estimaciones de los parámetros. A la hora de generar estas simulaciones, nos hemos quedado con 1 de cada 10 simulaciones para disminuir la autocorrelación. Además, con cada una de estas 10000 simulaciones hemos estimado el número de escaños que correspondería a cada partido para obtener una simulación de los escaños por provincias y totales.</p>
 
@@ -164,28 +165,12 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">CecP</td>
-      <td style="text-align: right">6</td>
-      <td style="text-align: right">1</td>
-      <td style="text-align: right">1</td>
-      <td style="text-align: right">1</td>
-      <td style="text-align: right">9</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Cs</td>
-      <td style="text-align: right">21</td>
-      <td style="text-align: right">3</td>
-      <td style="text-align: right">3</td>
-      <td style="text-align: right">5</td>
-      <td style="text-align: right">32</td>
-    </tr>
-    <tr>
       <td style="text-align: left">CUP</td>
       <td style="text-align: right">6</td>
       <td style="text-align: right">1</td>
       <td style="text-align: right">1</td>
       <td style="text-align: right">1</td>
-      <td style="text-align: right">9</td>
+      <td style="text-align: right">85</td>
     </tr>
     <tr>
       <td style="text-align: left">ERC</td>
@@ -193,7 +178,7 @@
       <td style="text-align: right">5</td>
       <td style="text-align: right">4</td>
       <td style="text-align: right">4</td>
-      <td style="text-align: right">31</td>
+      <td style="text-align: right">17</td>
     </tr>
     <tr>
       <td style="text-align: left">JxCAT</td>
@@ -201,15 +186,15 @@
       <td style="text-align: right">5</td>
       <td style="text-align: right">4</td>
       <td style="text-align: right">4</td>
-      <td style="text-align: right">29</td>
+      <td style="text-align: right">15</td>
     </tr>
     <tr>
-      <td style="text-align: left">PP</td>
-      <td style="text-align: right">5</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">1</td>
+      <td style="text-align: left">CecP</td>
       <td style="text-align: right">6</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">18</td>
     </tr>
     <tr>
       <td style="text-align: left">PSC</td>
@@ -217,7 +202,23 @@
       <td style="text-align: right">2</td>
       <td style="text-align: right">2</td>
       <td style="text-align: right">2</td>
-      <td style="text-align: right">19</td>
+      <td style="text-align: right">85</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PP</td>
+      <td style="text-align: right">5</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">15</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">OTROSBL</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">18</td>
     </tr>
   </tbody>
 </table>
@@ -295,7 +296,7 @@
   </tbody>
 </table>
 
-<p>Como puede verse, las estimaciones fueron bastante buenas. Considerando el total de escaños, fallamos en 22 (si los consideramos provincia a provincia serían 26) de un total de 135.</p>
+<p>Como puede verse, las estimaciones fueron bastante buenas. Considerando el total de escaños, fallamos en 186 (si los consideramos provincia a provincia serían 96) de un total de 135.</p>
 
 <p>Para dar una medida de la variabilidad de esta estimación, hemos usado los resultados de las simulaciones para estimar el número de escaños totales que cada partido obtendría. Para ello hemos usado los porcentajes estimados en cada iteración y calculado los escaños. Posteriormente, hemos calculado una serie de estadísticos resumen con los escaños obtenidos por cada partido.</p>
 
@@ -317,63 +318,63 @@
   <tbody>
     <tr>
       <td style="text-align: left">Min.</td>
-      <td style="text-align: right">3.0000</td>
-      <td style="text-align: right">23.0000</td>
-      <td style="text-align: right">20.0000</td>
-      <td style="text-align: right">4.0000</td>
-      <td style="text-align: right">12.0000</td>
-      <td style="text-align: right">22.0000</td>
-      <td style="text-align: right">0.0000</td>
+      <td style="text-align: right">3.000</td>
+      <td style="text-align: right">23.00</td>
+      <td style="text-align: right">21.00</td>
+      <td style="text-align: right">2.000</td>
+      <td style="text-align: right">13.00</td>
+      <td style="text-align: right">23.00</td>
+      <td style="text-align: right">0.000</td>
     </tr>
     <tr>
       <td style="text-align: left">1st Qu.</td>
-      <td style="text-align: right">8.0000</td>
-      <td style="text-align: right">29.0000</td>
-      <td style="text-align: right">27.0000</td>
-      <td style="text-align: right">8.0000</td>
-      <td style="text-align: right">18.0000</td>
-      <td style="text-align: right">30.0000</td>
-      <td style="text-align: right">5.0000</td>
+      <td style="text-align: right">8.000</td>
+      <td style="text-align: right">29.00</td>
+      <td style="text-align: right">27.00</td>
+      <td style="text-align: right">8.000</td>
+      <td style="text-align: right">18.00</td>
+      <td style="text-align: right">30.00</td>
+      <td style="text-align: right">5.000</td>
     </tr>
     <tr>
       <td style="text-align: left">Median</td>
-      <td style="text-align: right">9.0000</td>
-      <td style="text-align: right">31.0000</td>
-      <td style="text-align: right">28.0000</td>
-      <td style="text-align: right">9.0000</td>
-      <td style="text-align: right">20.0000</td>
-      <td style="text-align: right">32.0000</td>
-      <td style="text-align: right">6.0000</td>
+      <td style="text-align: right">9.000</td>
+      <td style="text-align: right">31.00</td>
+      <td style="text-align: right">28.00</td>
+      <td style="text-align: right">9.000</td>
+      <td style="text-align: right">20.00</td>
+      <td style="text-align: right">32.00</td>
+      <td style="text-align: right">6.000</td>
     </tr>
     <tr>
       <td style="text-align: left">Mean</td>
-      <td style="text-align: right">8.8627</td>
-      <td style="text-align: right">30.8588</td>
-      <td style="text-align: right">28.4841</td>
-      <td style="text-align: right">8.8161</td>
-      <td style="text-align: right">19.8515</td>
-      <td style="text-align: right">31.7292</td>
-      <td style="text-align: right">6.3976</td>
+      <td style="text-align: right">8.858</td>
+      <td style="text-align: right">30.84</td>
+      <td style="text-align: right">28.49</td>
+      <td style="text-align: right">8.796</td>
+      <td style="text-align: right">19.85</td>
+      <td style="text-align: right">31.74</td>
+      <td style="text-align: right">6.421</td>
     </tr>
     <tr>
       <td style="text-align: left">3rd Qu.</td>
-      <td style="text-align: right">10.0000</td>
-      <td style="text-align: right">32.0000</td>
-      <td style="text-align: right">30.0000</td>
-      <td style="text-align: right">10.0000</td>
-      <td style="text-align: right">21.0000</td>
-      <td style="text-align: right">33.0000</td>
-      <td style="text-align: right">7.0000</td>
+      <td style="text-align: right">10.000</td>
+      <td style="text-align: right">32.00</td>
+      <td style="text-align: right">30.00</td>
+      <td style="text-align: right">10.000</td>
+      <td style="text-align: right">21.00</td>
+      <td style="text-align: right">33.00</td>
+      <td style="text-align: right">7.000</td>
     </tr>
     <tr>
       <td style="text-align: left">Max.</td>
-      <td style="text-align: right">16.0000</td>
-      <td style="text-align: right">42.0000</td>
-      <td style="text-align: right">39.0000</td>
-      <td style="text-align: right">15.0000</td>
-      <td style="text-align: right">28.0000</td>
-      <td style="text-align: right">42.0000</td>
-      <td style="text-align: right">13.0000</td>
+      <td style="text-align: right">15.000</td>
+      <td style="text-align: right">41.00</td>
+      <td style="text-align: right">39.00</td>
+      <td style="text-align: right">16.000</td>
+      <td style="text-align: right">28.00</td>
+      <td style="text-align: right">41.00</td>
+      <td style="text-align: right">13.000</td>
     </tr>
   </tbody>
 </table>
@@ -470,17 +471,17 @@
 
 <p>El modelo Bayesiano nos combina los datos de las distintas encuestas de manera que se obtiene una estimación de las proporciones de voto mucho más fiable y, por tanto, del número de escaños obtenido por cada partido. La siguiente figura muestra las distribuciones marginales a posteriori de los escaños obtenidos por cada partido.</p>
 
-<p><img src="/figure/source/2017-12-15-encuestas-CATPROV/unnamed-chunk-13-1.png" alt="plot of chunk unnamed-chunk-13" /></p>
+<p><img src="/figure/posts/2017-12-15-encuestas-CATPROV/unnamed-chunk-13-1.png" alt="plot of chunk unnamed-chunk-13" /></p>
 
 <p>Por último, vamos a mostrar en una gráfica el número de escaños que obtendrían los partidos independentistas, junto con el límite de 68 escaños que marca la mayoría absoluta:</p>
 
-<p><img src="/figure/source/2017-12-15-encuestas-CATPROV/unnamed-chunk-14-1.png" alt="plot of chunk unnamed-chunk-14" /></p>
+<p><img src="/figure/posts/2017-12-15-encuestas-CATPROV/unnamed-chunk-14-1.png" alt="plot of chunk unnamed-chunk-14" /></p>
 
 <p>La gráfica indica que los partidos nacionalistas obtendrían una mayoría absoluta con una gran probabilidad.</p>
 
 <h2 id="conclusiones">Conclusiones</h2>
 
-<p>Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones catalanas de 21 de diciembre de 2017. Los resultados muestran que los partidos nacionalistas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 59.79%.</p>
+<p>Hemos visto cómo los modelos jerárquicos Bayesianos nos permiten combinar datos de diferentes encuestas para poder realizar una estimación del número de escaños que obtendría cada partido en las elecciones catalanas de 21 de diciembre de 2017. Los resultados muestran que los partidos nacionalistas obtendrían una mayoría absoluta en número de escaños con una probabilidad del 59.27%.</p>
 
 <p>Por algún motivo, este modelo proporciona resultados muy similares a los obtenidos usando solamente las encuestas a nivel provincial. Esto puede deberse a que el modelo produce un sobreajuste de los porcentajes de voto a nivel provincial.</p>
 
@@ -585,10 +586,7 @@
    <br>
    Avda. España s/n - 02071 Albacete (Spain)
    <br>
-   Tel: (+34) 967 59 92 00, ext. 8291
-   </p>
-    </div>
-
+   Tel: (+34) 926 05 36 65
   </div>
 
 </footer>

@@ -93,16 +93,16 @@
   <article class="post-content">
   <p><strong>Actualización: He añadido un análisis del partido AFANINON CB Almansa - Arcos Albacete Basket celebrado el  26/01/2019.</strong></p>
 
-<p>El paquete <code class="highlight language-R">rfeb</code> escrito por <a href="https://solmos.netlify.com">Sergio Olmos</a> permite descargar datos de lanzamientos de los partidos de baloncesto de varias ligas de la RFEB.  El paquete se puede instalar directamente desde <a href="https://github.com/solmos/rfeb">github</a>.  Trasteando un poco he conseguido descargar datos de varias jornadas y me he preguntado qué podríamos hacer con estos datos.  Voy a utilizar el equipo local, <a href="http://abbasket2012.com"><em>Arcos Albacete Basket</em></a> para hacer un pequeño análisis del paquete y sus posibilidades.</p>
+<p>El paquete <code class="language-plaintext highlighter-rouge">rfeb</code> escrito por <a href="https://solmos.netlify.com">Sergio Olmos</a> permite descargar datos de lanzamientos de los partidos de baloncesto de varias ligas de la RFEB.  El paquete se puede instalar directamente desde <a href="https://github.com/solmos/rfeb">github</a>.  Trasteando un poco he conseguido descargar datos de varias jornadas y me he preguntado qué podríamos hacer con estos datos.  Voy a utilizar el equipo local, <a href="http://abbasket2012.com"><em>Arcos Albacete Basket</em></a> para hacer un pequeño análisis del paquete y sus posibilidades.</p>
 
 <h2 id="descarga-de-datos">Descarga de datos</h2>
 
-<p>La descarga de datos se hace con la función <code class="highlight language-R">extract_shots<span class="p">()</span></code>, que require un vector con los números de identificación de los partidos. Estos se obtienen de la URL del sitio <a href="http://baloncestoenvivo.feb.es">http://baloncestoenvivo.feb.es</a>, por lo obtener partidos de jornadas pasadas puede ser un poco complicado al no haber un listado de los partidos de jornadas anteriores.</p>
+<p>La descarga de datos se hace con la función <code class="language-plaintext highlighter-rouge">extract_shots()</code>, que require un vector con los números de identificación de los partidos. Estos se obtienen de la URL del sitio <a href="http://baloncestoenvivo.feb.es">http://baloncestoenvivo.feb.es</a>, por lo obtener partidos de jornadas pasadas puede ser un poco complicado al no haber un listado de los partidos de jornadas anteriores.</p>
 
-<p>Usando un poco de fuerza bruta he conseguido descargar partidos de varias ligas de las últimas jornadas, y las he guardado en un fichero <code class="highlight language-R">RData</code>.</p>
+<p>Usando un poco de fuerza bruta he conseguido descargar partidos de varias ligas de las últimas jornadas, y las he guardado en un fichero <code class="language-plaintext highlighter-rouge">RData</code>.</p>
 
-<div class="highlight"><pre><code class="language-r"><span class="kn">library</span><span class="p">(</span>rfeb<span class="p">)</span>
-<span class="kp">load</span><span class="p">(</span><span class="s">&quot;rfeb/2011000-299.RData&quot;</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">rfeb</span><span class="p">)</span><span class="w">
+</span><span class="n">load</span><span class="p">(</span><span class="s2">"rfeb/2011000-299.RData"</span><span class="p">)</span></code></pre></figure>
 
 <p>El Arcos Albacete Basket se enfrenta el próximo sábado 26 de enero de 2019 al AFANION CB Almansa, por lo que haremos un análisis comparativo de ambos equipos.</p>
 
@@ -110,26 +110,26 @@
 
 <p>En primer lugar, creamos dos variables con los nombres de los equipos tal y como aparecen en los datos:</p>
 
-<div class="highlight"><pre><code class="language-r">arcosab <span class="o">&lt;-</span> <span class="s">&quot;ARCOS ALBACETE BASKET&quot;</span>
-afanion <span class="o">&lt;-</span> <span class="s">&quot;AFANION CB ALMANSA&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">arcosab</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"ARCOS ALBACETE BASKET"</span><span class="w">
+</span><span class="n">afanion</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"AFANION CB ALMANSA"</span></code></pre></figure>
 
-<p>Los resultados de los partidos están en un <code class="highlight language-R"><span class="kt">data.frame</span></code> llamado <code class="highlight language-R">shots2</code>. En primer lugar, dejamos solamente los lanzamientos de estos dos equipos:</p>
+<p>Los resultados de los partidos están en un <code class="language-plaintext highlighter-rouge">data.frame</code> llamado <code class="language-plaintext highlighter-rouge">shots2</code>. En primer lugar, dejamos solamente los lanzamientos de estos dos equipos:</p>
 
-<div class="highlight"><pre><code class="language-r">shots <span class="o">&lt;-</span> <span class="kp">subset</span><span class="p">(</span>shots2<span class="p">,</span> team <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span>arcosab<span class="p">,</span> afanion<span class="p">))</span>
-shots<span class="o">$</span>team <span class="o">&lt;-</span> <span class="kp">as.character</span><span class="p">(</span>shots<span class="o">$</span>team<span class="p">)</span>
-shots<span class="o">$</span>game <span class="o">&lt;-</span> <span class="kp">as.character</span><span class="p">(</span>shots<span class="o">$</span>game<span class="p">)</span>
-<span class="kp">levels</span><span class="p">(</span>shots<span class="o">$</span>made<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;Fuera&quot;</span><span class="p">,</span> <span class="s">&quot;Dentro&quot;</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">shots</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">shots2</span><span class="p">,</span><span class="w"> </span><span class="n">team</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">arcosab</span><span class="p">,</span><span class="w"> </span><span class="n">afanion</span><span class="p">))</span><span class="w">
+</span><span class="n">shots</span><span class="o">$</span><span class="n">team</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">shots</span><span class="o">$</span><span class="n">team</span><span class="p">)</span><span class="w">
+</span><span class="n">shots</span><span class="o">$</span><span class="n">game</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">shots</span><span class="o">$</span><span class="n">game</span><span class="p">)</span><span class="w">
+</span><span class="n">levels</span><span class="p">(</span><span class="n">shots</span><span class="o">$</span><span class="n">made</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Fuera"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Dentro"</span><span class="p">)</span></code></pre></figure>
 
 <p>Los datos corresponden a 2 partidos, en los que al AFANION CB Almansa realizó 540 lanzamientos y el Arcos Albacete Basket realizó 586.</p>
 
 <p>Antes de proceder al análisis vamos a eliminar los partidos del último partido entre el AFANION CB Almansa y el Arcos Albacete Basket para analizarlo por separado:</p>
 
-<div class="highlight"><pre><code class="language-r">afa.aba <span class="o">&lt;-</span> shots<span class="p">[</span>shots<span class="o">$</span>game <span class="o">==</span> <span class="s">&quot;2011201&quot;</span><span class="p">,</span> <span class="p">]</span>
-shots <span class="o">&lt;-</span> shots<span class="p">[</span><span class="o">-</span><span class="kp">which</span><span class="p">(</span>shots<span class="o">$</span>game <span class="o">==</span> <span class="s">&quot;2011201&quot;</span><span class="p">),</span> <span class="p">]</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">afa.aba</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">shots</span><span class="p">[</span><span class="n">shots</span><span class="o">$</span><span class="n">game</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"2011201"</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="n">shots</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">shots</span><span class="p">[</span><span class="o">-</span><span class="n">which</span><span class="p">(</span><span class="n">shots</span><span class="o">$</span><span class="n">game</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"2011201"</span><span class="p">),</span><span class="w"> </span><span class="p">]</span></code></pre></figure>
 
 <h2 id="ubicación-de-los-lanzamientos">Ubicación de los lanzamientos</h2>
 
-<p>El paquete <code class="highlight language-R">rfeb</code> incluye la función <code class="highlight language-R">plot_shotchart<span class="p">()</span></code> para visualizar los datos. Podemos utilizar esta función para mostrar la ubicación de los lanzamientos y si entraron (<code class="highlight language-R">Dentro</code>) o no (<code class="highlight language-R">Fuera</code>).</p>
+<p>El paquete <code class="language-plaintext highlighter-rouge">rfeb</code> incluye la función <code class="language-plaintext highlighter-rouge">plot_shotchart()</code> para visualizar los datos. Podemos utilizar esta función para mostrar la ubicación de los lanzamientos y si entraron (<code class="language-plaintext highlighter-rouge">Dentro</code>) o no (<code class="language-plaintext highlighter-rouge">Fuera</code>).</p>
 
 <p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5" /></p>
 
@@ -137,19 +137,19 @@ shots <span class="o">&lt;-</span> shots<span class="p">[</span><span class="o">
 
 <p>Los datos también incluyen los tiempos a los que se hacen los lanzamientos. Podemos utilizar esta información para hacer una suvización que nos permita ver cómo varía el número de lanzamientos a lo largo del partido.  La siguiente gráfica muestra como el AFANION CB Almansa suele iniciar los partidos con más lanzamientos a canasta que el  Arcos Albacete Basket, que reparte sus lanzamientos de forma más uniforme durante todo el partido. Conviene comentar que algunos tiempos yo mayores a 40 minutos porque corresponden a lanzamientos que se hicieron durante la prórroga.</p>
 
-<div class="highlight"><pre><code class="language-r"><span class="c1">#t: Vector de tiempos en formato mm:ss</span>
-density_time <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>shots<span class="p">,</span> team <span class="o">=</span> <span class="kc">NULL</span><span class="p">,</span> bw <span class="o">=</span> <span class="m">2.5</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">if</span><span class="p">(</span><span class="o">!</span><span class="kp">is.null</span><span class="p">(</span>team<span class="p">))</span> <span class="p">{</span>
-    times <span class="o">&lt;-</span> ms<span class="p">(</span>shots<span class="p">[</span>shots<span class="o">$</span>team <span class="o">%in%</span> team<span class="p">,</span> <span class="p">]</span><span class="o">$</span><span class="kp">t</span><span class="p">)</span>
-  <span class="p">}</span> <span class="kr">else</span> <span class="p">{</span>
-    times <span class="o">&lt;-</span> ms<span class="p">(</span>shots<span class="o">$</span><span class="kp">t</span><span class="p">)</span>
-  <span class="p">}</span>
-  times <span class="o">&lt;-</span> <span class="p">(</span>minute<span class="p">(</span>times<span class="p">)</span> <span class="o">*</span> <span class="m">60</span> <span class="o">+</span> second<span class="p">(</span>times<span class="p">))</span> <span class="o">/</span> <span class="m">60</span>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1">#t: Vector de tiempos en formato mm:ss</span><span class="w">
+</span><span class="n">density_time</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">shots</span><span class="p">,</span><span class="w"> </span><span class="n">team</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">bw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2.5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nf">is.null</span><span class="p">(</span><span class="n">team</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">times</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ms</span><span class="p">(</span><span class="n">shots</span><span class="p">[</span><span class="n">shots</span><span class="o">$</span><span class="n">team</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">team</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="o">$</span><span class="n">t</span><span class="p">)</span><span class="w">
+  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">times</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ms</span><span class="p">(</span><span class="n">shots</span><span class="o">$</span><span class="n">t</span><span class="p">)</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="n">times</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="n">minute</span><span class="p">(</span><span class="n">times</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">second</span><span class="p">(</span><span class="n">times</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">60</span><span class="w">
 
-  res <span class="o">&lt;-</span> density<span class="p">(</span>times<span class="p">,</span> from <span class="o">=</span> <span class="m">0</span><span class="p">,</span> to <span class="o">=</span> <span class="m">40</span><span class="p">,</span> bw <span class="o">=</span> bw<span class="p">,</span> kernel <span class="o">=</span> kernel<span class="p">)</span> 
-  res<span class="o">$</span>y <span class="o">&lt;-</span> res<span class="o">$</span>y <span class="o">*</span> <span class="kp">length</span><span class="p">(</span>times<span class="p">)</span>
-  <span class="kr">return</span><span class="p">(</span>res<span class="p">)</span>
-<span class="p">}</span></code></pre></div>
+  </span><span class="n">res</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">density</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="n">bw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bw</span><span class="p">,</span><span class="w"> </span><span class="n">kernel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kernel</span><span class="p">)</span><span class="w"> 
+  </span><span class="n">res</span><span class="o">$</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">res</span><span class="o">$</span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">times</span><span class="p">)</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
 <p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-9-1.png" alt="plot of chunk unnamed-chunk-9" /></p>
 
@@ -159,7 +159,7 @@ density_time <span class="o">&lt;-</span> <span class="kr">function</span><span 
 
 <h2 id="tiros-por-jugador">Tiros por jugador</h2>
 
-<p>Por último, podemos explorar los lanzamientos por jugador. Actualmente, el paquete <code class="highlight language-R">rfeb</code> sólo proporciona el número de la camiseta de cada jugador.  A continuación se muestra la ubicación de los lanzamientos de cada jugador del Arcos Albacete Basket.</p>
+<p>Por último, podemos explorar los lanzamientos por jugador. Actualmente, el paquete <code class="language-plaintext highlighter-rouge">rfeb</code> sólo proporciona el número de la camiseta de cada jugador.  A continuación se muestra la ubicación de los lanzamientos de cada jugador del Arcos Albacete Basket.</p>
 
 <p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-11-1.png" alt="plot of chunk unnamed-chunk-11" /></p>
 
@@ -171,9 +171,9 @@ density_time <span class="o">&lt;-</span> <span class="kr">function</span><span 
 
 <p>Por último, vamos a ver el análisis del partido AFANION CB Almansa - Arcos Albacete Basket celebrado el 26/01/2019 con victoria local por 90 a 69 puntos. En primer lugar, veamos desde dónde se realizaron los tiros a canasta durante el partido:</p>
 
-<div class="highlight"><pre><code class="language-r"><span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
-plot_shotchart<span class="p">(</span>afa.aba<span class="p">,</span> color <span class="o">=</span> made<span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> team <span class="o">+</span> made<span class="p">)</span> <span class="o">+</span>
-  geom_density_2d<span class="p">(</span>data <span class="o">=</span> shots<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> x<span class="p">,</span> y <span class="o">=</span> y<span class="p">))</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+</span><span class="n">plot_shotchart</span><span class="p">(</span><span class="n">afa.aba</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">made</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="n">team</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">made</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_density_2d</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shots</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">))</span></code></pre></figure>
 
 <p><img src="/figure/source/2019-01-25-baloncesto-conR/unnamed-chunk-13-1.png" alt="plot of chunk unnamed-chunk-13" /></p>
 
@@ -201,7 +201,7 @@ plot_shotchart<span class="p">(</span>afa.aba<span class="p">,</span> color <spa
 
 <h2 id="conclusiones">Conclusiones</h2>
 
-<p>El paquete <code class="highlight language-R">rfeb</code> facilita el acceso a datos de partidos de varias ligas de la RFEB.  La explotación de los datos con el sfotware estadístico <code class="highlight language-R">R</code> permite, entre otras cosas, visualizar los datos usando distintos tipos de gráficos.  Se echa de menos la posibilidad de descargar el listado de los partidos de la jornada, para saber qué equipo es el local y cuál el visitante. También sería interesante saber los datos de los jugadores, además del número de su camiseta.</p>
+<p>El paquete <code class="language-plaintext highlighter-rouge">rfeb</code> facilita el acceso a datos de partidos de varias ligas de la RFEB.  La explotación de los datos con el sfotware estadístico <code class="language-plaintext highlighter-rouge">R</code> permite, entre otras cosas, visualizar los datos usando distintos tipos de gráficos.  Se echa de menos la posibilidad de descargar el listado de los partidos de la jornada, para saber qué equipo es el local y cuál el visitante. También sería interesante saber los datos de los jugadores, además del número de su camiseta.</p>
 
 
   </article>
@@ -298,10 +298,7 @@ plot_shotchart<span class="p">(</span>afa.aba<span class="p">,</span> color <spa
    <br>
    Avda. España s/n - 02071 Albacete (Spain)
    <br>
-   Tel: (+34) 967 59 92 00, ext. 8291
-   </p>
-    </div>
-
+   Tel: (+34) 926 05 36 65
   </div>
 
 </footer>

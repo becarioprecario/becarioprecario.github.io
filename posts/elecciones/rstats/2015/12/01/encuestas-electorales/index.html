@@ -124,35 +124,35 @@
 
 <h3 id="estimación-de-porcentajes">Estimación de porcentajes</h3>
 
-<p>Supongamos por un momento que estamos considerando el caso en el que únicamente tenemos dos partidos, <em>A</em> y <em>B</em>, y que estamos intentando estimar la intención de voto. Podemos considerar que los porcentajes de voto reales son <script type="math/tex">\pi_A</script> y <script type="math/tex">\pi_B</script>. Supongamos también que sólo se puede votar a estas dos opciones, de manera que <script type="math/tex">\pi_A = 1 - \pi_B</script>.</p>
+<p>Supongamos por un momento que estamos considerando el caso en el que únicamente tenemos dos partidos, <em>A</em> y <em>B</em>, y que estamos intentando estimar la intención de voto. Podemos considerar que los porcentajes de voto reales son \(\pi_A\) y \(\pi_B\). Supongamos también que sólo se puede votar a estas dos opciones, de manera que \(\pi_A = 1 - \pi_B\).</p>
 
-<p>Conviene comentar que este tipo de problemas se da con más frecuencia de lo que parece. En Medicina, por ejemplo, estas situaciones se dan cuando se prueba un nuevo medicamento y se estudia si el paciente mejora (<em>A</em>) o no mejora (<em>B</em>). En este contexto, <script type="math/tex">\pi_A</script> mide la eficacia del medicamento o la proporción de pacientes que mejoraría con ese tratamiento, mientras que <script type="math/tex">\pi_B</script> sería la proporción de pacientes que no mejoraría. Estas proporciones se estimarían mediante el desarrollo de un ensayo clínico en el que a un grupo de pacientes se les da el tratamiento bajo estudio y se recogen cuántos mejoran y cuántos no.</p>
+<p>Conviene comentar que este tipo de problemas se da con más frecuencia de lo que parece. En Medicina, por ejemplo, estas situaciones se dan cuando se prueba un nuevo medicamento y se estudia si el paciente mejora (<em>A</em>) o no mejora (<em>B</em>). En este contexto, \(\pi_A\) mide la eficacia del medicamento o la proporción de pacientes que mejoraría con ese tratamiento, mientras que \(\pi_B\) sería la proporción de pacientes que no mejoraría. Estas proporciones se estimarían mediante el desarrollo de un ensayo clínico en el que a un grupo de pacientes se les da el tratamiento bajo estudio y se recogen cuántos mejoran y cuántos no.</p>
 
-<p>Volviendo al contexto electoral, si preguntamos a una persona elegida al azar de entre todos los votantes, la probabilidad de que nos diga que va a votar al partido <em>A</em> sería de <script type="math/tex">\pi_A</script>. Si preguntamos a un número grande de personas, la proporción que nos haya dicho que votará al partido <em>A</em>, y que llamaremos <script type="math/tex">\hat{\pi}_A</script>, se parecerá mucho al valor real de <script type="math/tex">\pi_A</script>. De manera similar tendríamos la proporción observada de votantes del partidos <em>B</em>, <script type="math/tex">\hat{\pi}_B</script>, se ha de parecer a <script type="math/tex">\pi_B</script>.</p>
+<p>Volviendo al contexto electoral, si preguntamos a una persona elegida al azar de entre todos los votantes, la probabilidad de que nos diga que va a votar al partido <em>A</em> sería de \(\pi_A\). Si preguntamos a un número grande de personas, la proporción que nos haya dicho que votará al partido <em>A</em>, y que llamaremos \(\hat{\pi}_A\), se parecerá mucho al valor real de \(\pi_A\). De manera similar tendríamos la proporción observada de votantes del partidos <em>B</em>, \(\hat{\pi}_B\), se ha de parecer a \(\pi_B\).</p>
 
-<p>Por ejemplo, si preguntamos a 100 personas y 63 nos dicen que votarán al partido <em>A</em> tendríamos una estimación de la proporción real de votantes igual a <script type="math/tex">\hat{\pi}_A = 63/100 = 0.63</script>. Para el partido <em>B</em> la estimación sería <script type="math/tex">\hat{\pi}_B = 37/100 = 0.37</script>, que se ha de parecer mucho a la proporción real de votantes del partido <em>B</em>.</p>
+<p>Por ejemplo, si preguntamos a 100 personas y 63 nos dicen que votarán al partido <em>A</em> tendríamos una estimación de la proporción real de votantes igual a \(\hat{\pi}_A = 63/100 = 0.63\). Para el partido <em>B</em> la estimación sería \(\hat{\pi}_B = 37/100 = 0.37\), que se ha de parecer mucho a la proporción real de votantes del partido <em>B</em>.</p>
 
 <p>Estas estimaciones serán más fiables cuanto mayor sea el número de personas que entrevistemos siempre y cuando la muestra sea representativa de toda la población. Además, si repitiésemos las encuestas tomando a otro grupo de 100 votantes, las proporciones estimadas seguramente varíen un poco, dependiendo del error que estemos cometiendo en la estimación.</p>
 
 <h3 id="estimación-del-error">Estimación del error</h3>
 
-<p>La estimación del error o la variabilidad de los resultados entre muestra y muestra la haremos por simulación. En concreto, supongamos que los porcentajes reales fueran conocidos y tales que <script type="math/tex">\pi_A=0.60</script> y <script type="math/tex">\pi_B=0.40</script>. Podríamos simular una encuesta seleccionando 100 respuestas al azar de manera que cada respuesta sea <em>A</em> o <em>B</em> de acuerdo a las proporciones anteriores. Si repetimos esto 1000 y hacemos un histograma de los resultados obtendríamos:</p>
+<p>La estimación del error o la variabilidad de los resultados entre muestra y muestra la haremos por simulación. En concreto, supongamos que los porcentajes reales fueran conocidos y tales que \(\pi_A=0.60\) y \(\pi_B=0.40\). Podríamos simular una encuesta seleccionando 100 respuestas al azar de manera que cada respuesta sea <em>A</em> o <em>B</em> de acuerdo a las proporciones anteriores. Si repetimos esto 1000 y hacemos un histograma de los resultados obtendríamos:</p>
 
-<p><img src="/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /></p>
+<p><img src="/figure/posts/2015-12-01-encuestas-electorales/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /></p>
 
-<p>Lo que puede verse en esa gráfica es que la mayoría de las estimaciones quedan cerca del valor real, pero que también existe cierta variabilidad en las estimaciones. Podríamos dar un rango de valores (o <em>intervalo</em>) que contenga el 95% de los valores estimados en cada muestra. Para el partido <em>A</em> sería (0.50975, 0.69) y para el partido <em>B</em> sería (0.31, 0.49025).</p>
+<p>Lo que puede verse en esa gráfica es que la mayoría de las estimaciones quedan cerca del valor real, pero que también existe cierta variabilidad en las estimaciones. Podríamos dar un rango de valores (o <em>intervalo</em>) que contenga el 95% de los valores estimados en cada muestra. Para el partido <em>A</em> sería (0.51, 0.69) y para el partido <em>B</em> sería (0.31, 0.49).</p>
 
-<p>Como puede verse, ambos intervalos aparecen centrados en los valores reales y la amplitud es de dos veces <script type="math/tex">0.10</script>. Este valor es lo que reportaríamos como error. Este valor viene a decir que en el 95% de las encuestas que hagamos, el valor real de la proporción va a estar, como mucho, a <script type="math/tex">0.10</script> del valor real de la proporción de votantes.</p>
+<p>Como puede verse, ambos intervalos aparecen centrados en los valores reales y la amplitud es de dos veces \(0.10\). Este valor es lo que reportaríamos como error. Este valor viene a decir que en el 95% de las encuestas que hagamos, el valor real de la proporción va a estar, como mucho, a \(0.10\) del valor real de la proporción de votantes.</p>
 
 <p>Conviene comentar que este error es conocido desde hace mucho tiempo por los matemáticos y va a ser igual a</p>
 
-<script type="math/tex; mode=display">1.96 * \sqrt{\frac{\pi (1 - \pi)}{n}}</script>
+\[1.96 * \sqrt{\frac{\pi (1 - \pi)}{n}}\]
 
-<p>donde <script type="math/tex">n</script> es el número de encuestas recogidas y <script type="math/tex">\pi</script> la proporción real que estamos intentando estimar. Como <script type="math/tex">\pi</script> es desconocida en la práctica se suele tomar una cota superior de este error dada por</p>
+<p>donde \(n\) es el número de encuestas recogidas y \(\pi\) la proporción real que estamos intentando estimar. Como \(\pi\) es desconocida en la práctica se suele tomar una cota superior de este error dada por</p>
 
-<script type="math/tex; mode=display">1.96 * \sqrt{\frac{0.5 * (1 - 0.5)}{n}}</script>
+\[1.96 * \sqrt{\frac{0.5 * (1 - 0.5)}{n}}\]
 
-<p>Para las 100 encuestas (es decir, <script type="math/tex">n = 100</script>) que hemos hecho en las simulaciones el error estimado sería de 0.098, que se parece mucho al error que aparece en las simulaciones.</p>
+<p>Para las 100 encuestas (es decir, \(n = 100\)) que hemos hecho en las simulaciones el error estimado sería de 0.098, que se parece mucho al error que aparece en las simulaciones.</p>
 
 <h3 id="encuestas-a-las-elecciones-municipales-en-albacete-el-24m">Encuestas a las elecciones municipales en Albacete el 24M</h3>
 
@@ -258,7 +258,7 @@
 
 <p>Para estimar el error de las encuestas realizadas, podemos repetir el experimento anterior y simular respuestas a las encuestas usando los porcentajes reales de voto para ver cuál sería la variabilidad esperada y compararla con los resultados obtenidos. La siguiente gráfica muestra la variabilidad de acuerdo al número de encuestas realizado,  el porcentaje de voto estimado en nuestra  encuesta (en negro) y el de La Tribuna (en rojo):</p>
 
-<p><img src="/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-4-1.png" alt="plot of chunk unnamed-chunk-4" /></p>
+<p><img src="/figure/posts/2015-12-01-encuestas-electorales/unnamed-chunk-4-1.png" alt="plot of chunk unnamed-chunk-4" /></p>
 
 <p>Lo más remarcable es el <em>voto oculto</em> que experimentan PP y PSOE en nuestras encuestas. Las encuestas subestiman el porcentaje de voto real a estos dos partidos, que quedaría englobado en el apartado de OTROS.</p>
 
@@ -270,9 +270,108 @@
 
 <p>Para el caso concreto de Albacete, la siguiente tabla muestra las puntuaciones según el número real de votos obtenido:</p>
 
-<div class="highlight"><pre><code class="language-R"><span class="c1">## Error in library(pander): there is no package called &#39;pander&#39;</span></code></pre></div>
-
-<div class="highlight"><pre><code class="language-R"><span class="c1">## Error in pandoc.table(tab.dhont[, -6], emphasize.verbatim.cells = which(tab.dhont[, : no se pudo encontrar la función &quot;pandoc.table&quot;</span></code></pre></div>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">PP</th>
+      <th style="text-align: center">PSOE</th>
+      <th style="text-align: center">Ganemos</th>
+      <th style="text-align: center">Cs</th>
+      <th style="text-align: center">UPyD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/1</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">29351</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">23944</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">13446</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">11902</code></td>
+      <td style="text-align: center">1532</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/2</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">14676</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">11972</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">6723</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">5951</code></td>
+      <td style="text-align: center">766</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/3</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">9784</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">7981</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">4482</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">3967</code></td>
+      <td style="text-align: center">510.7</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/4</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">7338</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">5986</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">3362</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">2976</code></td>
+      <td style="text-align: center">383</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/5</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">5870</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">4789</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">2689</code></td>
+      <td style="text-align: center">2380</td>
+      <td style="text-align: center">306.4</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/6</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">4892</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">3991</code></td>
+      <td style="text-align: center">2241</td>
+      <td style="text-align: center">1984</td>
+      <td style="text-align: center">255.3</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/7</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">4193</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">3421</code></td>
+      <td style="text-align: center">1921</td>
+      <td style="text-align: center">1700</td>
+      <td style="text-align: center">218.9</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/8</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">3669</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">2993</code></td>
+      <td style="text-align: center">1681</td>
+      <td style="text-align: center">1488</td>
+      <td style="text-align: center">191.5</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/9</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">3261</code></td>
+      <td style="text-align: center">2660</td>
+      <td style="text-align: center">1494</td>
+      <td style="text-align: center">1322</td>
+      <td style="text-align: center">170.2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/10</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">2935</code></td>
+      <td style="text-align: center">2394</td>
+      <td style="text-align: center">1345</td>
+      <td style="text-align: center">1190</td>
+      <td style="text-align: center">153.2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Nº votos/11</strong></td>
+      <td style="text-align: center">2668</td>
+      <td style="text-align: center">2177</td>
+      <td style="text-align: center">1222</td>
+      <td style="text-align: center">1082</td>
+      <td style="text-align: center">139.3</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Se han marcado las 27 puntuaciones más altas que son las que proporcionan algún concejal. UPyD no participa en el reparto de concejales porque no ha llegado al mínimo del 5% de los votos válidos. Aun así, vemos que hubiera quedado muy lejos de obtener un concejal en caso de haber entrado.</p>
 
@@ -280,7 +379,7 @@
 
 <p>Igual que hemos hecho con los porcentajes de voto, también es posible estimar cuántos escaños obtendría cada partido por simulación. La gráfica que aparece a continuación muestran el número de escaños que obtendríamos con las simulaciones de las encuestas (usando los porcentajes de voto reales), el que obtuvimos con nuestas encuestas (en negro) y el publicado por el periódico La Tribuna de Albacete (en rojo). Como puede verse, en general nuestros resultados no estaban muy alejados de los resultados reales pero sí que quedaban fuera de lo deseable.</p>
 
-<p><img src="/figure/source/2015-12-01-encuestas-electorales/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7" /></p>
+<p><img src="/figure/posts/2015-12-01-encuestas-electorales/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7" /></p>
 
 <p>Como nuestras encuestas sobrestimaron el número de votos a Ciudadanos este partido parece obtener un número de escaños mucho mayor de los que en realidad tuvo. Para el resto de partidos los resultados sí que fueron bastante cercanos, aunquefuera de lo que cabría esperar por la variabilidad del muestreo. Los resultados de la encuesta del periódico La Tribuna cayeron dentro de lo que cabría esperar de acuerdo al error esperado e incluso parece que afinaron más que en nuestra encuesta.</p>
 
@@ -383,10 +482,7 @@
    <br>
    Avda. España s/n - 02071 Albacete (Spain)
    <br>
-   Tel: (+34) 967 59 92 00, ext. 8291
-   </p>
-    </div>
-
+   Tel: (+34) 926 05 36 65
   </div>
 
 </footer>
