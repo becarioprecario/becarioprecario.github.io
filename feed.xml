@@ -3,10 +3,10 @@
   <channel>
     <title>Blogario Precario</title>
     <description>A random walk on blogging</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 27 Dec 2025 00:45:40 +0100</pubDate>
-    <lastBuildDate>Sat, 27 Dec 2025 00:45:40 +0100</lastBuildDate>
+    <link>https://becarioprecario.github.io/</link>
+    <atom:link href="https://becarioprecario.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 07 Jan 2026 10:47:52 +0100</pubDate>
+    <lastBuildDate>Wed, 07 Jan 2026 10:47:52 +0100</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -85,8 +85,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 01 Apr 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/posts/rstats/2020/04/01/EPH-with-R/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/rstats/2020/04/01/EPH-with-R/</guid>
+        <link>https://becarioprecario.github.io/posts/rstats/2020/04/01/EPH-with-R/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/rstats/2020/04/01/EPH-with-R/</guid>
         
         <category>Epidemiology</category>
         
@@ -406,8 +406,8 @@
 
 </description>
         <pubDate>Sun, 28 Apr 2019 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2019/04/28/proyeccion-regionales-2019/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2019/04/28/proyeccion-regionales-2019/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2019/04/28/proyeccion-regionales-2019/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2019/04/28/proyeccion-regionales-2019/</guid>
         
         <category>Castilla-La Mancha</category>
         
@@ -1537,8 +1537,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 10 Feb 2019 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2019/02/10/proyeccion-CLM2019/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2019/02/10/proyeccion-CLM2019/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2019/02/10/proyeccion-CLM2019/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2019/02/10/proyeccion-CLM2019/</guid>
         
         <category>Castilla-La Mancha</category>
         
@@ -1665,8 +1665,8 @@
 
 </description>
         <pubDate>Fri, 25 Jan 2019 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/posts/baloncesto/rstats/2019/01/25/baloncesto-conR/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/baloncesto/rstats/2019/01/25/baloncesto-conR/</guid>
+        <link>https://becarioprecario.github.io/posts/baloncesto/rstats/2019/01/25/baloncesto-conR/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/baloncesto/rstats/2019/01/25/baloncesto-conR/</guid>
         
         <category>Baloncesto</category>
         
@@ -1709,8 +1709,8 @@
 
 </description>
         <pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/posts/rstats/2018/12/01/JSS-Special-Issue/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/rstats/2018/12/01/JSS-Special-Issue/</guid>
+        <link>https://becarioprecario.github.io/posts/rstats/2018/12/01/JSS-Special-Issue/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/rstats/2018/12/01/JSS-Special-Issue/</guid>
         
         <category>JSS</category>
         
@@ -1985,8 +1985,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 25 Nov 2018 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2018/11/25/encuestas-ANDPROV/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2018/11/25/encuestas-ANDPROV/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2018/11/25/encuestas-ANDPROV/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2018/11/25/encuestas-ANDPROV/</guid>
         
         <category>Cataluna</category>
         
@@ -2401,8 +2401,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 15 Dec 2017 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2017/12/15/encuestas-CATPROV/</guid>
         
         <category>Cataluna</category>
         
@@ -2894,8 +2894,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-PVPROV/</guid>
         
         <category>Pais Vasco</category>
         
@@ -3821,8 +3821,8 @@ $(document).ready(function () {
 &lt;/html&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/posts/2016/09/25/encuestas-PVPROV/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/2016/09/25/encuestas-PVPROV/</guid>
+        <link>https://becarioprecario.github.io/posts/2016/09/25/encuestas-PVPROV/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/2016/09/25/encuestas-PVPROV/</guid>
         
         
       </item>
@@ -4260,8 +4260,8 @@ $(document).ready(function () {
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</guid>
+        <link>https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</link>
+        <guid isPermaLink="true">https://becarioprecario.github.io/posts/elecciones/rstats/2016/09/25/encuestas-GALPROV/</guid>
         
         <category>Galicia</category>
         
